@@ -40,5 +40,9 @@ execute "install Xerox-550" do
     not_if "lpstat -v | grep -q 'Xerox-550'"
 end
 
-
+execute "detach XC_Integrated550_560_v1_1_RBpDX_FD44_v4.dmg" do
+    command "hdiutil detach \"/Volumes/User Software\""
+    user node['current_user']
+    only_if "mount | grep -q 'User Software'"
+end
 
