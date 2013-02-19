@@ -1,4 +1,4 @@
-drivers Cookbook
+drivers Cookbook [![Build Status](https://travis-ci.org/kitchenplan/chef-drivers.png?branch=master)](https://travis-ci.org/kitchenplan/chef-drivers)
 ================
 
 A cookbook that installs drivers. For now only the Xerox 550 printer
