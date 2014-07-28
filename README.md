@@ -1,7 +1,18 @@
-drivers Cookbook [![Build Status](https://travis-ci.org/kitchenplan/chef-drivers.png?branch=master)](https://travis-ci.org/kitchenplan/chef-drivers)
+drivers Cookbook
 ================
 
-A cookbook that installs drivers. For now only the Xerox 550 printer
+A cookbook that installs drivers.
+Original by Roderik van der Veer: https://github.com/kitchenplan/chef-drivers
+
+Supported
+---------
+
+### Printers
+
+- Xerox 550
+- Canon Pixma Pro 9000II
+- Canon Pixma Pro 9500II
+
 
 Contributing
 ------------
@@ -11,5 +22,3 @@ Contributing
 3. Write you change
 4. Run the tests, ensuring they all pass (with travis)
 5. Submit a Pull Request using Github
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46288146-2/kitchenplan/chef-drivers)](https://github.com/igrigorik/ga-beacon)
