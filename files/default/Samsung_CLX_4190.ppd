@@ -1,0 +1,3888 @@
+*PPD-Adobe: "4.3"
+*% ===============================================
+*% Disclaimer:  The above statement indicates
+*% that this PPD was written using the Adobe PPD
+*% File Format Specification 4.3, but does not
+*% intend to imply approval and acceptance by
+*% Adobe Systems, Inc.
+*% ===============================================
+*% ===============================================
+*% PPD for Samsung CLX-4190 Series CUPS
+*% For Macintosh Only
+*% =============================================== 
+*FormatVersion:	"4.3"
+*FileVersion: "5.00.03"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName:	"C4190.ppd"
+*APDialogExtension: "/Library/Printers/Samsung/PDEs/Graphic2.bundle"
+*APDialogExtension: "/Library/Printers/Samsung/PDEs/JobAccounting2.bundle"
+*%APPrinterUtilityPath: "/Library/Printers/Samsung/Utilities/EPM/Samsung Easy Printer Manager.app"
+*Manufacturer:	"Samsung"
+*Product:	"(Samsung CLX-4190 Series)"
+*cupsVersion:	1.4
+*cupsManualCopies: True
+*cupsModelNumber: 7
+*cupsFilter:	"application/vnd.cups-raster 0 /Library/Printers/Samsung/Filters/rastertosec"
+*ModelName:     "Samsung CLX-4190 Series"
+*ShortNickName: "Samsung CLX-4190 Series"
+*NickName:      "Samsung CLX-4190 Series"
+*PSVersion:	"(3010.000) 550"
+*PSVersion:	"(3010.000) 651"
+*PSVersion:	"(3010.000) 652"
+*PSVersion:	"(3010.000) 653"
+*LanguageLevel:	"3"
+*ColorDevice:	True
+*DefaultColorSpace: RGB
+*FileSystem:	False
+*Throughput:	"22"
+*LandscapeOrientation: Plus90
+*VariablePaperSize: False
+*TTRasterizer:	Type42
+
+*eColorSupport: "1"
+*eFixedBandWidth: "0"
+*eEmulationMode: "3"
+*eCommandVersion: "5"
+
+*APPrinterIconPath: "/Library/Printers/Samsung/Icons/CLX-4190.icns"
+*APICADriver: True
+*cupsFilter: "application/vnd.cups-command 100 /Library/Printers/Samsung/Filters/commandtosec"
+*SECWarningStatusPath: "/Library/Printers/Samsung/Filters/statusDesc.plist" 
+*SECCommandFileFilterPath: "/Library/Printers/Samsung/Filters/commandtosec"
+*cupsCommands: "ReportLevels"
+*cupsSNMPSupplies: False
+
+*eCMSMode2: "1"
+*eCMSLibPath: "/Library/Printers/Samsung/SCMS/"
+*eCMSLibFile: "/Library/Printers/Samsung/SCMS/libscmssc.dylib"
+*eCMSPrefix: "clx-4190"
+
+*%APAutoSetupTool: "/Library/Printers/Samsung/Utilities/AutoSetup/secautosetup"
+*%SECAutoSetupInfoPath: "/Library/Printers/Samsung/CLX-4190/autosetupinfo.plist"
+*%SECDOCLibPath: "/Library/Printers/Samsung/Utilities/AutoSetup/DOC.dylib"
+
+*eCMSFEATURES: "id_DocType, id_RGBColor, id_Trapping, id_HalftoneLPI, id_CurlMode, id_EdgeEnhance, id_SaveMode"
+
+*eJAEncryption: "True"
+*eEncryption : "False"
+*eExtendedAccount : "True"
+*SECJAIDEncrypt : "True"
+
+*AccountMaxIDLength: 129
+
+*ePJL: "SkipBlankPages, Permission, AccountPassword"
+
+*% =========================================================
+*% Installable Options
+*% =========================================================
+*OpenGroup: InstallableOptions/Installed Options
+
+*% =========================================================
+*%  Toner Save Mode
+*% =========================================================
+*OpenUI *id_SaveMode/Toner Save: PickOne
+*Defaultid_SaveMode: Off
+*id_SaveMode On/On: ""
+*id_SaveMode Off/Off: ""
+*CloseUI: *id_SaveMode
+
+*CloseGroup: InstallableOptions
+
+*% =========================================================
+*% Get Paper Size
+*% =========================================================
+*612792: "00"
+*6121008: "01"
+*612936: "24"
+*522756: "03"
+*595842: "02"
+*420595: "16"
+*516729: "11"
+*297420: "17"
+*297684: "06"
+*312624: "09"
+*459649: "08"
+*323459: "23"
+*499709: "12"
+*279540: "07"
+*612972: "28"
+*261468: "25"
+*279639: "26"
+*396612: "30"
+*288432: "13"
+*customsz: "21"
+
+*% =========================================================
+*% Get Media source
+*% =========================================================
+*etray0: "01"
+*etray1: "01"
+*etray2: "02"
+*etray3: "03"
+*etray4: "04"
+*etray5: "05"
+
+*% =========================================================
+*% Get Resolution
+*% =========================================================
+*eResolution300: "03"
+*eResolution600: "06"
+*eResolution1200: "12"
+
+*% =========================================================
+*% Get Band Height
+*% =========================================================
+*eband3: "64"
+*eband6: "128"
+*eband12: "128"
+
+*% =========================================================
+*% Job Accounting2 PDE - Account Type
+*% =========================================================
+*OpenUI *AccountType/Accounting type: PickOne
+*OrderDependency: 40 AnySetup *AccountType
+*DefaultAccountType: Accounting
+*AccountType Accounting/Accounting: ""  
+*AccountType Pincode/ID Only: ""
+*CloseUI: *AccountType
+
+*% =========================================================
+*% Job Accounting2 PDE - Account ID
+*% =========================================================
+*OpenUI *AccountID/User ID: PickOne
+*OrderDependency: 50 AnySetup *AccountID
+*DefaultAccountID: Unknown
+*CloseUI: *AccountID
+
+*% =========================================================
+*% Job Accounting2 PDE - Permission Type
+*% =========================================================
+*OpenUI *Permission/ : PickOne
+*OrderDependency: 50 AnySetup *Permission
+*DefaultPermission: Personal
+*Permission Personal/User permission: "%% @PJL SET LDAPPERMISSION=PERSONAL"
+*Permission Group/Group permission: "%% @PJL SET LDAPPERMISSION=GROUP"
+*CloseUI: *Permission
+
+*% =========================================================
+*% Job Accounting2 PDE - Account Password
+*% =========================================================
+*OpenUI *AccountPassword/Enter Password: PickOne
+*OrderDependency: 50 AnySetup *AccountPassword
+*AccountMinLength: 4
+*AccountMaxLength: 32 
+*DefaultAccountPassword: Unknown
+*CloseUI: *AccountPassword
+
+*% =======================================================
+*% Job Accounting2 PDE - Confirm Password
+*% =========================================================
+*OpenUI *ConfirmAcctPassword/Confirm Password: PickOne
+*OrderDependency: 50 AnySetup *ConfirmAcctPassword
+*DefaultConfirmAcctPassword: Unknown
+*CloseUI: *ConfirmAcctPassword
+
+*% =======================================================
+*% Job Accounting2 PDE - PIN Code
+*% =========================================================
+*OpenUI *PINCode/ID Only: PickOne
+*OrderDependency: 50 AnySetup *PINCode
+*DefaultPINCode: Unknown
+*CloseUI: *PINCode
+
+*% =========================================================
+*% Job Accounting2 PDE - Job Name, Password Range, warning text.
+*% =========================================================
+*APWRange : "(4-32 Alphanumeric)"
+*ko.APWRange : (4-32 영숫자)
+*zh_CN.APWRange : （4-32 位字母数字）
+*zh_TW.APWRange : (4-32 位英數字元)
+
+*de.APWRange : (4-32 alphanumerisch)
+*es.APWRange : (Alfanúm. de 4 a 32)
+*fr.APWRange : (Alphanumérique 4-32)
+*it.APWRange : (4-32 alfanumerici)
+*nl.APWRange : (4-32 alfanumeriek)
+*pt.APWRange : (Alfanumérico 4-32)
+
+*AConfirmRange : "(4-32 Alphanumeric)"
+*ko.AConfirmRange : (4-32 영숫자)
+*zh_CN.AConfirmRange : （4-32 位字母数字）
+*zh_TW.AConfirmRange : (4-32 位英數字元)
+
+*de.AConfirmRange : (4-32 alphanumerisch)
+*es.AConfirmRange : (Alfanúm. de 4 a 32)
+*fr.AConfirmRange : (Alphanumérique 4-32)
+*it.AConfirmRange : (4-32 alfanumerici)
+*nl.AConfirmRange : (4-32 alfanumeriek)
+*pt.AConfirmRange : (Alfanumérico 4-32)
+
+*PINCodeRange : "(1-129 Alphanumeric)"
+*ko.PINCodeRange : (1-129 영숫자)
+*zh_CN.PINCodeRange : （1-129 位字母数字）
+*zh_TW.PINCodeRange : (1-129 位英數字元)
+
+*de.PINCodeRange : (1-129 alphanumerisch)
+*es.PINCodeRange : (Alfanúm. de 1 a 129)
+*fr.PINCodeRange : (Alphanumérique 1-129)
+*it.PINCodeRange : (1-129 alfanumerici)
+*nl.PINCodeRange : (1-129 alfanumeriek)
+*pt.PINCodeRange : (Alfanumérico 1-129)
+
+
+*AWarningText : "You must enter a 4-32 alphanumeric password and re-enter it for confirmation in order to use Job Accounting feature"
+*ko.AWarningText : 작업 계정를 사용하려면 4-32 자리의 영숫자를 입력하고 암호 확인을 위해 재입력해야 합니다.
+*zh_CN.AWarningText : 必须输入 4-32 位的字母数字密码并重新输入进行确认，以便使用作业统计功能
+*zh_TW.AWarningText : 您必須輸入 4-32 位英數字元密碼，並重新輸入以進行確認，然後才可使用「工作計量」功能
+
+*de.AWarningText : Sie müssen ein 4- bis 32-stelliges alphanumerisches Passwort eingeben und es zur Bestätigung noch einmal eingeben, um die Auftragsprotokollierung verwenden zu können
+*es.AWarningText : Debe escribir una contraseña de 4 a 32 caracteres alfanuméricos y volver a escribirla para confirmarla, y así poder usar la función Contabilidad de trabajos
+*fr.AWarningText : Pour pouvoir utiliser la fonction Gestion de tâches, vous devez saisir un mot de passe alphanumérique 4-32, puis le confirmer en le ressaisissant
+*it.AWarningText : Per utilizzare la password, immettere una password di 4-32 caratteri alfanumerici e reimmetterla per conferma.
+*nl.AWarningText : U moet een alfanumeriek wachtwoord van 4-32 tekens invoeren en dit vervolgens ter bevestiging nogmaals invoeren om de functie Taakaccountbeheer te kunnen gebruiken
+*pt.AWarningText : Tem de introduzir uma palavra-passe alfanumérica com 4 a 32 caracteres e introduzi-la novamente para fins de confirmação para poder utilizar a funcionalidade Contabilização de Tarefas
+
+*PINcodeWarningText : "You must enter a 4-32 alphanumeric PIN code in order to use Job Accounting feature"
+
+*% =========================================================
+*% Help file
+*% =========================================================
+*GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/English/Graphic.html"
+*ko.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/ko/Graphic.html"
+*zh_CN.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/zh_CN/Graphic.html"
+*zh_TW.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/zh_TW/Graphic.html"
+
+*de.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/German/Graphic.html"
+*es.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Spanish/Graphic.html"
+*fr.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/French/Graphic.html"
+*it.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Italian/Graphic.html"
+*nl.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Dutch/Graphic.html"
+*pt.GraphicHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/pt/Graphic.html"
+
+*AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/English/JobAccounting.html"
+*ko.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/ko/JobAccounting.html"
+*zh_CN.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/zh_CN/JobAccounting.html"
+*zh_TW.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/zh_TW/JobAccounting.html"
+
+*de.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/German/JobAccounting.html"
+*es.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Spanish/JobAccounting.html"
+*fr.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/French/JobAccounting.html"
+*it.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Italian/JobAccounting.html"
+*nl.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/Dutch/JobAccounting.html"
+*pt.AccountHelpPath: "/Library/Printers/Samsung/CLX-4190/Help/pt/JobAccounting.html"
+
+
+*% =========================================================
+*%  Paper Source
+*% =========================================================
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Printer Auto Selection: "<</cupsMediaPosition 1>>setpagedevice"
+*End
+*InputSlot Manual/Manual Feeder: "<</cupsMediaPosition 2>>setpagedevice"
+*End
+*CloseUI: *InputSlot
+
+*% =========================================================
+*%  Paper Handling
+*% =========================================================
+*% Use these entries to set paper size unless there is a specific
+*% reason to use PageRegion, such as when using manual feed.
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/Letter: "<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*PageSize Legal/Legal: "<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*PageSize Executive/Executive: "<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*PageSize A4/A4: "<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*PageSize A5/A5: "<</PageSize [420 595] /ImagingBBox null>> setpagedevice"
+*PageSize B5-JIS/JIS B5: "<</PageSize [516 729] /ImagingBBox null>> setpagedevice"
+*PageSize US-Folio/US Folio: "<</PageSize [612 936] /ImagingBBox null>> setpagedevice"
+*PageSize Env10/No. 10 Env.: "<</PageSize [297 684] /ImagingBBox null>> setpagedevice"
+*PageSize EnvDL/DL Env.: "<</PageSize [312 624] /ImagingBBox null>> setpagedevice"
+*PageSize EnvC5/C5 Env.: "<</PageSize [459 649] /ImagingBBox null>> setpagedevice"
+*PageSize EnvC6/C6 Env.: "<</PageSize [323 459] /ImagingBBox null>> setpagedevice"
+*PageSize B5-ISO/ISO B5: "<</PageSize [499 709] /ImagingBBox null>> setpagedevice"
+*PageSize EnvMonarch/Monarch Env.: "<</PageSize [279 540] /ImagingBBox null>> setpagedevice"
+*PageSize A6/A6: "<</PageSize [297 420] /ImagingBBox null>> setpagedevice"
+*PageSize Oficio_S/Oficio: "<</PageSize [612 972] /ImagingBBox null>> setpagedevice"
+*PageSize Statement/Statement: "<</PageSize [396 612] /ImagingBBox null>> setpagedevice"
+*PageSize Env9/#9 Envelope: "<</PageSize [279 639] /ImagingBBox null>> setpagedevice"
+*PageSize Postcard_S/Postcard 4x6: "<</PageSize [288 432] /ImagingBBox null>> setpagedevice"
+*PageSize IndexCard/Index Card: "<</PageSize [216 360] /ImagingBBox null>> setpagedevice"
+*?PageSize: "
+save currentpagedevice /PageSize get aload pop
+   2 copy gt {exch} if (Unknown) 11 dict
+   dup [288 432] (IndexCard) put
+   dup [288 432] (Postcard_S) put
+   dup [288 432] (Env9) put
+   dup [612 972] (Statement) put
+   dup [297 420] (A6) put
+   dup [279 540] (EnvMonarch) put
+   dup [499 709] (B5-ISO) put
+   dup [323 459] (EnvC6) put
+   dup [459 649] (EnvC5) put
+   dup [312 624] (EnvDL) put
+   dup [297 684] (Env10) put
+   dup [612 936] (US-Folio) put
+   dup [516 729] (B5-JIS) put
+   dup [420 595] (A5) put
+   dup [595 842] (A4) put
+   dup [522 756] (Executive) put
+   dup [612 1008] (Legal) put   
+   dup [612 792] (Letter) put
+ {exch aload pop 4 index sub abs 5 le exch 5 index
+ sub abs 5 le and  {exch pop exit} {pop} ifelse}
+ bind forall  = flush pop pop restore
+"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/Letter: "<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*PageRegion Legal/Legal: "<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*PageRegion Executive/Executive: "<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*PageRegion A4/A4: "<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*PageRegion A5/A5: "<</PageSize [420 595] /ImagingBBox null>> setpagedevice"
+*PageRegion B5-JIS/JIS B5: "<</PageSize [516 729] /ImagingBBox null>> setpagedevice"
+*PageRegion US-Folio/US Folio: "<</PageSize [612 936] /ImagingBBox null>> setpagedevice"
+*PageRegion Env10/No. 10 Env.: "<</PageSize [297 684] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvDL/DL Env.: "<</PageSize [312 624] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC5/C5 Env.: "<</PageSize [459 649] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC6/C6 Env.: "<</PageSize [323 459] /ImagingBBox null>> setpagedevice"
+*PageRegion B5-ISO/ISO B5: "<</PageSize [499 709] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvMonarch/Monarch Env.: "<</PageSize [279 540] /ImagingBBox null>> setpagedevice"
+*PageRegion A6/A6: "<</PageSize [297 420] /ImagingBBox null>> setpagedevice"
+*PageRegion Oficio_S/Oficio: "<</PageSize [612 972] /ImagingBBox null>> setpagedevice"
+*PageRegion Statement/Statement: "<</PageSize [396 612] /ImagingBBox null>> setpagedevice"
+*PageRegion Env9/#9 Envelope: "<</PageSize [279 639] /ImagingBBox null>> setpagedevice"
+*PageRegion Postcard_S/Postcard 4x6: "<</PageSize [288 432] /ImagingBBox null>> setpagedevice"
+*PageRegion IndexCard/Index Card: "<</PageSize [216 360] /ImagingBBox null>> setpagedevice"
+*CloseUI: *PageRegion
+
+*% These entries provide the imageable areas of the media option keywords
+*DefaultImageableArea: Letter
+*ImageableArea Letter/Letter: "12.24 12.06 599.76 780.06"
+*ImageableArea Legal/Legal: "12.5 12.5 599.5 995.5"
+*ImageableArea Executive/Executive: "13.3 12.1 508.7 744.1"
+*ImageableArea A4/A4: "12.5 12.5 582.5 829.5"
+*ImageableArea A5/A5: "12.5 12.5 407.5 582.5"
+*ImageableArea B5-JIS/JIS B5: "12.5 12.5 503.5 716.5"
+*ImageableArea Env10/No. 10 Env.: "13 13 284.5 671.5"
+*ImageableArea EnvDL/DL Env.: "13.8 12.1 297.9 611.6"
+*ImageableArea EnvC5/C5 Env.: "12.6 12.1 446.5 637.0"
+*ImageableArea EnvC6/C6 Env.: "12.5 12.5 310.5 446.5"
+*ImageableArea US-Folio/US Folio: "12.5 12.5 599.5 923.5"
+*ImageableArea EnvMonarch/Monarch Env.: "12.7 12.1 266.2 528.1"
+*ImageableArea B5-ISO/ISO B5: "13.20 12.06 485.52 696.54"
+*ImageableArea A6/A6: "12.5 12.5 284.5 407.5"
+*ImageableArea Oficio_S/Oficio: "12.5 12.5 599.5 959.5"
+*ImageableArea Statement/Statement: "12.50 12.50 383.50 599.50"
+*ImageableArea Env9/#9 Envelope: "12.5 12.5 266.5 626.5"
+*ImageableArea Postcard_S/Post Card 4x6: "12.50 12.50 275.50 419.50"
+*ImageableArea IndexCard/Index Card: "12.50 12.50 203.50 347.50"
+*?ImageableArea: "
+ 	save /cvp { cvi (            ) cvs print ( ) print } bind def
+  	newpath clippath pathbbox
+  	4 -2 roll exch 2 {ceiling cvp} repeat
+ 	 exch 2 {floor cvp} repeat flush
+	 restore"
+*End
+
+*% These provide the physical dimensions of the media, by option keyword.
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/Letter: "612 792"
+*PaperDimension Legal/Legal: "612 1008"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension B5-JIS/JIS B5: "516 729"
+*PaperDimension US-Folio/US Folio: "612 936"
+*PaperDimension Env10/No. 10 Env.: "297 684"
+*PaperDimension EnvDL/DL Env.: "312 624"
+*PaperDimension EnvC5/C5 Env.: "459 649"
+*PaperDimension EnvC6/C6 Env.: "323 459"
+*PaperDimension B5-ISO/ISO B5: "499 709"
+*PaperDimension EnvMonarch/Monarch Env.: "279 540"
+*PaperDimension Oficio_S/Oficio: "612 972"
+*PaperDimension A6/A6: "297 420"
+*PaperDimension Statement/Statement: "396 612"
+*PaperDimension Env9/#9 Envelope: "279 639"
+*PaperDimension Postcard_S/Post Card 4x6: "288 432"
+*PaperDimension IndexCard/Index Card: "216 360"
+
+*%=== Custom Paper Support =================
+*VariablePaperSize: True
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*HWMargins: 16 16 16 16
+*CustomPageSize True: "
+     pop pop pop 
+   <</PageSize [ 5 -2 roll ] /ImagingBBox null >> setpagedevice
+"
+*End
+
+*ParamCustomPageSize Width: 1 points 216 612
+*ParamCustomPageSize Height: 2 points 360 1008
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 1 1
+
+*% =========================================================
+*%  SECResolution (Graphic2.plugin)
+*% =========================================================
+*OpenUI *SECResolution/Quality: PickOne
+*OrderDependency: 15 AnySetup *SECResolution
+*DefaultSECResolution: Best
+*SECResolution Best/Best: "<</HWResolution[600 600] /cupsRowFeed 1 /cupsRowStep 1 /cupsRowCount 2 >>setpagedevice"
+*%SECResolution Normal/Normal: "<</HWResolution[600 600] /cupsRowFeed 1 /cupsRowStep 1 /cupsRowCount 1 >>setpagedevice"
+*CloseUI: *SECResolution
+
+*eNormalTable: "6x6x1"
+*eBestTable: "6x6x2"
+
+*DefaultResolution: 600dpi
+
+*% =========================================================
+*%  Color & Gray Option
+*% =========================================================
+*OpenUI *ColorModel/Color Mode: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: RGBA
+*ColorModel RGBA/Color: "<</cupsColorOrder 0/cupsColorSpace 1/cupsBitsPerColor 8>>setpagedevice"
+*ColorModel Gray/Grayscale: "<</cupsColorOrder 0/cupsColorSpace 3/cupsBitsPerColor 8>>setpagedevice"
+*CloseUI: *ColorModel
+
+*% =========================================================
+*%  Black Optimization
+*% =========================================================
+*OpenUI *BlackOptimization/Black Optimization: PickOne
+*OrderDependency: 10 AnySetup *BlackOptimization
+*DefaultBlackOptimization: On
+*BlackOptimization Off/Off:	""
+*BlackOptimization On/On:	""
+*CloseUI: *BlackOptimization
+
+*OpenGroup: AdvancedOptions/Advanced Options
+
+*% =========================================================
+*%  Media Type
+*% =========================================================
+*OpenUI *MediaType/Paper Type: PickOne
+*OrderDependency: 13 AnySetup *MediaType
+*DefaultMediaType: None
+*MediaType None/Printer Default: "<</MediaType(@PJL SET PAPERTYPE = OFF)/cupsMediaType 0>>setpagedevice"
+*MediaType Plain/Plain:		"<</MediaType(@PJL SET PAPERTYPE = NORMAL)/cupsMediaType 1>>setpagedevice"
+*MediaType Thick/Thick:		"<</MediaType(@PJL SET PAPERTYPE = THICK)/cupsMediaType 2>>setpagedevice"
+*MediaType 51/Thicker:		"<</MediaType(@PJL SET PAPERTYPE = THICKER)/cupsMediaType 3>>setpagedevice"
+*MediaType Thin/Thin:		"<</MediaType(@PJL SET PAPERTYPE = THIN)/cupsMediaType 4>>setpagedevice"
+*MediaType Bond/Bond:		"<</MediaType(@PJL SET PAPERTYPE = BOND)/cupsMediaType 5>>setpagedevice"
+*MediaType Colored/Color:	"<</MediaType(@PJL SET PAPERTYPE = COLOR)/cupsMediaType 6>>setpagedevice"
+*MediaType Card/CardStock:	"<</MediaType(@PJL SET PAPERTYPE = CARD)/cupsMediaType 7>>setpagedevice"
+*MediaType Label/Labels:	"<</MediaType(@PJL SET PAPERTYPE = LABEL)/cupsMediaType 8>>setpagedevice"
+*MediaType Transparency/Transparency:	"<</MediaType(@PJL SET PAPERTYPE = OHP)/cupsMediaType 9>>setpagedevice"
+*MediaType Envelope/Envelope:	"<</MediaType(@PJL SET PAPERTYPE = ENV)/cupsMediaType 10>>setpagedevice"
+*MediaType Preprinted/Preprinted: "<</MediaType(@PJL SET PAPERTYPE = USED)/cupsMediaType 11>>setpagedevice"
+*MediaType Cotton/Cotton:	"<</MediaType(@PJL SET PAPERTYPE = COTTON)/cupsMediaType 12>>setpagedevice"
+*MediaType Recycled/Recycled:	"<</MediaType(@PJL SET PAPERTYPE = RECYCLED)/cupsMediaType 13>>setpagedevice"
+*MediaType Archive/Archive:	"<</MediaType(@PJL SET PAPERTYPE = ARCHIVE)/cupsMediaType 14>>setpagedevice"
+*MediaType 12/Letterhead:	"<</MediaType(@PJL SET PAPERTYPE = LETTERHEAD)/cupsMediaType 15>>setpagedevice"
+*MediaType 18/Punched:		"<</MediaType(@PJL SET PAPERTYPE = PUNCHED)/cupsMediaType 16>>setpagedevice"
+*MediaType 67/Glossy Photo 111-130 g/m2 (Laser): "<</MediaType (@PJL SET PAPERTYPE = PHOTO111-130)/cupsMediaType 17>> setpagedevice"
+*MediaType 68/Glossy Photo 131-175 g/m2 (Laser): "<</MediaType (@PJL SET PAPERTYPE = PHOTO131-175)/cupsMediaType 18>> setpagedevice"
+*MediaType 69/Glossy Photo 176-220 g/m2 (Laser): "<</MediaType (@PJL SET PAPERTYPE = PHOTO176-220)/cupsMediaType 19>> setpagedevice"
+*CloseUI: *MediaType
+
+*% =========================================================
+*%  Document Type
+*% =========================================================
+*OpenUI *id_DocType/Document Type:  PickOne
+*OrderDependency: 20 AnySetup *DocType
+*Defaultid_DocType: Standard
+*id_DocType Standard/Standard:	""
+*id_DocType Photo/Photo:		""
+*id_DocType Business/Business Graphic:	""
+*id_DocType CAD/CAD:		""
+*id_DocType Webpage/Web Page:	""
+*CloseUI: *id_DocType
+
+*% =========================================================
+*%  Fine Edge Option
+*% =========================================================
+*OpenUI *id_EdgeEnhance/Edge Enhancement: PickOne
+*OrderDependency: 10 AnySetup *id_EdgeEnhance
+*Defaultid_EdgeEnhance: Normal
+*id_EdgeEnhance Off/Off:		""
+*id_EdgeEnhance Normal/Normal:		""
+*id_EdgeEnhance Maximum/Maximum:	""
+*CloseUI: *id_EdgeEnhance
+
+*% =========================================================
+*%  Trapping
+*% =========================================================
+*OpenUI *id_Trapping/Trapping: PickOne
+*OrderDependency: 10 AnySetup *id_Trapping
+*Defaultid_Trapping: Medium
+*id_Trapping Off/Off:		""
+*id_Trapping Medium/Normal:	""
+*id_Trapping Maximum/Maximum:	""
+*CloseUI: *id_Trapping
+
+
+*% =========================================================
+*%  RGB Color Option
+*% =========================================================
+*OpenUI *id_RGBColor/Samsung Color Management: PickOne
+*OrderDependency: 10 AnySetup *id_RGBColor
+*Defaultid_RGBColor: Standard
+*id_RGBColor Standard/Standard: ""
+*id_RGBColor Vivid/Vivid: ""
+*id_RGBColor Device/Device: ""
+*id_RGBColor 3/Corporate Imaging: ""
+*CloseUI: *id_RGBColor
+
+*% =========================================================
+*%  Screen (id_HalftoneLPI)
+*% =========================================================
+*OpenUI *id_HalftoneLPI/Screen: PickOne
+*OrderDependency: 10 AnySetup *id_HalftoneLPI
+*Defaultid_HalftoneLPI: Enhanced
+*id_HalftoneLPI Default/Printer Default: ""
+*id_HalftoneLPI Normal/Normal:     ""
+*id_HalftoneLPI Enhanced/Enhanced: ""
+*id_HalftoneLPI Detailed/Detailed: ""
+*CloseUI: *id_HalftoneLPI
+
+*% ========================================================
+*%  SkipBlankPages
+*% ========================================================
+*OpenUI *SkipBlankPages/Skip Blank Pages: Boolean
+*OrderDependency: 10 AnySetup *SkipBlankPages
+*DefaultSkipBlankPages: False
+*SkipBlankPages False/Off:                   "%% @PJL SET XIGNOREFF=OFF"
+*SkipBlankPages True/On:                     "%% @PJL SET XIGNOREFF=ON"
+*CloseUI: *SkipBlankPages
+
+*CloseGroup: AdvancedOptions
+
+*OpenGroup: ColorAdjust/Adjustment Levels
+
+*% =========================================================
+*%  Brightness Option
+*% =========================================================
+*OpenUI *n_Brightness/Brightness: PickOne
+*OrderDependency: 10 AnySetup *n_Brightness
+*Defaultn_Brightness: 50
+*n_Brightness 0/0: "0"
+*n_Brightness 10/10: "10"
+*n_Brightness 20/20: "20"
+*n_Brightness 30/30: "30"
+*n_Brightness 40/40: "40"
+*n_Brightness 50/50: "50"
+*n_Brightness 60/60: "60"
+*n_Brightness 70/70: "70"
+*n_Brightness 80/80: "80"
+*n_Brightness 90/90: "90"
+*n_Brightness 100/100: "100"
+*CloseUI: *n_Brightness
+
+*% =========================================================
+*%  Contrast Option
+*% =========================================================
+*OpenUI *n_Contrast/Contrast: PickOne
+*OrderDependency: 10 AnySetup *n_Contrast
+*Defaultn_Contrast: 50
+*n_Contrast 0/0: "0"
+*n_Contrast 10/10: "10"
+*n_Contrast 20/20: "20"
+*n_Contrast 30/30: "30"
+*n_Contrast 40/40: "40"
+*n_Contrast 50/50: "50"
+*n_Contrast 60/60: "60"
+*n_Contrast 70/70: "70"
+*n_Contrast 80/80: "80"
+*n_Contrast 90/90: "90"
+*n_Contrast 100/100: "100"
+*CloseUI: *n_Contrast
+
+*% =========================================================
+*%  Saturation Option
+*% =========================================================
+*OpenUI *n_Saturation/Saturation: PickOne
+*OrderDependency: 10 AnySetup *n_Saturation
+*Defaultn_Saturation: 50
+*n_Saturation 0/0: "0"
+*n_Saturation 10/10: "10"
+*n_Saturation 20/20: "20"
+*n_Saturation 30/30: "30"
+*n_Saturation 40/40: "40"
+*n_Saturation 50/50: "50"
+*n_Saturation 60/60: "60"
+*n_Saturation 70/70: "70"
+*n_Saturation 80/80: "80"
+*n_Saturation 90/90: "90"
+*n_Saturation 100/100: "100"
+*CloseUI: *n_Saturation
+
+*% =========================================================
+*%  RCBalance Option
+*% =========================================================
+*OpenUI *n_RCBalance/Cyan-Red: PickOne
+*OrderDependency: 10 AnySetup *n_RCBalance
+*Defaultn_RCBalance: 50
+*n_RCBalance 0/0: "0"
+*n_RCBalance 10/10: "10"
+*n_RCBalance 20/20: "20"
+*n_RCBalance 30/30: "30"
+*n_RCBalance 40/40: "40"
+*n_RCBalance 50/50: "50"
+*n_RCBalance 60/60: "60"
+*n_RCBalance 70/70: "70"
+*n_RCBalance 80/80: "80"
+*n_RCBalance 90/90: "90"
+*n_RCBalance 100/100: "100"
+*CloseUI: *n_RCBalance
+
+*% =========================================================
+*%  GMBalance Option
+*% =========================================================
+*OpenUI *n_GMBalance/Magenta-Green: PickOne
+*OrderDependency: 10 AnySetup *n_GMBalance
+*Defaultn_GMBalance: 50
+*n_GMBalance 0/0: "0"
+*n_GMBalance 10/10: "10"
+*n_GMBalance 20/20: "20"
+*n_GMBalance 30/30: "30"
+*n_GMBalance 40/40: "40"
+*n_GMBalance 50/50: "50"
+*n_GMBalance 60/60: "60"
+*n_GMBalance 70/70: "70"
+*n_GMBalance 80/80: "80"
+*n_GMBalance 90/90: "90"
+*n_GMBalance 100/100: "100"
+*CloseUI: *n_GMBalance
+
+*% =========================================================
+*%  BYBalance Option
+*% =========================================================
+*OpenUI *n_BYBalance/Yellow-Blue: PickOne
+*OrderDependency: 10 AnySetup *n_BYBalance
+*Defaultn_BYBalance: 50
+*n_BYBalance 0/0: "0"
+*n_BYBalance 10/10: "10"
+*n_BYBalance 20/20: "20"
+*n_BYBalance 30/30: "30"
+*n_BYBalance 40/40: "40"
+*n_BYBalance 50/50: "50"
+*n_BYBalance 60/60: "60"
+*n_BYBalance 70/70: "70"
+*n_BYBalance 80/80: "80"
+*n_BYBalance 90/90: "90"
+*n_BYBalance 100/100: "100"
+*CloseUI: *n_BYBalance
+
+*CloseGroup: ColorAdjust
+
+*% =========================================================
+*%  IPP Reason
+*% =========================================================
+
+*% ========================= General Message Added
+
+
+*cupsIPPReason com.Samsung.LoadManual-error:"text:Load%20paper%20manually"
+*de.cupsIPPReason com.Samsung.LoadManual-error:"text: Legen%20manuell%20Papier%20ein."
+*es.cupsIPPReason com.Samsung.LoadManual-error:"text:Cargue%20papel%20manualmente."
+*fr.cupsIPPReason com.Samsung.LoadManual-error:"text:Chargez%20manuellement%20du%20papier."
+*it.cupsIPPReason com.Samsung.LoadManual-error:"text:Caricare%20la%20carta%20manualmente."
+*nl.cupsIPPReason com.Samsung.LoadManual-error:"text:Vul%20handmatig%20papier%20bij."
+*ko.cupsIPPReason com.Samsung.LoadManual-error:"text:수동으로%20용지를%20넣으십시오."
+*pt.cupsIPPReason com.Samsung.LoadManual-error:"text:Colocar%20o%20papel%20manualmente."
+*zh_CN.cupsIPPReason com.Samsung.LoadManual-error:"text:手动装入纸张。"
+*zh_TW.cupsIPPReason com.Samsung.LoadManual-error:"text:手動裝入紙張。"
+
+
+*cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Paper%20is%20empty%20or%20low%20in%20Tray%20MP%20paper/manual%20feeder.%20Load%20paper."
+*de.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Wenig%20oder%20kein%20Papier%20im%20Papiereinzugsbereich/manuellen%20Einzug%20des%20Mehrzweckschachts.%20Legen%20Sie%20Papier%20ein."
+*es.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Bandeja%20multiusos/alimentador%20manual%20casi%20vacíos%20o%20sin%20papel.%20Cargue%20papel."
+*fr.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Le chargeur%20de%20papier%20manuel/polyvalent%20est%20vide%20ou%20presque%20vide.%20Chargez%20du%20papier."
+*it.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Carta%20alimentatore%20multifunzione/manuale%20esaurita%20o%20scarsa.%20Caricare%20la%20carta."
+*nl.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Het%20papier%20in%20de%20multifunctionele%20lade/handmatige%20invoer%20is%20%28bijna%29%20op.%20Vul%20papier%20bij."
+*ko.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:다목적%20용지함/수동%20급지장치에%20용지가%20없거나%20부족함.
+text:%20용지를%20넣으십시오."
+*pt.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:Sem papel ou pouco papel no alimentador manual/MF de papel do tabuleiro. Coloque papel."
+*zh_CN.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:纸盘 MP 纸张/手动进纸器中缺纸或纸张不足。请装入纸张。"
+*zh_TW.cupsIPPReason com.Samsung.PaperEmptyMP-error:"text:紙匣多功能紙張/手動送紙器紙張用盡或不足。請裝入紙張。"
+
+
+
+*cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Paper%20is%20empty%20or%20low%20in%20Tray%20MP%20paper/manual%20feeder.%20Load%20paper."
+*de.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Wenig%20oder%20kein%20Papier%20im%20Papiereinzugsbereich/manuellen%20Einzug%20des%20Mehrzweckschachts.%20Legen%20Sie%20Papier%20ein."
+*es.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Bandeja%20multiusos/alimentador%20manual%20casi%20vacíos%20o%20sin%20papel.%20Cargue%20papel."
+*fr.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Le%20chargeur%20de%20papier%20manuel/polyvalent%20est%20vide%20ou%20presque%20vide.%20Chargez%20du%20papier."
+*it.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Carta%20alimentatore%20multifunzione/manuale%20esaurita%20o%20scarsa.%20Caricare%20la%20carta."
+*nl.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Het%20papier%20in%20de%20multifunctionele%20lade/handmatige%20invoer%20is%20%28bijna%29%20op.%20Vul%20papier%20bij."
+*ko.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:다목적%20용지함/수동%20급지장치에%20용지가%20없거나%20부족함.
+text:%20용지를%20넣으십시오."
+*pt.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:Sem%20papel%20ou%20pouco%20papel%20no%20alimentador%20manual/MF%20de%20papel%20do%20tabuleiro.%20Coloque%20papel."
+*zh_CN.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:纸盘%20MP%20纸张/手动进纸器中缺纸或纸张不足%20请装入纸张。"
+*zh_TW.cupsIPPReason com.Samsung.PaperEmptyMP-warning:"text:紙匣多功能紙張/手動送紙器紙張用盡或不足。請裝入紙張。"
+
+
+
+
+*cupsIPPReason com.Samsung.PaperMismatch-error:"text:Paper%20size%20is%20mismatched.%20Please%20check%20paper."
+*de.cupsIPPReason com.Samsung.PaperMismatch-error:"text:Papierformat%20stimmt%20nicht%20überein.%20Überprüfen%20Sie%20das%20Papier."
+*es.cupsIPPReason com.Samsung.PaperMismatch-error:"text:El%20tamaño%20del%20papel%20no%20coincide.%20Compruebe%20el%20papel."
+*fr.cupsIPPReason com.Samsung.PaperMismatch-error:"text:Le%20format%20du%20papier%20est%20incorrect.%20Veuillez%20vérifier%20le%20papier."
+*it.cupsIPPReason com.Samsung.PaperMismatch-error:"text:Formato%20carta%20non%20corrispondente.%20Controllare%20la%20carta."
+*nl.cupsIPPReason com.Samsung.PaperMismatch-error:"text:Papierformaat%20is%20onjuist.%20Controleer%20het%20papier."
+*ko.cupsIPPReason com.Samsung.PaperMismatch-error:"text:용지%20크기%20불일치.%20용지를%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.PaperMismatch-error:"text:Tamanho%20errado%20do%20papel.%20Verifique%20o%20papel."
+*zh_CN.cupsIPPReason com.Samsung.PaperMismatch-error:"text:纸张尺寸不匹配。请检查纸张。"
+*zh_TW.cupsIPPReason com.Samsung.PaperMismatch-error:"text:紙張大小不符。請檢查紙張。"
+
+
+
+
+*cupsIPPReason com.Samsung.PaperError-error:"text:Paper%20error.%20Call%20for%20service."
+*de.cupsIPPReason com.Samsung.PaperError-error:"text:Papierfehler.%20Service%20rufen."
+*es.cupsIPPReason com.Samsung.PaperError-error:"text:Error%20del%20papel.%20Llame%20al%20servicio%20técnico."
+*fr.cupsIPPReason com.Samsung.PaperError-error:"text:Erreur%20de%20papier.%20Appelez%20le%20service%20de%20maintenance."
+*it.cupsIPPReason com.Samsung.PaperError-error:"text:Errore%20carta.%20Rivolgersi%20all'assistenza."
+*nl.cupsIPPReason com.Samsung.PaperError-error:"text:Probleem%20met%20papier.%20Bel%20voor%20onderhoud."
+*ko.cupsIPPReason com.Samsung.PaperError-error:"text:용지%20오류.%20서비스를%20요청하십시오."
+*pt.cupsIPPReason com.Samsung.PaperError-error:"text:Erro%20de%20papel.%20Contacte%20a%20assistência%20técnica."
+*zh_CN.cupsIPPReason com.Samsung.PaperError-error:"text:纸张错误。请致电服务部门。"
+*zh_TW.cupsIPPReason com.Samsung.PaperError-error:"text: 紙張錯誤。請與服務代表聯絡。"
+
+
+
+*cupsIPPReason com.Samsung.TrayError-error:"text:Tray%20error.%20Please%20check%20the%20tray."
+*de.cupsIPPReason com.Samsung.TrayError-error:"text:Tray%20error.%20Please%20check%20the%20tray."
+*es.cupsIPPReason com.Samsung.TrayError-error:"text:Erro%20de%20la%20bandeja.%20Compruebe%20la%20bandeja."
+*fr.cupsIPPReason com.Samsung.TrayError-error:"text:Erreur%20de%20bac.%20Veuillez%20vérifier%20le%20bac."
+*it.cupsIPPReason com.Samsung.TrayError-error:"text:Errore%20vassoio.%20Controllare%20il%20vassoio."
+*nl.cupsIPPReason com.Samsung.TrayError-error:"text:Probleem%20met%20lade.%20Controleer%20de%20lade."
+*ko.cupsIPPReason com.Samsung.TrayError-error:"text:용지함%20오류.%20용지함을%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.TrayError-error:"text:Erro%20do%20tabuleiro.%20Verifique%20o%20tabuleiro."
+*zh_CN.cupsIPPReason com.Samsung.TrayError-error:"text:纸盘错误。请检查纸盘。"
+*zh_TW.cupsIPPReason com.Samsung.TrayError-error:"text:紙匣錯誤。請檢查紙匣。"
+
+
+
+
+*cupsIPPReason com.Samsung.TonerInvalid-error:"text:Toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide."
+*de.cupsIPPReason com.Samsung.TonerInvalid-error:"text:Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.TonerInvalid-error:"text:El%20cartucho%20de%20tóner%20no%20es%20compatible.%20Consulte%20la%20guía%20del%20usuario."
+*fr.cupsIPPReason com.Samsung.TonerInvalid-error:"text:La%20cartouche%20de%20toner%20n'est%20pas%20compatible.%20Consultez%20le%20mode%20d'emploi."
+*it.cupsIPPReason com.Samsung.TonerInvalid-error:"text:La%20cartuccia%20del%20toner%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.TonerInvalid-error:"text:Tonercassette%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.TonerInvalid-error:"text:사용할%20수%20없는%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.TonerInvalid-error:"text:O%20cartucho%20de%20toner%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.TonerInvalid-error:"text:墨粉盒不兼容。请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.TonerInvalid-error:"text:碳粉匣不相容。查閱使用手冊。"
+
+
+
+*cupsIPPReason com.Samsung.TonerError-error:"text:Toner%20error.%20Replace%20with%20new%20toner%20cartridge."
+*de.cupsIPPReason com.Samsung.TonerError-error:"text:Tonerfehler.%20Durch%20neue%20Tonerkartusche%20ersetzen."
+*es.cupsIPPReason com.Samsung.TonerError-error:"text:Error%20en%20el%20tóner.%20Sustituya%20por%20un%20cartucho%20de%20tóner%20nuevo."
+*fr.cupsIPPReason com.Samsung.TonerError-error:"text:Erreur%20de%20toner.%20Remplacer%20la%20cartouche%20de%20toner."
+*it.cupsIPPReason com.Samsung.TonerError-error:"text:Errore%20toner.%20Sostituire%20con%20nuova%20cartuccia%20di%20toner."
+*nl.cupsIPPReason com.Samsung.TonerError-error:"text:Probleem%20met%20toner.%20Plaats%20een%20nieuwe%20tonercassette."
+*ko.cupsIPPReason com.Samsung.TonerError-error:"text:토너%20오류.%20새%20토너%20카트리지로%20교체하십시오."
+*pt.cupsIPPReason com.Samsung.TonerError-error:"text:Erro%20do%20toner.%20Substituir%20por%20um%20novo%20cartucho%20de%20toner."
+*zh_CN.cupsIPPReason com.Samsung.TonerError-error:"text:墨粉错误。换上新的墨粉盒。"
+*zh_TW.cupsIPPReason com.Samsung.TonerError-error:"text:碳粉錯誤。更新新的碳粉匣。"
+
+
+
+
+*cupsIPPReason com.Samsung.ImagingUnitError-error:"text:Imaging%20unit%20is%20not%20compatible.%20Check%20user's%20guide."
+*de.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:Die%20Bildeinheit%20ist%20nicht%20kompatibel.%20Lesen%20Sie%20im%20Benutzerhandbuch%20nach."
+*es.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:La%20unidad%20de%20imagen%20no%20es%20compatible.%20Consulte%20el%20Manual%20del%20usuario."
+*fr.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:L'unité%20d'imagerie%20n'est%20pas%20compatible.%20Consultez%20le%20mode%20d'emploi."
+*it.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:La%20fotounità%20non%20è%20compatibile.%20Consultare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:Beeldeenheid%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:사용할%20수%20없는%20이미징%20유니트%20입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:Unidade%20de%20imagem%20incompatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:成像单元不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.ImagingUnitError-error:"text:成像單元不相容。%20請查閱使用者手冊。"
+
+
+
+*cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Please%20prepare%20new%20imaging%20unit."
+*de.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Bereiten%20Sie%20eine%20neue%20Bildeinheit%20vor."
+*es.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Prepare%20una%20unidad%20de%20generación%20de%20imágenes%20nueva."
+*fr.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Veuillez%20préparer%20une%20nouvelle%20unité%20d'imagerie."
+*it.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Preparare%20una%20nuova%20fotounità."
+*nl.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Houd%20een%20nieuwe%20beeldeenheid%20gereed."
+*ko.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:새%20이미징%20유니트를%20준비하십시오."
+*pt.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:Preparar%20nova%20unidade%20de%20imagem."
+*zh_CN.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:请准备新的成像单元。"
+*zh_TW.cupsIPPReason com.Samsung.ImagingUnitWarning-warning:"text:請檢查傳送帶。"
+
+
+
+
+*cupsIPPReason com.Samsung.TransbeltError-error:"text:Please%20check%20transfer%20belt."
+*de.cupsIPPReason com.Samsung.TransbeltError-error:"text:Überprüfen%20Sie%20das%20Übertragungsband."
+*es.cupsIPPReason com.Samsung.TransbeltError-error:"text:Verifique%20la%20cinta%20de%20transferencia."
+*fr.cupsIPPReason com.Samsung.TransbeltError-error:"text:Vérifiez%20la%20courroie%20de%20transfert."
+*it.cupsIPPReason com.Samsung.TransbeltError-error:"text:Controllare%20la%20cinghia%20di%20trasferimento."
+*nl.cupsIPPReason com.Samsung.TransbeltError-error:"text:Controleer%20de%20transportriem."
+*ko.cupsIPPReason com.Samsung.TransbeltError-error:"text:전송벨트를%20확인하세요."
+*pt.cupsIPPReason com.Samsung.TransbeltError-error:"text:Verifique%20a%20correio%20de%20transferência."
+*zh_CN.cupsIPPReason com.Samsung.TransbeltError-error:"text:请检查传送带。"
+*zh_TW.cupsIPPReason com.Samsung.TransbeltError-error:"text:請檢查傳送帶。"
+
+
+
+
+*cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Please%20check%20transfer%20belt."
+*de.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Überprüfen%20Sie%20das%20Übertragungsband."
+*es.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Verifique%20la%20cinta%20de%20transferencia."
+*fr.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Vérifiez%20la%20courroie%20de%20transfert."
+*it.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Controllare%20la%20cinghia%20di%20trasferimento."
+*nl.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Controleer%20de%20transportriem."
+*ko.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:전송벨트를%20확인하세요."
+*pt.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:Verifique%20a%20correio%20de%20transferência."
+*zh_CN.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:请检查传送带。"
+*zh_TW.cupsIPPReason com.Samsung.TransbeltWarning-warning:"text:請檢查傳送帶。"
+
+
+
+*cupsIPPReason com.Samsung.FinisherError-error:"text:Finisher%20error.%20Please%20check%20the%20finisher."
+*de.cupsIPPReason com.Samsung.FinisherError-error:"text:Finisher-Fehler.%20Überprüfen%20Sie%20den%20Finisher."
+*es.cupsIPPReason com.Samsung.FinisherError-error:"text:Error%20de%20la%20acabadora.%20Compruebe%20la%20acabadora."
+*fr.cupsIPPReason com.Samsung.FinisherError-error:"text:Erreur%20de%20module%20de%20finition.%20Veuillez%20vérifier%20le%20module%20de%20finition."
+*it.cupsIPPReason com.Samsung.FinisherError-error:"text:Errore%20finisher.%20Controllare%20il%20finisher."
+*nl.cupsIPPReason com.Samsung.FinisherError-error:"text:Probleem%20met%20afwerkeenheid.%20Controleer%20de%20afwerkeenheid."
+*ko.cupsIPPReason com.Samsung.FinisherError-error:"text:피니셔%20오류.%20피니셔를%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.FinisherError-error:"text:Erro%20do%20finalizador.%20Verifique%20o%20finalizador.."
+*zh_CN.cupsIPPReason com.Samsung.FinisherError-error:"text:装订器错误。请检查装订器。"
+*zh_TW.cupsIPPReason com.Samsung.FinisherError-error:"text:分頁機錯誤。請檢查分頁機。"
+
+
+
+
+
+*cupsIPPReason com.Samsung.FuserError-error:"text:Fuser%20error.%20Please%20check%20the%20fuser."
+*de.cupsIPPReason com.Samsung.FuserError-error:"text:Fehler%20in%20Fixiereinheit.%20Überprüfen%20Sie%20die%20Fixiereinheit."
+*es.cupsIPPReason com.Samsung.FuserError-error:"text:Error%20en%20fusor.%20Compruebe%20el%20fusor."
+*fr.cupsIPPReason com.Samsung.FuserError-error:"text:Erreur%20de%20four.%20Veuillez%20vérifier%20le%20four."
+*it.cupsIPPReason com.Samsung.FuserError-error:"text:Errore%20fusore.%20Controllare%20il%20fusore."
+*nl.cupsIPPReason com.Samsung.FuserError-error:"text:Probleem%20met%20fixeereenheid.%20Controleer%20de%20fixeereenheid."
+*ko.cupsIPPReason com.Samsung.FuserError-error:"text:퓨저%20오류.%20퓨저를%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.FuserError-error:"text:Erro%20do%20fusor.%20Verifique%20o%20fusor."
+*zh_CN.cupsIPPReason com.Samsung.FuserError-error:"text:加热器错误。请检查加热器。"
+*zh_TW.cupsIPPReason com.Samsung.FuserError-error:"text:加熱器錯誤。請檢查加熱器。"
+
+
+
+
+*cupsIPPReason com.Samsung.LSUError-error:"text:LSU%20error.%20Please%20check%20the%20LSU."
+*de.cupsIPPReason com.Samsung.LSUError-error:"text:LSU-Fehler.%20Überprüfen%20Sie%20die%20LSU."
+*es.cupsIPPReason com.Samsung.LSUError-error:"text:Error%20LSU.%20Compruebe%20la%20unidad%20LSU."
+*fr.cupsIPPReason com.Samsung.LSUError-error:"text:Erreur%20du%20module%20laser.%20Veuillez%20vérifier%20le%20module%20laser."
+*it.cupsIPPReason com.Samsung.LSUError-error:"text:Errore%20LSU.%20Controllare%20la%20LSU."
+*nl.cupsIPPReason com.Samsung.LSUError-error:"text:Probleem%20met%20scannereenheid.%20Controleer%20de%20scannereenheid."
+*ko.cupsIPPReason com.Samsung.LSUError-error:"text:LSU%20오류.%20LSU를%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.LSUError-error:"text:Erro%20LSU.%20Verifique%20o%20LSU."
+*zh_CN.cupsIPPReason com.Samsung.LSUError-error:"text:LSU%20错误。请检查%20LSU。"
+*zh_TW.cupsIPPReason com.Samsung.LSUError-error:"text:LSU%20錯誤。請檢查%20LSU。"
+
+
+
+
+*cupsIPPReason com.Samsung.SystemError-error:"text:Printer%20system%20error.%20Please%20check%20your%20printer."
+*de.cupsIPPReason com.Samsung.SystemError-error:"text:Druckersystemfehler.%20Überprüfen%20Sie%20den%20Drucker."
+*es.cupsIPPReason com.Samsung.SystemError-error:"text:Error%20del%20sistema%20de%20impresión.%20Verifique%20la%20impresora."
+*fr.cupsIPPReason com.Samsung.SystemError-error:"text:Erreur%20système%20d'imprimante.%20Veuillez%20vérifier%20votre%20imprimante."
+*it.cupsIPPReason com.Samsung.SystemError-error:"text:Errori%20di%20sistema%20della%20stampante.%20Controllare%20la%20stampante."
+*nl.cupsIPPReason com.Samsung.SystemError-error:"text:Probleem%20met%20printersysteem.%20Controleer%20uw%20printer."
+*ko.cupsIPPReason com.Samsung.SystemError-error:"text:프린터%20시스템%20오류.%20프린터를%20확인하십시오."
+*pt.cupsIPPReason com.Samsung.SystemError-error:"text:Erro%20do%20sistema%20da%20impressora.%20Verifique%20a%20sua%20impressora."
+*zh_CN.cupsIPPReason com.Samsung.SystemError-error:"text:打印机系统错误。请检查您的打印机。"
+*zh_TW.cupsIPPReason com.Samsung.SystemError-error:"text:印表機系統錯誤。請檢查印表機。"
+
+
+
+
+
+*cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:Printer%20has%20an%20error%20or%20warning.%20Please%20check%20the%20printer."
+*de.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:Der%20Drucker%20meldet%20einen%20Fehler%20oder%20eine%20Warnung.%20Überprüfen%20Sie%20den%20Drucker."
+*es.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:La%20impresora%20arrojó%20un%20error%20o%20una%20advertencia.%20Verifique%20la%20impresora."
+*fr.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:L'imprimante%20a%20une%20erreur%20ou%20un%20avertissement.%20Veuillez%20vérifier%20l'imprimante."
+*it.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:Errore%20o%20avvertenza%20dalla%20stampante.%20Controllare%20la%20stampante."
+*nl.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:Er%20is%20een%20fout%20of%20waarschuwing%20voor%20de%20printer.%20Controleer%20de%20printer."
+*ko.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:프린터에%20문제가%20있습니다.%20프린터를%20체크하세요."
+*pt.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:Erro%20ou%20aviso%20da%20impressora.%20Verifique%20a%20impressora."
+*zh_CN.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:打印机发生错误或出现警告。%20请检查打印机。"
+*zh_TW.cupsIPPReason com.Samsung.GeneralErrorOrWarning-error:"text:印表機發生錯誤或出現警告。%20請檢查印表機。"
+
+
+
+*cupsIPPReason com.Samsung.TonerFailure-error:"text:Toner%20Cartridge%20Failure.%20Call%20for%20service."
+*de.cupsIPPReason com.Samsung.TonerFailure-error:"text:Tonerkartuschenfehler.%20Service%20rufen."
+*es.cupsIPPReason com.Samsung.TonerFailure-error:"text:Error%20del%20cartucho%20de%20tóner.%20Llame%20al%20servicio%20técnico."
+*fr.cupsIPPReason com.Samsung.TonerFailure-error:"text:Échec%20de%20la%20cartouche%20de%20toner.%20Appelez%20le%20service%20de%20maintenance."
+*it.cupsIPPReason com.Samsung.TonerFailure-error:"text:Errore%20cartuccia%20toner.%20Rivolgersi%20all'assistenza."
+*nl.cupsIPPReason com.Samsung.TonerFailure-error:"text:Probleem%20met%20tonercassette.%20Bel%20voor%20onderhoud."
+*ko.cupsIPPReason com.Samsung.TonerFailure-error:"text:토너%20카트리지%20고장.%20서비스를%20요청하십시오."
+*pt.cupsIPPReason com.Samsung.TonerFailure-error:"text:Falha%20no%20Cartucho%20de%20Toner.%20Contacte%20a%20assistência%20técnica."
+*zh_CN.cupsIPPReason com.Samsung.TonerFailure-error:"text:墨粉盒故障。请致电服务部门。"
+*zh_TW.cupsIPPReason com.Samsung.TonerFailure-error:"text:碳粉匣故障。請與服務代表聯絡。"
+
+
+
+*cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Imaging%20Unit%20Failure.%20Call%20for%20service."
+*de.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Bildeinheitfehler.%20Service%20rufen."
+*es.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Error%20de%20unidad%20de%20imagen.%20Llame%20al%20servicio%20técnico."
+*fr.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Échec%20de%20l’unité%20d’imagerie.%20Appelez%20le%20service%20de%20maintenance."
+*it.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Errore%20fotounità.%20Rivolgersi%20all'assistenza."
+*nl.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Probleem%20met%20beeldeenheid.%20Bel%20voor%20onderhoud."
+*ko.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:이미징%20유니트%20고장.%20서비스를%20요청하십시오."
+*pt.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:Falha%20na%20Unidade%20de%20imagem.%20Contacte%20a%20assistência%20técnica."
+*zh_CN.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:成像装置故障。请致电服务部门。"
+*zh_TW.cupsIPPReason com.Samsung.ImagingUnitFailure-error:"text:成像單元故障。請與服務代表聯絡。"
+
+
+*% =========================================================
+
+
+*cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Paper%20Mismatch%20MP"
+*de.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Falsches%20Papier%20in%20MZS"
+*es.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Discrepancia%20papel%20multiusos"
+*fr.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Disparité%20papier%20dans%20le%20bac%20polyvalent"
+*it.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Carta%20di%20formato%20diverso%20vassoio%20multifunzione"
+*nl.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:Verkeerd%20papier%20in%20MPT"
+*ko.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:다목적용지함%20용지%20불일치"
+*pt.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%20multifuncional"
+*zh_CN.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:MP%20纸盘纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.MPPaperMismatch-error:"text:紙匣%20MP%20紙張不符"
+
+*cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Paper%20Mismatch%20tray%201"
+*de.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Falsches%20Papier%20in%20Schacht%201"
+*es.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Discrepancia%20de%20papel%20bandeja%201"
+*fr.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Disparité%20papier%20dans%20le%20bac%201"
+*it.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Carta%20di%20formato%20diverso%20vassoio%201"
+*nl.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:Verkeerd%20papier%20in%20lade%201"
+*ko.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:용지함1용지%20불일치"
+*pt.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%201"
+*zh_CN.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:纸盘%201%20纸盘纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.FirstPaperMismatch-error:"text:紙匣%201%20紙張不符"
+
+*cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Paper%20Mismatch%20tray%202"
+*de.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Falsches%20Papier%20in%20Schacht%202"
+*es.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Discrepancia%20de%20papel%20bandeja%202"
+*fr.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Disparité%20papier%20dans%20le%20bac%202"
+*it.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Carta%20di%20formato%20diverso%20vassoio%202"
+*nl.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:Verkeerd%20papier%20in%20lade%202"
+*ko.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:용지함2용지%20불일치"
+*pt.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%202"
+*zh_CN.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:纸盘%202%20纸盘纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.OptPaperMismatch-error:"text:紙匣%202%20紙張不符"
+
+*cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Paper%20Mismatch%20tray%203"
+*de.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Falsches%20Papier%20in%20Schacht%203"
+*es.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Discrepancia%20de%20papel%20bandeja%203"
+*fr.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Disparité%20papier%20dans%20le%20bac%203"
+*it.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Carta%20di%20formato%20diverso%20vassoio%203"
+*nl.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:Verkeerd%20papier%20in%20lade%203"
+*ko.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:용지함3용지%20불일치"
+*pt.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%203"
+*zh_CN.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:纸盘%203%20纸盘纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.Opt3PaperMismatch-error:"text:紙匣%203%20紙張不符"
+
+*cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Paper%20Mismatch%20tray%202%28HCF%29"
+*de.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Falsches%20Papier%20in%20Schacht%202%20%28HCF%29"
+*es.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Discrepancia%20de%20papel%20en%20la%20bandeja%202%20%28alimentador%20de%20alta%20capacidad%29"
+*fr.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Format%20de%20papier%20incorrect%20dans%20le%20bac%202"
+*it.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Carta%20di%20formato%20diverso%20vassoio%202%20%28HCF%29"
+*nl.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:Verkeerd%20papier%20in%20lade%202%20%28HCF%29"
+*ko.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:용지함%202%28HCF%29%20용지%20불일치"
+*pt.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%202%20%28HCF%29"
+*zh_CN.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:纸盘%202%20%28HCF%29%20纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.OptPaperMismatchHcf-error:"text:紙匣%202%20%28HCF%29%20中紙張不符"
+
+*cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Paper%20Mismatch%20tray%203%28HCF%29"
+*de.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Falsches%20Papier%20in%20Schacht%203%20%28HCF%29"
+*es.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Discrepancia%20de%20papel%20en%20la%20bandeja%203%20%28alimentador%20de%20alta%20capacidad%29"
+*fr.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Format%20de%20papier%20incorrect%20dans%20le%20bac%203"
+*it.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Carta%20di%20formato%20diverso%20vassoio%203%20%28HCF%29"
+*nl.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:Verkeerd%20papier%20in%20lade%203%20%28HCF%29"
+*ko.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:용지함%203%28HCF%29%20용지%20불일치"
+*pt.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:O%20papel%20não%20corresponde%20no%20tabuleiro%203%20%28HCF%29"
+*zh_CN.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:纸盘%203%20%28HCF%29%20纸张不匹配"
+*zh_TW.cupsIPPReason com.Samsung.Opt3PaperMismatchHcf-error:"text:紙匣%203%20%28HCF%29%20中紙張不符"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:Yellow%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:Gelb-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:El%20cartucho%20de%20tóner%20amarillo%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:La%20cartouche%20de%20toner%20jaune%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:La%20cartuccia%20del%20toner%20giallo%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:Cassette%20met%20gele%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:사용할%20수%20없는%20노랑색%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:O%20cartucho%20de%20toner%20amarelo%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:黄色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitPwdY-error:"text:黃色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:Yellow%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:Gelb-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:El%20cartucho%20de%20tóner%20amarillo%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:La%20cartouche%20de%20toner%20jaune%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:La%20cartuccia%20del%20toner%20giallo%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:Cassette%20met%20gele%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:사용할%20수%20없는%20노랑색%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:O%20cartucho%20de%20toner%20amarelo%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:黄色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitY-error:"text:黃色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:Yellow%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:Gelb-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:El%20cartucho%20de%20tóner%20amarillo%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:La%20cartouche%20de%20toner%20jaune%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:La%20cartuccia%20del%20toner%20giallo%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:Cassette%20met%20gele%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:사용할%20수%20없는%20노랑색%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:O%20cartucho%20de%20toner%20amarelo%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:黄色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.NonGenuineTonerY-error:"text:黃色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:Magenta%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:Magenta-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:El%20cartucho%20de%20tóner%20magenta%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:La%20cartouche%20de%20toner%20magenta%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:La%20cartuccia%20del%20toner%20magenta%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:Cassette%20met%20magenta%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:사용할%20수%20없는%20마젠타%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:O%20cartucho%20de%20toner%20magenta%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:洋红色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitPwdM-error:"text:洋紅色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:Magenta%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:Magenta-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:El%20cartucho%20de%20tóner%20magenta%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:La%20cartouche%20de%20toner%20magenta%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:La%20cartuccia%20del%20toner%20magenta%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:Cassette%20met%20magenta%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:사용할%20수%20없는%20마젠타%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:O%20cartucho%20de%20toner%20magenta%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:洋红色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitM-error:"text:洋紅色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:Magenta%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:Magenta-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:El%20cartucho%20de%20tóner%20magenta%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:La%20cartouche%20de%20toner%20magenta%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:La%20cartuccia%20del%20toner%20magenta%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:Cassette%20met%20magenta%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:사용할%20수%20없는%20마젠타%20토너입니다.%20설명서를%20참조하십시오."
+*pt.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:O%20cartucho%20de%20toner%20magenta%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:洋红色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.NonGenuineTonerM-error:"text:洋紅色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:Cyan%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:Cyan-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:El%20cartucho%20de%20tóner%20cian%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:La%20cartouche%20de%20toner%20cyan%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:La%20cartuccia%20del%20toner%20ciano%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:Cassette%20met%20cyaan%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:사용할%20수%20없는%20시안%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:O%20cartucho%20de%20toner%20turquesa%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:青色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitPwdC-error:"text:青色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:Cyan%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:Cyan-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:El%20cartucho%20de%20tóner%20cian%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:La%20cartouche%20de%20toner%20cyan%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:La%20cartuccia%20del%20toner%20ciano%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:Cassette%20met%20cyaan%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:사용할%20수%20없는%20시안%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:O%20cartucho%20de%20toner%20turquesa%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:青色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitC-error:"text:青色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:Cyan%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:Cyan-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:El%20cartucho%20de%20tóner%20cian%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:La%20cartouche%20de%20toner%20cyan%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:La%20cartuccia%20del%20toner%20ciano%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:Cassette%20met%20cyaan%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:사용할%20수%20없는%20시안%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:O%20cartucho%20de%20toner%20turquesa%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:青色墨粉盒不兼容。%20请查阅用户指南。"
+*zh_TW.cupsIPPReason com.Samsung.NonGenuineTonerC-error:"text:青色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:Black%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:Schwarz-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:El%20cartucho%20de%20tóner%20negro%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:La%20cartouche%20de%20toner%20noir%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:La%20cartuccia%20del%20toner%20nero%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:Cassette%20met%20zwarte%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:사용할%20수%20없는%20검정색%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:O%20cartucho%20de%20toner%20preto%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:黑色墨粉盒不兼容。%20请查阅指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitPwdK-error:"text:黑色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:Black%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:Schwarz-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:El%20cartucho%20de%20tóner%20negro%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:La%20cartouche%20de%20toner%20noir%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:La%20cartuccia%20del%20toner%20nero%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:Cassette%20met%20zwarte%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:사용할%20수%20없는%20검정색%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:O%20cartucho%20de%20toner%20preto%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:黑色墨粉盒不兼容。%20请查阅指南。"
+*zh_TW.cupsIPPReason com.Samsung.InvalidTonerKitK-error:"text:黑色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:Black%20toner%20cartridge%20is%20not%20compatible.%20Check%20user's%20guide"
+*de.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:Schwarz-Tonerkartusche%20ist%20nicht%20kompatibel.%20Im%20Handbuch%20nachsehen."
+*es.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:El%20cartucho%20de%20tóner%20negro%20no%20es%20compatible.%20Consultar%20el%20Manual%20de%20Usuario."
+*fr.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:La%20cartouche%20de%20toner%20noir%20n’est%20pas%20compatible.%20Consultez%20le%20mode%20d’emploi."
+*it.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:La%20cartuccia%20del%20toner%20nero%20non%20è%20compatibile.%20Controllare%20la%20guida%20dell'utente."
+*nl.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:Cassette%20met%20zwarte%20toner%20is%20niet%20compatibel.%20Raadpleeg%20de%20gebruikershandleiding."
+*ko.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:사용할%20수%20없는%20검정색%20토너입니다.%20설명서를%20참조하십시오"
+*pt.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:O%20cartucho%20de%20toner%20preto%20não%20é%20compatível.%20Consulte%20o%20manual%20do%20utilizador."
+*zh_CN.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:黑色墨粉盒不兼容。%20请查阅指南。"
+*zh_TW.cupsIPPReason com.Samsung.NonGenuineTonerK-error:"text:黑色碳粉匣不相容。%20查閱使用手冊。"
+
+*cupsIPPReason com.Samsung.UsbCableOff-error:"text:USB%20Printer%20status%20is%20not%20available"
+*de.cupsIPPReason com.Samsung.UsbCableOff-error:"text:USB-Druckerstatus%20nicht%20verfügbar."
+*es.cupsIPPReason com.Samsung.UsbCableOff-error:"text:El%20estado%20de%20la%20impresora%20USB%20no%20está%20disponible"
+*fr.cupsIPPReason com.Samsung.UsbCableOff-error:"text:L’état%20de%20l’imprimante%20USB%20n’est%20pas%20disponible."
+*it.cupsIPPReason com.Samsung.UsbCableOff-error:"text:Lo%20stato%20della%20stampante%20USB%20non%20è%20disponibile"
+*nl.cupsIPPReason com.Samsung.UsbCableOff-error:"text:USB-printerstatus%20is%20niet%20beschikbaar"
+*ko.cupsIPPReason com.Samsung.UsbCableOff-error:"text:USB%20케이블로%20연결된%20프린터의%20상태를%20알%20수%20없습니다."
+*pt.cupsIPPReason com.Samsung.UsbCableOff-error:"text:O%20estado%20da%20impressora%20USB%20não%20está%20disponível"
+*zh_CN.cupsIPPReason com.Samsung.UsbCableOff-error:"text:USB%20打印机状态不可用"
+*zh_TW.cupsIPPReason com.Samsung.UsbCableOff-error:"text:無法取得%20USB%20印表機狀態"
+
+*cupsIPPReason com.Samsung.NetworkCableOff-error:"text:Network%20Printer status%20is%20not%20available"
+*de.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:Netzwerkdruckerstatus%20nicht%20verfügbar."
+*es.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:El%20estado%20de%20la%20impresora%20de%20red%20no%20está%20disponible"
+*fr.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:L’état%20de%20l’imprimante%20réseau%20n’est%20pas%20disponible."
+*it.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:Lo%20stato%20della%20stampante%20di%20rete%20non%20disponibile"
+*nl.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:Netwerkprinterstatus%20is%20niet%20beschikbaar"
+*ko.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:네트워크%20프린터의%20상태를%20알%20수%20없습니다."
+*pt.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:O%20estado%20da%20impressora%20de%20rede%20não%20está%20disponível"
+*zh_CN.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:网络打印机状态不可用"
+*zh_TW.cupsIPPReason com.Samsung.NetworkCableOff-error:"text:無法取得網路印表機狀態"
+
+*cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Replace%20with%20new%20Transfer%20belt%20unit"
+*de.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Durch%20neue%20Übertragungsbandeinheit%20ersetzen."
+*es.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Substitúyala%20por%20una%20unidad%20de%20cinta%20de%20transferencia%20nueva."
+*fr.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Remplacez%20par%20une%20nouvelle%20unité%20de%20bande%20d'accélération."
+*it.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Sostituire%20con%20una%20nuova%20unità%20cinghia%20di%20trasferimento."
+*nl.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Plaats%20een%20nieuwe%20transportriemeenheid."
+*ko.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:새%20용지%20이송벨트로%20교체하십시오."
+*pt.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:Substituir%20por%20uma%20nova%20correia%20de%20transferência."
+*zh_CN.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:更换成新的转印带装置。"
+*zh_TW.cupsIPPReason com.Samsung.ReplaceTransbelt-error:"text:以新的轉印皮帶進行更換。"
+
+*cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Replace%20with%20new%20Transfer%20belt%20unit"
+*de.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Durch%20neue%20Übertragungsbandeinheit%20ersetzen."
+*es.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Substitúyala%20por%20una%20unidad%20de%20cinta%20de%20transferencia%20nueva."
+*fr.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Remplacez%20par%20une%20nouvelle%20unité%20de%20bande%20d'accélération."
+*it.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Sostituire%20con%20una%20nuova%20unità%20cinghia%20di%20trasferimento."
+*nl.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Plaats%20een%20nieuwe%20transportriemeenheid."
+*ko.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:새%20용지%20이송벨트로%20교체하십시오."
+*pt.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:Substituir%20por%20uma%20nova%20correia%20de%20transferência."
+*zh_CN.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:更换成新的转印带装置。"
+*zh_TW.cupsIPPReason com.Samsung.ReplaceTransSoon-error:"text:以新的轉印皮帶進行更換。"
+
+*cupsIPPReason com.Samsung.PowerSave-report: "text:Sleeping..."
+*de.cupsIPPReason com.Samsung.PowerSave-report: "text:Im Sleep-Modus..."
+*es.cupsIPPReason com.Samsung.PowerSave-report: "text:En espera..."
+*fr.cupsIPPReason com.Samsung.PowerSave-report: "text:En veille..."
+*it.cupsIPPReason com.Samsung.PowerSave-report: "text:In attesa..."
+*nl.cupsIPPReason com.Samsung.PowerSave-report: "text:In slaapstand..."
+*ko.cupsIPPReason com.Samsung.PowerSave-report: "text:절전 모드"
+*pt.cupsIPPReason com.Samsung.PowerSave-report: "text:=A hibernar..."
+*zh_CN.cupsIPPReason com.Samsung.PowerSave-report: "text:正在休眠..."
+*zh_TW.cupsIPPReason com.Samsung.PowerSave-report: "text:休眠中..."
+
+*cupsIPPReason com.Samsung.AcrMode-report: "text:Adjusting%20Color%20Registration...%20Please%20wait%20few%20minutes."
+*de.cupsIPPReason com.Samsung.AcrMode-report: "text:Farbregistrierung%20wird%20angepasst...%20Dies%20kann%20einige%20Minuten%20dauern."
+*es.cupsIPPReason com.Samsung.AcrMode-report: "text:Ajustando%20el%20registro%20de%20colores...%20Espere%20unos%20minutos."
+*fr.cupsIPPReason com.Samsung.AcrMode-report: "text:Réglage%20de%20l’enregistrement%20des%20couleurs...%20Veuillez%20patienter%20quelques%20minutes."
+*it.cupsIPPReason com.Samsung.AcrMode-report: "text:Regolazione%20registrazione%20colori...%20Attendere%20qualche%20minuto."
+*nl.cupsIPPReason com.Samsung.AcrMode-report: "text:Bezig%20met%20aanpassen%20van%20kleurregistratie...%20Enkele%20minuten%20geduld."
+*ko.cupsIPPReason com.Samsung.AcrMode-report: "text:컬러%20조정중...%20잠시만%20기다려%20주세요."
+*pt.cupsIPPReason com.Samsung.AcrMode-report: "text:A%20ajustar%20o%20registo%20de%20cor...%20Aguarde%20alguns%20minutos."
+*zh_CN.cupsIPPReason com.Samsung.AcrMode-report: "text:正在调整色彩配准...%20请等待数分钟。"
+*zh_TW.cupsIPPReason com.Samsung.AcrMode-report: "text:正在調整色彩登錄...%20請等待幾分鐘。"
+
+*cupsIPPReason com.Samsung.Warmingup-report: "text:Warming%20up...%20Please%20wait%20few%20minutes."
+*de.cupsIPPReason com.Samsung.Warmingup-report: "text:Aufwärmphase...%20Dies%20kann%20einige%20Minuten%20dauern."
+*es.cupsIPPReason com.Samsung.Warmingup-report: "text:Preparándose...%20Espere%20unos%20minutos."
+*fr.cupsIPPReason com.Samsung.Warmingup-report: "text:Préchauffage%20en%20cours...%20Veuillez%20patienter%20quelques%20minutes."
+*it.cupsIPPReason com.Samsung.Warmingup-report: "text:Riscaldamento...%20Attendere%20qualche%20minuto."
+*nl.cupsIPPReason com.Samsung.Warmingup-report: "text:Bezig%20met%20opwarmen...%20Enkele%20minuten%20geduld."
+*ko.cupsIPPReason com.Samsung.Warmingup-report: "text:준비%20중입니다...%20잠시만%20기다려%20주세요."
+*pt.cupsIPPReason com.Samsung.Warmingup-report: "text:A%20aquecer...%20Aguarde%20alguns%20minutos."
+*zh_CN.cupsIPPReason com.Samsung.Warmingup-report: "text:正在预热...%20请等待数分钟。"
+*zh_TW.cupsIPPReason com.Samsung.Warmingup-report: "text:暖機中...%20請等待幾分鐘。"
+
+*cupsIPPReason com.Samsung.Processing-report: "text:Processing"
+*de.cupsIPPReason com.Samsung.Processing-report: "text:n Bearbeitung"
+*es.cupsIPPReason com.Samsung.Processing-report: "text:Procesando"
+*fr.cupsIPPReason com.Samsung.Processing-report: "text:Traitement en cours"
+*it.cupsIPPReason com.Samsung.Processing-report: "text:Elaborazione in corso"
+*nl.cupsIPPReason com.Samsung.Processing-report: "text:Bezig met verwerken"
+*ko.cupsIPPReason com.Samsung.Processing-report: "text:처리중"
+*pt.cupsIPPReason com.Samsung.Processing-report: "text:A processar"
+*zh_CN.cupsIPPReason com.Samsung.Processing-report: "text:处理中"
+*zh_TW.cupsIPPReason com.Samsung.Processing-report: "text:處理中"
+
+*cupsIPPReason com.Samsung.General-report: "text:Refer%20Printer%20Utility%20for%20detailed%20printer%20status%20and%20trouble%20shooting%20guides.%28Utility,%20Printer%20Setup>Utility>Open%20Printer%20Utility%29"
+*de.cupsIPPReason com.Samsung.General-report: "text:Umfassende%20Informationen%20zum%20Druckerstatus%20und%20zur%20Fehlerbehebung%20finden%20Sie%20unter%20Drucker-Dienstprogramm.
+text:%28Sonstiges,%20Drucker%20konfigurieren>Sonstiges>Drucker-Dienstprogramm%20öffnen%29"
+*es.cupsIPPReason com.Samsung.General-report: "text:Consulte%20Utilidad%20Impresoras%20para%20obtener%20información%20detallada%20sobre%20el%20estado%20de%20la%20impresora%20y%20para%20obtener%20guías%20de%20solución%20de%20problemas.
+text:%28Utilidad,%20Configuración%20de%20impresora>Utilidad>Abrir%20Utilidad%20Impresoras%29"
+*fr.cupsIPPReason com.Samsung.General-report: "text:Reportez-vous%20à%20l’utilitaire%20de%20l’imprimante%20pour%20obtenir%20des%20informations%20détaillées%20concernant%20les%20guides%20d’état%20de%20l’imprimante%20et%20de%20dépannage.
+text:%28Utilitaire,%20Configuration%20d’imprimante>Utilitaire>Ouvrir%20l’utilitaire%20de%20l’imprimante%29"
+*it.cupsIPPReason com.Samsung.General-report: "text:Per%20ulteriori%20informazioni%20sullo%20stato%20della%20stampante%20e%20sulla%20risoluzione%20dei%20problemi,%20fare%20riferimento%20Utility%20Stampante.
+text:%28Utility,%20Configurazione%20stampante>Utility>Apri%20Utility%20Stampante%29"
+*nl.cupsIPPReason com.Samsung.General-report: "text:Raadpleeg%20Printerhulpprogramma%20voor%20gedetaileerde%20informatie%20over%20de%20printerstatus%20en%20instructies%20voor%20probleemoplossing.
+text:%28Onderhoud,%20Printerconfiguratie>Onderhoud>Open%20Printerhulpprogramma%29"
+*ko.cupsIPPReason com.Samsung.General-report: "text:자세한%20프린터%20정보와%20문제%20해결%20가이드는%20프린터%20유틸리티를%20참조하세요.
+text:%28유틸리티,%20프린터%20설정>유틸리티>프린터%20유틸리티%20열기%29"
+*pt.cupsIPPReason com.Samsung.General-report: "text:Consulte%20Utilitário%20de%20Impressão%20para%20obter%20mais%20informações%20sobre%20o%20estado%20da%20impressora%20e%20orientações%20para%20a%20resolução%20de%20problemas.
+text:%28Utilitário,%20Configuração%20de%20Impressora>Utilitário>Abrir%20o%20Utilitário%20de%20Impressão%29"
+*zh_CN.cupsIPPReason com.Samsung.General-report: "text:如需详细的打印机状态与故障排除指南，请参考打印机实用工具。%28实用工具,%20打印机设置>实用工具>打开打印机实用工具%29"
+*zh_TW.cupsIPPReason com.Samsung.General-report: "text:如需詳細的印表機狀態與疑難排解指南，請參考印表機工具程式。%28工具程式,%20印表機設定>工具程式>打開印表機工具程式%29"
+
+*cupsIPPReason com.Samsung.General-error: "text:Refer%20Printer%20Utility%20for%20detailed%20printer%20status%20and%20trouble%20shooting%20guides.%28Utility,%20Printer%20Setup>Utility>Open%20Printer%20Utility%29"
+*de.cupsIPPReason com.Samsung.General-error: "text:Umfassende%20Informationen%20zum%20Druckerstatus%20und%20zur%20Fehlerbehebung%20finden%20Sie%20unter%20Drucker-Dienstprogramm.
+text:%28Sonstiges,%20Drucker%20konfigurieren>Sonstiges>Drucker-Dienstprogramm%20öffnen%29"
+*es.cupsIPPReason com.Samsung.General-error: "text:Consulte%20Utilidad%20Impresoras%20para%20obtener%20información%20detallada%20sobre%20el%20estado%20de%20la%20impresora%20y%20para%20obtener%20guías%20de%20solución%20de%20problemas.
+text:%28Utilidad,%20Configuración%20de%20impresora>Utilidad>Abrir%20Utilidad%20Impresoras%29"
+*fr.cupsIPPReason com.Samsung.General-error: "text:Reportez-vous%20à%20l’utilitaire%20de%20l’imprimante%20pour%20obtenir%20des%20informations%20détaillées%20concernant%20les%20guides%20d’état%20de%20l’imprimante%20et%20de%20dépannage.
+text:%28Utilitaire,%20Configuration%20d’imprimante>Utilitaire>Ouvrir%20l’utilitaire%20de%20l’imprimante%29"
+*it.cupsIPPReason com.Samsung.General-error: "text:Per%20ulteriori%20informazioni%20sullo%20stato%20della%20stampante%20e%20sulla%20risoluzione%20dei%20problemi,%20fare%20riferimento%20Utility%20Stampante.
+text:%28Utility,%20Configurazione%20stampante>Utility>Apri%20Utility%20Stampante%29"
+*nl.cupsIPPReason com.Samsung.General-error: "text:Raadpleeg%20Printerhulpprogramma%20voor%20gedetaileerde%20informatie%20over%20de%20printerstatus%20en%20instructies%20voor%20probleemoplossing.
+text:%28Onderhoud,%20Printerconfiguratie>Onderhoud>Open%20Printerhulpprogramma%29"
+*ko.cupsIPPReason com.Samsung.General-error: "text:자세한%20프린터%20정보와%20문제%20해결%20가이드는%20프린터%20유틸리티를%20참조하세요.
+text:%28유틸리티,%20프린터%20설정>유틸리티>프린터%20유틸리티%20열기%29"
+*pt.cupsIPPReason com.Samsung.General-error: "text:Consulte%20Utilitário%20de%20Impressão%20para%20obter%20mais%20informações%20sobre%20o%20estado%20da%20impressora%20e%20orientações%20para%20a%20resolução%20de%20problemas.
+text:%28Utilitário,%20Configuração%20de%20Impressora>Utilitário>Abrir%20o%20Utilitário%20de%20Impressão%29"
+*zh_CN.cupsIPPReason com.Samsung.General-error: "text:如需详细的打印机状态与故障排除指南，请参考打印机实用工具。%28实用工具,%20打印机设置>实用工具>打开打印机实用工具%29"
+*zh_TW.cupsIPPReason com.Samsung.General-report: "text:如需詳細的印表機狀態與疑難排解指南，請參考印表機工具程式。%28工具程式,%20印表機設定>工具程式>打開印表機工具程式%29"
+
+*cupsIPPReason com.Samsung.General-warning: "text:Refer%20Printer%20Utility%20for%20detailed%20printer%20status%20and%20trouble%20shooting%20guides.%28Utility,%20Printer%20Setup>Utility>Open%20Printer%20Utility%29"
+*de.cupsIPPReason com.Samsung.General-warning: "text:Umfassende%20Informationen%20zum%20Druckerstatus%20und%20zur%20Fehlerbehebung%20finden%20Sie%20unter%20Drucker-Dienstprogramm.
+text:%28Sonstiges,%20Drucker%20konfigurieren>Sonstiges>Drucker-Dienstprogramm%20öffnen%29"
+*es.cupsIPPReason com.Samsung.General-warning: "text:Consulte%20Utilidad%20Impresoras%20para%20obtener%20información%20detallada%20sobre%20el%20estado%20de%20la%20impresora%20y%20para%20obtener%20guías%20de%20solución%20de%20problemas.
+text:%28Utilidad,%20Configuración%20de%20impresora>Utilidad>Abrir%20Utilidad%20Impresoras%29"
+*fr.cupsIPPReason com.Samsung.General-warning: "text:Reportez-vous%20à%20l’utilitaire%20de%20l’imprimante%20pour%20obtenir%20des%20informations%20détaillées%20concernant%20les%20guides%20d’état%20de%20l’imprimante%20et%20de%20dépannage.
+text:%28Utilitaire,%20Configuration%20d’imprimante>Utilitaire>Ouvrir%20l’utilitaire%20de%20l’imprimante%29"
+*it.cupsIPPReason com.Samsung.General-warning: "text:Per%20ulteriori%20informazioni%20sullo%20stato%20della%20stampante%20e%20sulla%20risoluzione%20dei%20problemi,%20fare%20riferimento%20Utility%20Stampante.
+text:%28Utility,%20Configurazione%20stampante>Utility>Apri%20Utility%20Stampante%29"
+*nl.cupsIPPReason com.Samsung.General-warning: "text:Raadpleeg%20Printerhulpprogramma%20voor%20gedetaileerde%20informatie%20over%20de%20printerstatus%20en%20instructies%20voor%20probleemoplossing.
+text:%28Onderhoud,%20Printerconfiguratie>Onderhoud>Open%20Printerhulpprogramma%29"
+*ko.cupsIPPReason com.Samsung.General-warning: "text:자세한%20프린터%20정보와%20문제%20해결%20가이드는%20프린터%20유틸리티를%20참조하세요.
+text:%28유틸리티,%20프린터%20설정>유틸리티>프린터%20유틸리티%20열기%29"
+*pt.cupsIPPReason com.Samsung.General-warning: "text:Consulte%20Utilitário%20de%20Impressão%20para%20obter%20mais%20informações%20sobre%20o%20estado%20da%20impressora%20e%20orientações%20para%20a%20resolução%20de%20problemas.
+text:%28Utilitário,%20Configuração%20de%20Impressora>Utilitário>Abrir%20o%20Utilitário%20de%20Impressão%29"
+*zh_CN.cupsIPPReason com.Samsung.General-warning: "text:如需详细的打印机状态与故障排除指南，请参考打印机实用工具。%28实用工具,%20打印机设置>实用工具>打开打印机实用工具%29"
+*zh_TW.cupsIPPReason com.Samsung.General-warning: "text:如需詳細的印表機狀態與疑難排解指南，請參考印表機工具程式。%28工具程式,%20印表機設定>工具程式>打開印表機工具程式%29"
+
+*% =========================================================
+*%  User Interface Constraints
+*% =========================================================
+*% =========================================================
+*%  Index card(PageSize) - Inputslot
+*% =========================================================
+
+*UIConstraints: *PageSize IndexCard	*InputSlot Auto
+*UIConstraints:	*InputSlot Auto		*PageSize IndexCard
+
+*% =========================================================
+*%  Envelope(PageSize) - MediaType
+*% =========================================================		
+*% Env10
+*UIConstraints: *PageSize Env10			*MediaType None
+*UIConstraints: *PageSize Env10			*MediaType Plain
+*UIConstraints: *PageSize Env10			*MediaType Thick
+*UIConstraints: *PageSize Env10			*MediaType 51
+*UIConstraints: *PageSize Env10			*MediaType Thin
+*UIConstraints: *PageSize Env10			*MediaType Bond
+*UIConstraints: *PageSize Env10			*MediaType Colored
+*UIConstraints: *PageSize Env10			*MediaType Card
+*UIConstraints: *PageSize Env10			*MediaType Label
+*UIConstraints: *PageSize Env10			*MediaType Transparency
+*UIConstraints: *PageSize Env10			*MediaType Preprinted
+*UIConstraints: *PageSize Env10			*MediaType Recycled
+*UIConstraints: *PageSize Env10			*MediaType Cotton
+*UIConstraints: *PageSize Env10			*MediaType Archive
+*UIConstraints: *PageSize Env10			*MediaType 18
+*UIConstraints: *PageSize Env10			*MediaType 12
+*UIConstraints: *PageSize Env10			*MediaType 67
+*UIConstraints: *PageSize Env10			*MediaType 68
+*UIConstraints: *PageSize Env10			*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize Env10			
+*UIConstraints: *MediaType Plain		*PageSize Env10			
+*UIConstraints: *MediaType Thick		*PageSize Env10			
+*UIConstraints: *MediaType 51			*PageSize Env10			
+*UIConstraints: *MediaType Thin			*PageSize Env10			
+*UIConstraints: *MediaType Bond			*PageSize Env10			
+*UIConstraints: *MediaType Colored		*PageSize Env10			
+*UIConstraints: *MediaType Card			*PageSize Env10			
+*UIConstraints: *MediaType Label		*PageSize Env10			
+*UIConstraints: *MediaType Transparency 	*PageSize Env10			
+*UIConstraints: *MediaType Preprinted		*PageSize Env10			
+*UIConstraints: *MediaType Recycled		*PageSize Env10			
+*UIConstraints: *MediaType Cotton		*PageSize Env10			
+*UIConstraints: *MediaType Archive 		*PageSize Env10			
+*UIConstraints: *MediaType 18 			*PageSize Env10			
+*UIConstraints: *MediaType 12    		*PageSize Env10			
+*UIConstraints: *MediaType 67      		*PageSize Env10			
+*UIConstraints: *MediaType 68      		*PageSize Env10			
+*UIConstraints: *MediaType 69      		*PageSize Env10			
+
+*% EnvDL
+*UIConstraints: *PageSize EnvDL			*MediaType None
+*UIConstraints: *PageSize EnvDL			*MediaType Plain
+*UIConstraints: *PageSize EnvDL			*MediaType Thick
+*UIConstraints: *PageSize EnvDL			*MediaType 51
+*UIConstraints: *PageSize EnvDL			*MediaType Thin
+*UIConstraints: *PageSize EnvDL			*MediaType Bond
+*UIConstraints: *PageSize EnvDL			*MediaType Colored
+*UIConstraints: *PageSize EnvDL			*MediaType Card
+*UIConstraints: *PageSize EnvDL			*MediaType Label
+*UIConstraints: *PageSize EnvDL			*MediaType Transparency
+*UIConstraints: *PageSize EnvDL			*MediaType Preprinted
+*UIConstraints: *PageSize EnvDL			*MediaType Recycled
+*UIConstraints: *PageSize EnvDL			*MediaType Cotton
+*UIConstraints: *PageSize EnvDL			*MediaType Archive
+*UIConstraints: *PageSize EnvDL			*MediaType 18
+*UIConstraints: *PageSize EnvDL			*MediaType 12
+*UIConstraints: *PageSize EnvDL			*MediaType 67
+*UIConstraints: *PageSize EnvDL			*MediaType 68
+*UIConstraints: *PageSize EnvDL			*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize EnvDL			
+*UIConstraints: *MediaType Plain		*PageSize EnvDL			
+*UIConstraints: *MediaType Thick		*PageSize EnvDL			
+*UIConstraints: *MediaType 51			*PageSize EnvDL			
+*UIConstraints: *MediaType Thin			*PageSize EnvDL			
+*UIConstraints: *MediaType Bond			*PageSize EnvDL			
+*UIConstraints: *MediaType Colored		*PageSize EnvDL			
+*UIConstraints: *MediaType Card			*PageSize EnvDL			
+*UIConstraints: *MediaType Label		*PageSize EnvDL			
+*UIConstraints: *MediaType Transparency 	*PageSize EnvDL			
+*UIConstraints: *MediaType Preprinted		*PageSize EnvDL			
+*UIConstraints: *MediaType Recycled		*PageSize EnvDL			
+*UIConstraints: *MediaType Cotton		*PageSize EnvDL			
+*UIConstraints: *MediaType Archive 		*PageSize EnvDL			
+*UIConstraints: *MediaType 18 			*PageSize EnvDL			
+*UIConstraints: *MediaType 12    	   	*PageSize EnvDL		
+*UIConstraints: *MediaType 67      	     	*PageSize EnvDL			
+*UIConstraints: *MediaType 68      	     	*PageSize EnvDL			
+*UIConstraints: *MediaType 69      	     	*PageSize EnvDL	
+
+*% EnvC5
+*UIConstraints: *PageSize EnvC5			*MediaType None
+*UIConstraints: *PageSize EnvC5			*MediaType Plain
+*UIConstraints: *PageSize EnvC5			*MediaType Thick
+*UIConstraints: *PageSize EnvC5			*MediaType 51
+*UIConstraints: *PageSize EnvC5			*MediaType Thin
+*UIConstraints: *PageSize EnvC5			*MediaType Bond
+*UIConstraints: *PageSize EnvC5			*MediaType Colored
+*UIConstraints: *PageSize EnvC5			*MediaType Card
+*UIConstraints: *PageSize EnvC5			*MediaType Label
+*UIConstraints: *PageSize EnvC5			*MediaType Transparency
+*UIConstraints: *PageSize EnvC5			*MediaType Preprinted
+*UIConstraints: *PageSize EnvC5			*MediaType Recycled
+*UIConstraints: *PageSize EnvC5			*MediaType Cotton
+*UIConstraints: *PageSize EnvC5			*MediaType Archive
+*UIConstraints: *PageSize EnvC5			*MediaType 18
+*UIConstraints: *PageSize EnvC5			*MediaType 12
+*UIConstraints: *PageSize EnvC5			*MediaType 67
+*UIConstraints: *PageSize EnvC5			*MediaType 68
+*UIConstraints: *PageSize EnvC5			*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize EnvC5			
+*UIConstraints: *MediaType Plain		*PageSize EnvC5			
+*UIConstraints: *MediaType Thick		*PageSize EnvC5			
+*UIConstraints: *MediaType 51			*PageSize EnvC5			
+*UIConstraints: *MediaType Thin			*PageSize EnvC5			
+*UIConstraints: *MediaType Bond			*PageSize EnvC5			
+*UIConstraints: *MediaType Colored		*PageSize EnvC5			
+*UIConstraints: *MediaType Card			*PageSize EnvC5			
+*UIConstraints: *MediaType Label		*PageSize EnvC5			
+*UIConstraints: *MediaType Transparency  	*PageSize EnvC5			
+*UIConstraints: *MediaType Preprinted		*PageSize EnvC5			
+*UIConstraints: *MediaType Recycled		*PageSize EnvC5			
+*UIConstraints: *MediaType Cotton		*PageSize EnvC5			
+*UIConstraints: *MediaType Archive 	 	*PageSize EnvC5			
+*UIConstraints: *MediaType 18 		 	*PageSize EnvC5			
+*UIConstraints: *MediaType 12    	    	*PageSize EnvC5		
+*UIConstraints: *MediaType 67      	      	*PageSize EnvC5			
+*UIConstraints: *MediaType 68      	      	*PageSize EnvC5			
+*UIConstraints: *MediaType 69      	      	*PageSize EnvC5	
+
+*% EnvC6
+*UIConstraints: *PageSize EnvC6			*MediaType None
+*UIConstraints: *PageSize EnvC6			*MediaType Plain
+*UIConstraints: *PageSize EnvC6			*MediaType Thick
+*UIConstraints: *PageSize EnvC6			*MediaType 51
+*UIConstraints: *PageSize EnvC6			*MediaType Thin
+*UIConstraints: *PageSize EnvC6			*MediaType Bond
+*UIConstraints: *PageSize EnvC6			*MediaType Colored
+*UIConstraints: *PageSize EnvC6			*MediaType Card
+*UIConstraints: *PageSize EnvC6			*MediaType Label
+*UIConstraints: *PageSize EnvC6			*MediaType Transparency
+*UIConstraints: *PageSize EnvC6			*MediaType Preprinted
+*UIConstraints: *PageSize EnvC6			*MediaType Recycled
+*UIConstraints: *PageSize EnvC6			*MediaType Cotton
+*UIConstraints: *PageSize EnvC6			*MediaType Archive
+*UIConstraints: *PageSize EnvC6			*MediaType 18
+*UIConstraints: *PageSize EnvC6			*MediaType 12
+*UIConstraints: *PageSize EnvC6			*MediaType 67
+*UIConstraints: *PageSize EnvC6			*MediaType 68
+*UIConstraints: *PageSize EnvC6			*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize EnvC6			
+*UIConstraints: *MediaType Plain		*PageSize EnvC6			
+*UIConstraints: *MediaType Thick		*PageSize EnvC6			
+*UIConstraints: *MediaType 51			*PageSize EnvC6			
+*UIConstraints: *MediaType Thin			*PageSize EnvC6			
+*UIConstraints: *MediaType Bond			*PageSize EnvC6			
+*UIConstraints: *MediaType Colored		*PageSize EnvC6			
+*UIConstraints: *MediaType Card			*PageSize EnvC6			
+*UIConstraints: *MediaType Label		*PageSize EnvC6			
+*UIConstraints: *MediaType Transparency  	*PageSize EnvC6			
+*UIConstraints: *MediaType Preprinted		*PageSize EnvC6			
+*UIConstraints: *MediaType Recycled		*PageSize EnvC6			
+*UIConstraints: *MediaType Cotton		*PageSize EnvC6			
+*UIConstraints: *MediaType Archive 	 	*PageSize EnvC6			
+*UIConstraints: *MediaType 18 		 	*PageSize EnvC6			
+*UIConstraints: *MediaType 12    	    	*PageSize EnvC6
+*UIConstraints: *MediaType 67      	      	*PageSize EnvC6			
+*UIConstraints: *MediaType 68      	      	*PageSize EnvC6			
+*UIConstraints: *MediaType 69      	      	*PageSize EnvC6	
+
+*% EnvMonarch
+*UIConstraints: *PageSize EnvMonarch		*MediaType None
+*UIConstraints: *PageSize EnvMonarch		*MediaType Plain
+*UIConstraints: *PageSize EnvMonarch		*MediaType Thick
+*UIConstraints: *PageSize EnvMonarch		*MediaType 51
+*UIConstraints: *PageSize EnvMonarch		*MediaType Thin
+*UIConstraints: *PageSize EnvMonarch		*MediaType Bond
+*UIConstraints: *PageSize EnvMonarch		*MediaType Colored
+*UIConstraints: *PageSize EnvMonarch		*MediaType Card
+*UIConstraints: *PageSize EnvMonarch		*MediaType Label
+*UIConstraints: *PageSize EnvMonarch		*MediaType Transparency
+*UIConstraints: *PageSize EnvMonarch		*MediaType Preprinted
+*UIConstraints: *PageSize EnvMonarch		*MediaType Recycled
+*UIConstraints: *PageSize EnvMonarch		*MediaType Cotton
+*UIConstraints: *PageSize EnvMonarch		*MediaType Archive
+*UIConstraints: *PageSize EnvMonarch		*MediaType 18
+*UIConstraints: *PageSize EnvMonarch		*MediaType 12
+*UIConstraints: *PageSize EnvMonarch		*MediaType 67
+*UIConstraints: *PageSize EnvMonarch		*MediaType 68
+*UIConstraints: *PageSize EnvMonarch		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize EnvMonarch			
+*UIConstraints: *MediaType Plain		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Thick		*PageSize EnvMonarch			
+*UIConstraints: *MediaType 51			*PageSize EnvMonarch			
+*UIConstraints: *MediaType Thin			*PageSize EnvMonarch			
+*UIConstraints: *MediaType Bond			*PageSize EnvMonarch			
+*UIConstraints: *MediaType Colored		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Card			*PageSize EnvMonarch			
+*UIConstraints: *MediaType Label		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Transparency  	*PageSize EnvMonarch			
+*UIConstraints: *MediaType Preprinted		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Recycled		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Cotton		*PageSize EnvMonarch			
+*UIConstraints: *MediaType Archive 	 	*PageSize EnvMonarch			
+*UIConstraints: *MediaType 18 		 	*PageSize EnvMonarch			
+*UIConstraints: *MediaType 12    	    	*PageSize EnvMonarch		
+*UIConstraints: *MediaType 67      	      	*PageSize EnvMonarch			
+*UIConstraints: *MediaType 68      	      	*PageSize EnvMonarch			
+*UIConstraints: *MediaType 69      	      	*PageSize EnvMonarch	
+
+*% Env9
+*UIConstraints: *PageSize Env9			*MediaType None
+*UIConstraints: *PageSize Env9			*MediaType Plain
+*UIConstraints: *PageSize Env9			*MediaType Thick
+*UIConstraints: *PageSize Env9			*MediaType 51
+*UIConstraints: *PageSize Env9			*MediaType Thin
+*UIConstraints: *PageSize Env9			*MediaType Bond
+*UIConstraints: *PageSize Env9			*MediaType Colored
+*UIConstraints: *PageSize Env9			*MediaType Card
+*UIConstraints: *PageSize Env9			*MediaType Label
+*UIConstraints: *PageSize Env9			*MediaType Transparency
+*UIConstraints: *PageSize Env9			*MediaType Preprinted
+*UIConstraints: *PageSize Env9			*MediaType Recycled
+*UIConstraints: *PageSize Env9			*MediaType Cotton
+*UIConstraints: *PageSize Env9			*MediaType Archive
+*UIConstraints: *PageSize Env9			*MediaType 18
+*UIConstraints: *PageSize Env9			*MediaType 12
+*UIConstraints: *PageSize Env9			*MediaType 67
+*UIConstraints: *PageSize Env9			*MediaType 68
+*UIConstraints: *PageSize Env9			*MediaType 69
+
+*UIConstraints: *MediaType None			*PageSize Env9			
+*UIConstraints: *MediaType Plain		*PageSize Env9			
+*UIConstraints: *MediaType Thick		*PageSize Env9			
+*UIConstraints: *MediaType 51			*PageSize Env9			
+*UIConstraints: *MediaType Thin			*PageSize Env9			
+*UIConstraints: *MediaType Bond			*PageSize Env9			
+*UIConstraints: *MediaType Colored		*PageSize Env9			
+*UIConstraints: *MediaType Card			*PageSize Env9			
+*UIConstraints: *MediaType Label		*PageSize Env9			
+*UIConstraints: *MediaType Transparency  	*PageSize Env9			
+*UIConstraints: *MediaType Preprinted		*PageSize Env9			
+*UIConstraints: *MediaType Recycled		*PageSize Env9			
+*UIConstraints: *MediaType Cotton		*PageSize Env9			
+*UIConstraints: *MediaType Archive 	 	*PageSize Env9			
+*UIConstraints: *MediaType 18 		 	*PageSize Env9			
+*UIConstraints: *MediaType 12    	    	*PageSize Env9		
+*UIConstraints: *MediaType 67      	      	*PageSize Env9			
+*UIConstraints: *MediaType 68      	      	*PageSize Env9			
+*UIConstraints: *MediaType 69      	      	*PageSize Env9	
+
+*% =========================================================
+*%  Envelope(PageRegion) - MediaType
+*% =========================================================		
+*% Env10
+*UIConstraints: *PageRegion Env10		*MediaType None
+*UIConstraints: *PageRegion Env10		*MediaType Plain
+*UIConstraints: *PageRegion Env10		*MediaType Thick
+*UIConstraints: *PageRegion Env10		*MediaType 51
+*UIConstraints: *PageRegion Env10		*MediaType Thin
+*UIConstraints: *PageRegion Env10		*MediaType Bond
+*UIConstraints: *PageRegion Env10		*MediaType Colored
+*UIConstraints: *PageRegion Env10		*MediaType Card
+*UIConstraints: *PageRegion Env10		*MediaType Label
+*UIConstraints: *PageRegion Env10		*MediaType Transparency
+*UIConstraints: *PageRegion Env10		*MediaType Preprinted
+*UIConstraints: *PageRegion Env10		*MediaType Recycled
+*UIConstraints: *PageRegion Env10		*MediaType Cotton
+*UIConstraints: *PageRegion Env10		*MediaType Archive
+*UIConstraints: *PageRegion Env10		*MediaType 18
+*UIConstraints: *PageRegion Env10		*MediaType 12
+*UIConstraints: *PageRegion Env10		*MediaType 67
+*UIConstraints: *PageRegion Env10		*MediaType 68
+*UIConstraints: *PageRegion Env10		*MediaType 69
+
+
+*UIConstraints: *MediaType None			*PageRegion Env10			
+*UIConstraints: *MediaType Plain		*PageRegion Env10			
+*UIConstraints: *MediaType Thick		*PageRegion Env10			
+*UIConstraints: *MediaType 51			*PageRegion Env10			
+*UIConstraints: *MediaType Thin			*PageRegion Env10			
+*UIConstraints: *MediaType Bond			*PageRegion Env10			
+*UIConstraints: *MediaType Colored		*PageRegion Env10			
+*UIConstraints: *MediaType Card			*PageRegion Env10			
+*UIConstraints: *MediaType Label		*PageRegion Env10			
+*UIConstraints: *MediaType Transparency  	*PageRegion Env10			
+*UIConstraints: *MediaType Preprinted		*PageRegion Env10			
+*UIConstraints: *MediaType Recycled		*PageRegion Env10			
+*UIConstraints: *MediaType Cotton		*PageRegion Env10			
+*UIConstraints: *MediaType Archive 	 	*PageRegion Env10			
+*UIConstraints: *MediaType 18 		 	*PageRegion Env10			
+*UIConstraints: *MediaType 12    	    	*PageRegion Env10			
+*UIConstraints: *MediaType 67      	      	*PageRegion Env10			
+*UIConstraints: *MediaType 68      	      	*PageRegion Env10			
+*UIConstraints: *MediaType 69      	      	*PageRegion Env10			
+
+*% EnvDL
+*UIConstraints: *PageRegion EnvDL		*MediaType None
+*UIConstraints: *PageRegion EnvDL		*MediaType Plain
+*UIConstraints: *PageRegion EnvDL		*MediaType Thick
+*UIConstraints: *PageRegion EnvDL		*MediaType 51
+*UIConstraints: *PageRegion EnvDL		*MediaType Thin
+*UIConstraints: *PageRegion EnvDL		*MediaType Bond
+*UIConstraints: *PageRegion EnvDL		*MediaType Colored
+*UIConstraints: *PageRegion EnvDL		*MediaType Card
+*UIConstraints: *PageRegion EnvDL		*MediaType Label
+*UIConstraints: *PageRegion EnvDL		*MediaType Transparency
+*UIConstraints: *PageRegion EnvDL		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvDL		*MediaType Recycled
+*UIConstraints: *PageRegion EnvDL		*MediaType Cotton
+*UIConstraints: *PageRegion EnvDL		*MediaType Archive
+*UIConstraints: *PageRegion EnvDL		*MediaType 18
+*UIConstraints: *PageRegion EnvDL		*MediaType 12
+*UIConstraints: *PageRegion EnvDL		*MediaType 67
+*UIConstraints: *PageRegion EnvDL		*MediaType 68
+*UIConstraints: *PageRegion EnvDL		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageRegion EnvDL			
+*UIConstraints: *MediaType Plain		*PageRegion EnvDL			
+*UIConstraints: *MediaType Thick		*PageRegion EnvDL			
+*UIConstraints: *MediaType 51			*PageRegion EnvDL			
+*UIConstraints: *MediaType Thin			*PageRegion EnvDL			
+*UIConstraints: *MediaType Bond			*PageRegion EnvDL			
+*UIConstraints: *MediaType Colored		*PageRegion EnvDL			
+*UIConstraints: *MediaType Card			*PageRegion EnvDL			
+*UIConstraints: *MediaType Label		*PageRegion EnvDL			
+*UIConstraints: *MediaType Transparency  	*PageRegion EnvDL			
+*UIConstraints: *MediaType Preprinted		*PageRegion EnvDL			
+*UIConstraints: *MediaType Recycled		*PageRegion EnvDL			
+*UIConstraints: *MediaType Cotton		*PageRegion EnvDL			
+*UIConstraints: *MediaType Archive 	 	*PageRegion EnvDL			
+*UIConstraints: *MediaType 18 		 	*PageRegion EnvDL			
+*UIConstraints: *MediaType 12    	    	*PageRegion EnvDL		
+*UIConstraints: *MediaType 67      	      	*PageRegion EnvDL			
+*UIConstraints: *MediaType 68      	      	*PageRegion EnvDL			
+*UIConstraints: *MediaType 69      	      	*PageRegion EnvDL
+
+*% EnvC5
+*UIConstraints: *PageRegion EnvC5		*MediaType None
+*UIConstraints: *PageRegion EnvC5		*MediaType Plain
+*UIConstraints: *PageRegion EnvC5		*MediaType Thick
+*UIConstraints: *PageRegion EnvC5		*MediaType 51
+*UIConstraints: *PageRegion EnvC5		*MediaType Thin
+*UIConstraints: *PageRegion EnvC5		*MediaType Bond
+*UIConstraints: *PageRegion EnvC5		*MediaType Colored
+*UIConstraints: *PageRegion EnvC5		*MediaType Card
+*UIConstraints: *PageRegion EnvC5		*MediaType Label
+*UIConstraints: *PageRegion EnvC5		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC5		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvC5		*MediaType Recycled
+*UIConstraints: *PageRegion EnvC5		*MediaType Cotton
+*UIConstraints: *PageRegion EnvC5		*MediaType Archive
+*UIConstraints: *PageRegion EnvC5		*MediaType 18
+*UIConstraints: *PageRegion EnvC5		*MediaType 12
+*UIConstraints: *PageRegion EnvC5		*MediaType 67
+*UIConstraints: *PageRegion EnvC5		*MediaType 68
+*UIConstraints: *PageRegion EnvC5		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageRegion EnvC5			
+*UIConstraints: *MediaType Plain		*PageRegion EnvC5			
+*UIConstraints: *MediaType Thick		*PageRegion EnvC5			
+*UIConstraints: *MediaType 51			*PageRegion EnvC5			
+*UIConstraints: *MediaType Thin			*PageRegion EnvC5			
+*UIConstraints: *MediaType Bond			*PageRegion EnvC5			
+*UIConstraints: *MediaType Colored		*PageRegion EnvC5			
+*UIConstraints: *MediaType Card			*PageRegion EnvC5			
+*UIConstraints: *MediaType Label		*PageRegion EnvC5			
+*UIConstraints: *MediaType Transparency  	*PageRegion EnvC5			
+*UIConstraints: *MediaType Preprinted		*PageRegion EnvC5			
+*UIConstraints: *MediaType Recycled		*PageRegion EnvC5			
+*UIConstraints: *MediaType Cotton		*PageRegion EnvC5			
+*UIConstraints: *MediaType Archive 	 	*PageRegion EnvC5			
+*UIConstraints: *MediaType 18 		 	*PageRegion EnvC5			
+*UIConstraints: *MediaType 12    	    	*PageRegion EnvC5		
+*UIConstraints: *MediaType 67      	      	*PageRegion EnvC5			
+*UIConstraints: *MediaType 68      	      	*PageRegion EnvC5			
+*UIConstraints: *MediaType 69      	      	*PageRegion EnvC5
+
+*% EnvC6
+*UIConstraints: *PageRegion EnvC6		*MediaType None
+*UIConstraints: *PageRegion EnvC6		*MediaType Plain
+*UIConstraints: *PageRegion EnvC6		*MediaType Thick
+*UIConstraints: *PageRegion EnvC6		*MediaType 51
+*UIConstraints: *PageRegion EnvC6		*MediaType Thin
+*UIConstraints: *PageRegion EnvC6		*MediaType Bond
+*UIConstraints: *PageRegion EnvC6		*MediaType Colored
+*UIConstraints: *PageRegion EnvC6		*MediaType Card
+*UIConstraints: *PageRegion EnvC6		*MediaType Label
+*UIConstraints: *PageRegion EnvC6		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC6		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvC6		*MediaType Recycled
+*UIConstraints: *PageRegion EnvC6		*MediaType Cotton
+*UIConstraints: *PageRegion EnvC6		*MediaType Archive
+*UIConstraints: *PageRegion EnvC6		*MediaType 18
+*UIConstraints: *PageRegion EnvC6		*MediaType 12
+*UIConstraints: *PageRegion EnvC6		*MediaType 67
+*UIConstraints: *PageRegion EnvC6		*MediaType 68
+*UIConstraints: *PageRegion EnvC6		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageRegion EnvC6			
+*UIConstraints: *MediaType Plain		*PageRegion EnvC6			
+*UIConstraints: *MediaType Thick		*PageRegion EnvC6			
+*UIConstraints: *MediaType 51			*PageRegion EnvC6			
+*UIConstraints: *MediaType Thin			*PageRegion EnvC6			
+*UIConstraints: *MediaType Bond			*PageRegion EnvC6			
+*UIConstraints: *MediaType Colored		*PageRegion EnvC6			
+*UIConstraints: *MediaType Card			*PageRegion EnvC6			
+*UIConstraints: *MediaType Label		*PageRegion EnvC6			
+*UIConstraints: *MediaType Transparency  	*PageRegion EnvC6			
+*UIConstraints: *MediaType Preprinted		*PageRegion EnvC6			
+*UIConstraints: *MediaType Recycled		*PageRegion EnvC6			
+*UIConstraints: *MediaType Cotton		*PageRegion EnvC6			
+*UIConstraints: *MediaType Archive 	 	*PageRegion EnvC6			
+*UIConstraints: *MediaType 18 		 	*PageRegion EnvC6			
+*UIConstraints: *MediaType 12    	    	*PageRegion EnvC6		
+*UIConstraints: *MediaType 67      	      	*PageRegion EnvC6			
+*UIConstraints: *MediaType 68      	      	*PageRegion EnvC6			
+*UIConstraints: *MediaType 69      	      	*PageRegion EnvC6
+
+*% EnvMonarch
+*UIConstraints: *PageRegion EnvMonarch		*MediaType None
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Plain
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Thick
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 51
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Thin
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Bond
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Colored
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Card
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Label
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Transparency
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Recycled
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Cotton
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Archive
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 18
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 12
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 67
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 68
+*UIConstraints: *PageRegion EnvMonarch		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Plain		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Thick		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType 51			*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Thin			*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Bond			*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Colored		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Card			*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Label		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Transparency  	*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Preprinted		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Recycled		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Cotton		*PageRegion EnvMonarch			
+*UIConstraints: *MediaType Archive 	 	*PageRegion EnvMonarch			
+*UIConstraints: *MediaType 18 		 	*PageRegion EnvMonarch			
+*UIConstraints: *MediaType 12    	    	*PageRegion EnvMonarch		
+*UIConstraints: *MediaType 67      	      	*PageRegion EnvMonarch			
+*UIConstraints: *MediaType 68      	      	*PageRegion EnvMonarch			
+*UIConstraints: *MediaType 69      	      	*PageRegion EnvMonarch
+
+*% Env9
+*UIConstraints: *PageRegion Env9		*MediaType None
+*UIConstraints: *PageRegion Env9		*MediaType Plain
+*UIConstraints: *PageRegion Env9		*MediaType Thick
+*UIConstraints: *PageRegion Env9		*MediaType 51
+*UIConstraints: *PageRegion Env9		*MediaType Thin
+*UIConstraints: *PageRegion Env9		*MediaType Bond
+*UIConstraints: *PageRegion Env9		*MediaType Colored
+*UIConstraints: *PageRegion Env9		*MediaType Card
+*UIConstraints: *PageRegion Env9		*MediaType Label
+*UIConstraints: *PageRegion Env9		*MediaType Transparency
+*UIConstraints: *PageRegion Env9		*MediaType Preprinted
+*UIConstraints: *PageRegion Env9		*MediaType Recycled
+*UIConstraints: *PageRegion Env9		*MediaType Cotton
+*UIConstraints: *PageRegion Env9		*MediaType Archive
+*UIConstraints: *PageRegion Env9		*MediaType 18
+*UIConstraints: *PageRegion Env9		*MediaType 12
+*UIConstraints: *PageRegion Env9		*MediaType 67
+*UIConstraints: *PageRegion Env9		*MediaType 68
+*UIConstraints: *PageRegion Env9		*MediaType 69
+
+*UIConstraints: *MediaType None			*PageRegion Env9			
+*UIConstraints: *MediaType Plain		*PageRegion Env9			
+*UIConstraints: *MediaType Thick		*PageRegion Env9			
+*UIConstraints: *MediaType 51			*PageRegion Env9			
+*UIConstraints: *MediaType Thin			*PageRegion Env9			
+*UIConstraints: *MediaType Bond			*PageRegion Env9			
+*UIConstraints: *MediaType Colored		*PageRegion Env9			
+*UIConstraints: *MediaType Card			*PageRegion Env9			
+*UIConstraints: *MediaType Label		*PageRegion Env9			
+*UIConstraints: *MediaType Transparency  	*PageRegion Env9			
+*UIConstraints: *MediaType Preprinted		*PageRegion Env9			
+*UIConstraints: *MediaType Recycled		*PageRegion Env9			
+*UIConstraints: *MediaType Cotton		*PageRegion Env9			
+*UIConstraints: *MediaType Archive 	 	*PageRegion Env9			
+*UIConstraints: *MediaType 18 		 	*PageRegion Env9			
+*UIConstraints: *MediaType 12    	    	*PageRegion Env9		
+*UIConstraints: *MediaType 67      	      	*PageRegion Env9			
+*UIConstraints: *MediaType 68      	      	*PageRegion Env9			
+*UIConstraints: *MediaType 69      	      	*PageRegion Env9
+
+*% =========================================================
+*%  PageSize - Envelope(MediaType)
+*% =========================================================
+*UIConstraints: *PageSize Letter		*MediaType Envelope
+*UIConstraints: *PageSize Legal			*MediaType Envelope
+*UIConstraints: *PageSize Oficio_S		*MediaType Envelope
+*UIConstraints: *PageSize US-Folio		*MediaType Envelope
+*UIConstraints: *PageSize A4			*MediaType Envelope
+*UIConstraints: *PageSize B5-ISO		*MediaType Envelope
+*UIConstraints: *PageSize B5-JIS		*MediaType Envelope
+*UIConstraints: *PageSize Statement		*MediaType Envelope
+*UIConstraints: *PageSize Executive		*MediaType Envelope
+*UIConstraints: *PageSize A5			*MediaType Envelope
+*UIConstraints: *PageSize A6			*MediaType Envelope
+*UIConstraints: *PageSize IndexCard		*MediaType Envelope
+*UIConstraints: *PageSize Postcard_S		*MediaType Envelope
+
+*UIConstraints: *MediaType Envelope		*PageSize Letter		
+*UIConstraints: *MediaType Envelope		*PageSize Legal			
+*UIConstraints: *MediaType Envelope		*PageSize Oficio_S		
+*UIConstraints: *MediaType Envelope		*PageSize US-Folio		
+*UIConstraints: *MediaType Envelope		*PageSize A4			
+*UIConstraints: *MediaType Envelope		*PageSize B5-ISO		
+*UIConstraints: *MediaType Envelope		*PageSize B5-JIS		
+*UIConstraints: *MediaType Envelope		*PageSize Statement
+*UIConstraints: *MediaType Envelope		*PageSize Executive		
+*UIConstraints: *MediaType Envelope		*PageSize A5
+*UIConstraints: *MediaType Envelope		*PageSize A6
+*UIConstraints: *MediaType Envelope		*PageSize IndexCard
+*UIConstraints: *MediaType Envelope		*PageSize Postcard_S
+
+*% =========================================================
+*%  PageRegion - Envelope(MediaType)
+*% =========================================================
+*UIConstraints: *PageRegion Letter		*MediaType Envelope
+*UIConstraints: *PageRegion Legal		*MediaType Envelope
+*UIConstraints: *PageRegion Oficio_S		*MediaType Envelope
+*UIConstraints: *PageRegion US-Folio		*MediaType Envelope
+*UIConstraints: *PageRegion A4			*MediaType Envelope
+*UIConstraints: *PageRegion B5-ISO		*MediaType Envelope
+*UIConstraints: *PageRegion B5-JIS		*MediaType Envelope
+*UIConstraints: *PageRegion Statement		*MediaType Envelope
+*UIConstraints: *PageRegion Executive		*MediaType Envelope
+*UIConstraints: *PageRegion A5			*MediaType Envelope
+*UIConstraints: *PageRegion A6			*MediaType Envelope
+*UIConstraints: *PageRegion IndexCard		*MediaType Envelope
+*UIConstraints: *PageRegion Postcard_S		*MediaType Envelope
+
+*UIConstraints: *MediaType Envelope		*PageRegion Letter		
+*UIConstraints: *MediaType Envelope		*PageRegion Legal			
+*UIConstraints: *MediaType Envelope		*PageRegion Oficio_S		
+*UIConstraints: *MediaType Envelope		*PageRegion US-Folio		
+*UIConstraints: *MediaType Envelope		*PageRegion A4			
+*UIConstraints: *MediaType Envelope		*PageRegion B5-ISO		
+*UIConstraints: *MediaType Envelope		*PageRegion B5-JIS		
+*UIConstraints: *MediaType Envelope		*PageRegion Statement
+*UIConstraints: *MediaType Envelope		*PageRegion Executive		
+*UIConstraints: *MediaType Envelope		*PageRegion A5
+*UIConstraints: *MediaType Envelope		*PageRegion A6
+*UIConstraints: *MediaType Envelope		*PageRegion IndexCard
+*UIConstraints: *MediaType Envelope		*PageRegion Postcard_S
+
+*% =========================================================
+*%  PageSize - Transparency(MediaType)
+*% =========================================================
+*UIConstraints: *PageSize Executive		*MediaType Transparency
+*UIConstraints: *PageSize A5			*MediaType Transparency
+*UIConstraints: *PageSize B5-JIS		*MediaType Transparency
+*UIConstraints: *PageSize US-Folio		*MediaType Transparency
+*UIConstraints: *PageSize B5-ISO		*MediaType Transparency
+*UIConstraints: *PageSize Oficio_S		*MediaType Transparency
+*UIConstraints: *PageSize A6			*MediaType Transparency
+*UIConstraints: *PageSize Statement		*MediaType Transparency
+*UIConstraints: *PageSize Env9			*MediaType Transparency
+*UIConstraints: *PageSize Postcard_S		*MediaType Transparency
+*UIConstraints: *PageSize IndexCard		*MediaType Transparency
+
+*UIConstraints: *MediaType Transparency		*PageSize Executive
+*UIConstraints: *MediaType Transparency		*PageSize A5
+*UIConstraints: *MediaType Transparency		*PageSize B5-JIS
+*UIConstraints: *MediaType Transparency		*PageSize US-Folio
+*UIConstraints: *MediaType Transparency		*PageSize B5-ISO
+*UIConstraints: *MediaType Transparency		*PageSize Oficio_S
+*UIConstraints: *MediaType Transparency		*PageSize A6
+*UIConstraints: *MediaType Transparency		*PageSize Statement
+*UIConstraints: *MediaType Transparency		*PageSize Env9
+*UIConstraints: *MediaType Transparency		*PageSize Postcard_S
+*UIConstraints: *MediaType Transparency		*PageSize IndexCard
+
+*% =========================================================  
+*%  PageSize - Photo x 3  
+*% ========================================================= 
+*UIConstraints: *PageSize Legal			*MediaType 67
+*UIConstraints: *PageSize Executive		*MediaType 67
+*UIConstraints: *PageSize A5			*MediaType 67
+*UIConstraints: *PageSize B5-JIS		*MediaType 67
+*UIConstraints: *PageSize US-Folio		*MediaType 67
+*UIConstraints: *PageSize B5-ISO		*MediaType 67
+*UIConstraints: *PageSize Oficio_S		*MediaType 67
+*UIConstraints: *PageSize A6			*MediaType 67
+*UIConstraints: *PageSize Statement		*MediaType 67
+*UIConstraints: *PageSize IndexCard		*MediaType 67
+
+*UIConstraints: *PageSize Legal			*MediaType 68
+*UIConstraints: *PageSize Executive		*MediaType 68
+*UIConstraints: *PageSize A5			*MediaType 68
+*UIConstraints: *PageSize B5-JIS		*MediaType 68
+*UIConstraints: *PageSize US-Folio		*MediaType 68
+*UIConstraints: *PageSize B5-ISO		*MediaType 68
+*UIConstraints: *PageSize Oficio_S		*MediaType 67
+*UIConstraints: *PageSize A6			*MediaType 68
+*UIConstraints: *PageSize Statement		*MediaType 68
+*UIConstraints: *PageSize IndexCard		*MediaType 68
+
+*UIConstraints: *PageSize Legal			*MediaType 69
+*UIConstraints: *PageSize Executive		*MediaType 69
+*UIConstraints: *PageSize A5			*MediaType 69
+*UIConstraints: *PageSize B5-JIS		*MediaType 69
+*UIConstraints: *PageSize US-Folio		*MediaType 69
+*UIConstraints: *PageSize B5-ISO		*MediaType 69
+*UIConstraints: *PageSize Oficio_S		*MediaType 69
+*UIConstraints: *PageSize A6			*MediaType 69
+*UIConstraints: *PageSize Statement		*MediaType 69
+*UIConstraints: *PageSize IndexCard		*MediaType 69
+
+*UIConstraints: *MediaType 67			*PageSize Legal			
+*UIConstraints: *MediaType 67			*PageSize Executive		
+*UIConstraints: *MediaType 67			*PageSize A5			
+*UIConstraints: *MediaType 67			*PageSize B5-JIS		
+*UIConstraints: *MediaType 67			*PageSize US-Folio		
+*UIConstraints: *MediaType 67			*PageSize B5-ISO		
+*UIConstraints: *MediaType 67			*PageSize Oficio_S		
+*UIConstraints: *MediaType 67			*PageSize A6			
+*UIConstraints: *MediaType 67			*PageSize Statement	
+*UIConstraints: *MediaType 67			*PageSize IndexCard	
+
+*UIConstraints: *MediaType 68			*PageSize Legal			
+*UIConstraints: *MediaType 68			*PageSize Executive		
+*UIConstraints: *MediaType 68			*PageSize A5			
+*UIConstraints: *MediaType 68			*PageSize B5-JIS		
+*UIConstraints: *MediaType 68			*PageSize US-Folio		
+*UIConstraints: *MediaType 68			*PageSize B5-ISO		
+*UIConstraints: *MediaType 67			*PageSize Oficio_S		
+*UIConstraints: *MediaType 68			*PageSize A6			
+*UIConstraints: *MediaType 68			*PageSize Statement	
+*UIConstraints: *MediaType 68			*PageSize IndexCard
+
+*UIConstraints: *MediaType 69			*PageSize Legal			
+*UIConstraints: *MediaType 69			*PageSize Executive		
+*UIConstraints: *MediaType 69			*PageSize A5			
+*UIConstraints: *MediaType 69			*PageSize B5-JIS		
+*UIConstraints: *MediaType 69			*PageSize US-Folio		
+*UIConstraints: *MediaType 69			*PageSize B5-ISO		
+*UIConstraints: *MediaType 69			*PageSize Oficio_S		
+*UIConstraints: *MediaType 69			*PageSize A6			
+*UIConstraints: *MediaType 69			*PageSize Statement	
+*UIConstraints: *MediaType 69			*PageSize IndexCard
+
+*UIConstraints: *PageRegion Legal		*MediaType 67
+*UIConstraints: *PageRegion Executive		*MediaType 67
+*UIConstraints: *PageRegion A5			*MediaType 67
+*UIConstraints: *PageRegion B5-JIS		*MediaType 67
+*UIConstraints: *PageRegion US-Folio		*MediaType 67
+*UIConstraints: *PageRegion B5-ISO		*MediaType 67
+*UIConstraints: *PageRegion Oficio_S		*MediaType 67
+*UIConstraints: *PageRegion A6			*MediaType 67
+*UIConstraints: *PageRegion Statement		*MediaType 67
+*UIConstraints: *PageRegion IndexCard		*MediaType 67
+
+*UIConstraints: *PageRegion Legal		*MediaType 68
+*UIConstraints: *PageRegion Executive		*MediaType 68
+*UIConstraints: *PageRegion A5			*MediaType 68
+*UIConstraints: *PageRegion B5-JIS		*MediaType 68
+*UIConstraints: *PageRegion US-Folio		*MediaType 68
+*UIConstraints: *PageRegion B5-ISO		*MediaType 68
+*UIConstraints: *PageRegion Oficio_S		*MediaType 67
+*UIConstraints: *PageRegion A6			*MediaType 68
+*UIConstraints: *PageRegion Statement		*MediaType 68
+*UIConstraints: *PageRegion IndexCard		*MediaType 68
+
+*UIConstraints: *PageRegion Legal		*MediaType 69
+*UIConstraints: *PageRegion Executive		*MediaType 69
+*UIConstraints: *PageRegion A5			*MediaType 69
+*UIConstraints: *PageRegion B5-JIS		*MediaType 69
+*UIConstraints: *PageRegion US-Folio		*MediaType 69
+*UIConstraints: *PageRegion B5-ISO		*MediaType 69
+*UIConstraints: *PageRegion Oficio_S		*MediaType 69
+*UIConstraints: *PageRegion A6			*MediaType 69
+*UIConstraints: *PageRegion Statement		*MediaType 69
+*UIConstraints: *PageRegion IndexCard		*MediaType 69
+
+*UIConstraints: *MediaType 67			*PageRegion Legal			
+*UIConstraints: *MediaType 67			*PageRegion Executive		
+*UIConstraints: *MediaType 67			*PageRegion A5			
+*UIConstraints: *MediaType 67			*PageRegion B5-JIS		
+*UIConstraints: *MediaType 67			*PageRegion US-Folio		
+*UIConstraints: *MediaType 67			*PageRegion B5-ISO		
+*UIConstraints: *MediaType 67			*PageRegion Oficio_S		
+*UIConstraints: *MediaType 67			*PageRegion A6			
+*UIConstraints: *MediaType 67			*PageRegion Statement	
+*UIConstraints: *MediaType 67			*PageRegion IndexCard
+
+*UIConstraints: *MediaType 68			*PageRegion Legal			
+*UIConstraints: *MediaType 68			*PageRegion Executive		
+*UIConstraints: *MediaType 68			*PageRegion A5			
+*UIConstraints: *MediaType 68			*PageRegion B5-JIS		
+*UIConstraints: *MediaType 68			*PageRegion US-Folio		
+*UIConstraints: *MediaType 68			*PageRegion B5-ISO		
+*UIConstraints: *MediaType 67			*PageRegion Oficio_S		
+*UIConstraints: *MediaType 68			*PageRegion A6			
+*UIConstraints: *MediaType 68			*PageRegion Statement	
+*UIConstraints: *MediaType 68			*PageRegion IndexCard
+
+*UIConstraints: *MediaType 69			*PageRegion Legal			
+*UIConstraints: *MediaType 69			*PageRegion Executive		
+*UIConstraints: *MediaType 69			*PageRegion A5			
+*UIConstraints: *MediaType 69			*PageRegion B5-JIS		
+*UIConstraints: *MediaType 69			*PageRegion US-Folio		
+*UIConstraints: *MediaType 69			*PageRegion B5-ISO		
+*UIConstraints: *MediaType 69			*PageRegion Oficio_S		
+*UIConstraints: *MediaType 69			*PageRegion A6			
+*UIConstraints: *MediaType 69			*PageRegion Statement	
+*UIConstraints: *MediaType 69			*PageRegion IndexCard
+
+*% =========================================================
+*%  PageSize(A6, IndexCard, Postcard) - MediaType
+*% =========================================================		
+*% A6
+*UIConstraints: *PageSize A6		*MediaType Envelope
+*UIConstraints: *PageSize A6		*MediaType Transparency
+
+*UIConstraints: *MediaType Envelope       	*PageSize A6			
+*UIConstraints: *MediaType Transparency      	*PageSize A6			
+
+*% IndexCard
+*UIConstraints: *PageSize IndexCard		*MediaType Thin
+*UIConstraints: *PageSize IndexCard		*MediaType Bond
+*UIConstraints: *PageSize IndexCard		*MediaType Cotton
+*UIConstraints: *PageSize IndexCard		*MediaType Colored
+*UIConstraints: *PageSize IndexCard		*MediaType Preprinted
+*UIConstraints: *PageSize IndexCard		*MediaType Recycled
+*UIConstraints: *PageSize IndexCard		*MediaType Envelope
+*UIConstraints: *PageSize IndexCard		*MediaType Transparency
+*UIConstraints: *PageSize IndexCard		*MediaType Label
+*UIConstraints: *PageSize IndexCard		*MediaType Archive
+*UIConstraints: *PageSize IndexCard		*MediaType 18
+*UIConstraints: *PageSize IndexCard		*MediaType 12
+
+*UIConstraints: *MediaType Thin			*PageSize IndexCard			
+*UIConstraints: *MediaType Bond			*PageSize IndexCard			
+*UIConstraints: *MediaType Cotton 		*PageSize IndexCard			
+*UIConstraints: *MediaType Colored		*PageSize IndexCard			
+*UIConstraints: *MediaType Preprinted      	*PageSize IndexCard			
+*UIConstraints: *MediaType Recycled    		*PageSize IndexCard			
+*UIConstraints: *MediaType Envelope   		*PageSize IndexCard			
+*UIConstraints: *MediaType Transparency      	*PageSize IndexCard			
+*UIConstraints: *MediaType Label		*PageSize IndexCard			
+*UIConstraints: *MediaType Archive		*PageSize IndexCard			
+*UIConstraints: *MediaType 18			*PageSize IndexCard			
+*UIConstraints: *MediaType 12  			*PageSize IndexCard
+
+
+*% Postcard_S
+*UIConstraints: *PageSize Postcard_S		*MediaType Thin
+*UIConstraints: *PageSize Postcard_S		*MediaType Bond
+*UIConstraints: *PageSize Postcard_S		*MediaType Cotton
+*UIConstraints: *PageSize Postcard_S		*MediaType Colored
+*UIConstraints: *PageSize Postcard_S		*MediaType Preprinted
+*UIConstraints: *PageSize Postcard_S		*MediaType Recycled
+*UIConstraints: *PageSize Postcard_S		*MediaType Envelope
+*UIConstraints: *PageSize Postcard_S		*MediaType Transparency
+*UIConstraints: *PageSize Postcard_S		*MediaType Label
+*UIConstraints: *PageSize Postcard_S		*MediaType Archive
+*UIConstraints: *PageSize Postcard_S		*MediaType 18
+*UIConstraints: *PageSize Postcard_S		*MediaType 12
+
+*UIConstraints: *MediaType Thin			*PageSize Postcard_S			
+*UIConstraints: *MediaType Bond			*PageSize Postcard_S			
+*UIConstraints: *MediaType Cotton		*PageSize Postcard_S			
+*UIConstraints: *MediaType Colored		*PageSize Postcard_S			
+*UIConstraints: *MediaType Preprinted     	*PageSize Postcard_S			
+*UIConstraints: *MediaType Recycled   		*PageSize Postcard_S			
+*UIConstraints: *MediaType Envelope  		*PageSize Postcard_S			
+*UIConstraints: *MediaType Transparency     	*PageSize Postcard_S			
+*UIConstraints: *MediaType Label		*PageSize Postcard_S			
+*UIConstraints: *MediaType Archive		*PageSize Postcard_S			
+*UIConstraints: *MediaType 18			*PageSize Postcard_S			
+*UIConstraints: *MediaType 12 			*PageSize Postcard_S			
+
+*% =========================================================  
+*%  CustomPageSize - MediaType
+*% ========================================================= 
+*NonUIConstraints: *CustomPageSize True		*MediaType Transparency
+*NonUIConstraints: *MediaType Transparency	*CustomPageSize True
+
+*% =========================================================  
+*%  CustomPageSize - Photo x3
+*% =========================================================
+*NonUIConstraints: *CustomPageSize True		*MediaType 67	
+*NonUIConstraints: *MediaType 67		*CustomPageSize True	
+
+*NonUIConstraints: *CustomPageSize True		*MediaType 68
+*NonUIConstraints: *MediaType 68		*CustomPageSize True	
+
+*NonUIConstraints: *CustomPageSize True		*MediaType 69	
+*NonUIConstraints: *MediaType 69		*CustomPageSize True	
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Standard ROM
+*%
+*% End of "$Id: stcolor.ppd,v 1.8 2002/12/17 19:00:10 swdev Exp $".
+*%
+*% Spanish localization
+*es.Translation ModelName/Samsung CLX-4190 Series: ""
+*es.Translation InstallableOptions/Opciones instaladas: ""
+*es.Translation id_SaveMode/Modo Ahorro: ""
+*es.id_SaveMode On/Activado: ""
+*es.id_SaveMode Off/Desactivado: ""
+*es.Translation General/General: ""
+*es.Translation AccountType/Tipo de contabilidad: ""
+*es.AccountType Accounting/Contabilidad: ""
+*es.AccountType Pincode/Solo identificador: ""
+*es.Translation AccountID/ID de usuario: ""
+*es.Translation Permission/ : ""
+*es.Permission Personal/Permisos de usuario: ""
+*es.Permission Group/Permisos de grupo: ""
+*es.Translation AccountPassword/Introducir contraseña: ""
+*es.Translation ConfirmAcctPassword/Confirmar contraseña: ""
+*es.Translation PINCode/Solo identificador: ""
+*es.Translation InputSlot/Origen del papel: ""
+*es.InputSlot Auto/Selección automática de impresora: ""
+*es.InputSlot Manual/Alimentación manual: ""
+*es.Translation PageSize/Page Size: ""
+*es.PageSize Letter/Carta: ""
+*es.PageSize Legal/Legal: ""
+*es.PageSize Executive/Ejecutivo: ""
+*es.PageSize A4/A4: ""
+*es.PageSize A5/A5: ""
+*es.PageSize B5-JIS/JIS B5: ""
+*es.PageSize US-Folio/Folio: ""
+*es.PageSize Env10/Sobre No.10: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*es.PageSize EnvC6/Sobre C6: ""
+*es.PageSize B5-ISO/ISO B5: ""
+*es.PageSize EnvMonarch/S. Monarca: ""
+*es.PageSize A6/A6: ""
+*es.PageSize Oficio_S/Oficio: ""
+*es.PageSize Statement/Statement: ""
+*es.PageSize Env9/Sobre No.9: ""
+*es.PageSize Postcard_S/Postal 4x6: ""
+*es.PageSize IndexCard/Tarjeta índice: ""
+*es.PageSize Custom/Custom: ""
+*es.Translation PageRegion/PageRegion: ""
+*es.PageRegion Letter/Letter: ""
+*es.PageRegion Legal/Legal: ""
+*es.PageRegion Executive/Executive: ""
+*es.PageRegion A4/A4: ""
+*es.PageRegion A5/A5: ""
+*es.PageRegion B5-JIS/JIS B5: ""
+*es.PageRegion US-Folio/US Folio: ""
+*es.PageRegion Env10/No. 10 Env.: ""
+*es.PageRegion EnvDL/DL Env.: ""
+*es.PageRegion EnvC5/C5 Env.: ""
+*es.PageRegion EnvC6/C6 Env.: ""
+*es.PageRegion B5-ISO/ISO B5: ""
+*es.PageRegion EnvMonarch/Monarch Env.: ""
+*es.PageRegion A6/A6: ""
+*es.PageRegion Oficio_S/Oficio: ""
+*es.PageRegion Statement/Statement: ""
+*es.PageRegion Env9/#9 Envelope: ""
+*es.PageRegion Postcard_S/Postcard 4x6: ""
+*es.PageRegion IndexCard/Index Card: ""
+*es.PageRegion Custom/Custom: ""
+*es.Translation SECResolution/Calidad: ""
+*es.SECResolution Best/Perfecta: ""
+*es.Translation ColorModel/Modo de color: ""
+*es.ColorModel RGBA/Color: ""
+*es.ColorModel Gray/Escala de grises: ""
+*es.Translation BlackOptimization/Optimización del negro: ""
+*es.BlackOptimization Off/Desactivado: ""
+*es.BlackOptimization On/Activado: ""
+*es.Translation AdvancedOptions/Opciones avanzadas: ""
+*es.Translation MediaType/Tipo de papel: ""
+*es.MediaType None/Impresora predeterminada: ""
+*es.MediaType Plain/Papel normal: ""
+*es.MediaType Thick/Grueso: ""
+*es.MediaType 51/Más grueso: ""
+*es.MediaType Thin/Fino: ""
+*es.MediaType Bond/Bond: ""
+*es.MediaType Colored/Papel de color: ""
+*es.MediaType Card/Tarjetas: ""
+*es.MediaType Label/Etiquetas: ""
+*es.MediaType Transparency/Transparencia: ""
+*es.MediaType Envelope/Sobres: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*es.MediaType Cotton/Algodón: ""
+*es.MediaType Recycled/Reciclado: ""
+*es.MediaType Archive/Papel archivo: ""
+*es.MediaType 12/Encabezado: ""
+*es.MediaType 18/Perforado: ""
+*es.MediaType 67/Foto satinada 111-130 g/m² (láser): ""
+*es.MediaType 68/Foto satinada 131-175 g/m² (láser): ""
+*es.MediaType 69/Foto satinada 176-220 g/m² (láser): ""
+*es.Translation id_DocType/Tipo de documento: ""
+*es.id_DocType Standard/Estándar: ""
+*es.id_DocType Photo/Foto: ""
+*es.id_DocType Business/Gráfico empresarial: ""
+*es.id_DocType CAD/CAD: ""
+*es.id_DocType Webpage/Página web: ""
+*es.Translation id_EdgeEnhance/Mejora de márgenes: ""
+*es.id_EdgeEnhance Off/Desactivado: ""
+*es.id_EdgeEnhance Normal/Normal: ""
+*es.id_EdgeEnhance Maximum/Máximo: ""
+*es.Translation id_Trapping/Reventado: ""
+*es.id_Trapping Off/Desactivado: ""
+*es.id_Trapping Medium/Normal: ""
+*es.id_Trapping Maximum/Máximo: ""
+*es.Translation id_RGBColor/Administración de color de Samsung: ""
+*es.id_RGBColor Standard/Estándar: ""
+*es.id_RGBColor Vivid/Vivo: ""
+*es.id_RGBColor Device/Dispositivo: ""
+*es.id_RGBColor 3/Imagen corporativa: ""
+*es.Translation id_HalftoneLPI/La Pantalla: ""
+*es.id_HalftoneLPI Default/Impresora predeterminada: ""
+*es.id_HalftoneLPI Normal/Normal: ""
+*es.id_HalftoneLPI Enhanced/Mejorado: ""
+*es.id_HalftoneLPI Detailed/Detallado: ""
+*es.Translation SkipBlankPages/Saltar páginas en blanco: ""
+*es.SkipBlankPages False/Desactivado: ""
+*es.SkipBlankPages True/Activado: ""
+*es.Translation ColorAdjust/Niveles de ajuste: ""
+*es.Translation n_Brightness/Brillo: ""
+*es.n_Brightness 0/0: ""
+*es.n_Brightness 10/10: ""
+*es.n_Brightness 20/20: ""
+*es.n_Brightness 30/30: ""
+*es.n_Brightness 40/40: ""
+*es.n_Brightness 50/50: ""
+*es.n_Brightness 60/60: ""
+*es.n_Brightness 70/70: ""
+*es.n_Brightness 80/80: ""
+*es.n_Brightness 90/90: ""
+*es.n_Brightness 100/100: ""
+*es.Translation n_Contrast/Contraste: ""
+*es.n_Contrast 0/0: ""
+*es.n_Contrast 10/10: ""
+*es.n_Contrast 20/20: ""
+*es.n_Contrast 30/30: ""
+*es.n_Contrast 40/40: ""
+*es.n_Contrast 50/50: ""
+*es.n_Contrast 60/60: ""
+*es.n_Contrast 70/70: ""
+*es.n_Contrast 80/80: ""
+*es.n_Contrast 90/90: ""
+*es.n_Contrast 100/100: ""
+*es.Translation n_Saturation/Saturación: ""
+*es.n_Saturation 0/0: ""
+*es.n_Saturation 10/10: ""
+*es.n_Saturation 20/20: ""
+*es.n_Saturation 30/30: ""
+*es.n_Saturation 40/40: ""
+*es.n_Saturation 50/50: ""
+*es.n_Saturation 60/60: ""
+*es.n_Saturation 70/70: ""
+*es.n_Saturation 80/80: ""
+*es.n_Saturation 90/90: ""
+*es.n_Saturation 100/100: ""
+*es.Translation n_RCBalance/Cian-Rojo: ""
+*es.n_RCBalance 0/0: ""
+*es.n_RCBalance 10/10: ""
+*es.n_RCBalance 20/20: ""
+*es.n_RCBalance 30/30: ""
+*es.n_RCBalance 40/40: ""
+*es.n_RCBalance 50/50: ""
+*es.n_RCBalance 60/60: ""
+*es.n_RCBalance 70/70: ""
+*es.n_RCBalance 80/80: ""
+*es.n_RCBalance 90/90: ""
+*es.n_RCBalance 100/100: ""
+*es.Translation n_GMBalance/Magenta-Verde: ""
+*es.n_GMBalance 0/0: ""
+*es.n_GMBalance 10/10: ""
+*es.n_GMBalance 20/20: ""
+*es.n_GMBalance 30/30: ""
+*es.n_GMBalance 40/40: ""
+*es.n_GMBalance 50/50: ""
+*es.n_GMBalance 60/60: ""
+*es.n_GMBalance 70/70: ""
+*es.n_GMBalance 80/80: ""
+*es.n_GMBalance 90/90: ""
+*es.n_GMBalance 100/100: ""
+*es.Translation n_BYBalance/Amarillo-Azul: ""
+*es.n_BYBalance 0/0: ""
+*es.n_BYBalance 10/10: ""
+*es.n_BYBalance 20/20: ""
+*es.n_BYBalance 30/30: ""
+*es.n_BYBalance 40/40: ""
+*es.n_BYBalance 50/50: ""
+*es.n_BYBalance 60/60: ""
+*es.n_BYBalance 70/70: ""
+*es.n_BYBalance 80/80: ""
+*es.n_BYBalance 90/90: ""
+*es.n_BYBalance 100/100: ""
+*% Italian localization
+*it.Translation ModelName/Samsung CLX-4190 Series: ""
+*it.Translation InstallableOptions/Installed Options: ""
+*it.Translation id_SaveMode/Risparmio toner: ""
+*it.id_SaveMode On/Attivato: ""
+*it.id_SaveMode Off/Disattivato: ""
+*it.Translation General/General: ""
+*it.Translation AccountType/Tipo contabilità: ""
+*it.AccountType Accounting/Contabilità: ""
+*it.AccountType Pincode/Solo ID: ""
+*it.Translation AccountID/ID utente: ""
+*it.Translation Permission/ : ""
+*it.Permission Personal/Autorizzazione utente: ""
+*it.Permission Group/Autorizzazione del gruppo: ""
+*it.Translation AccountPassword/Immetti password: ""
+*it.Translation ConfirmAcctPassword/Conferma password: ""
+*it.Translation PINCode/Solo ID: ""
+*it.Translation InputSlot/Alimentazione: ""
+*it.InputSlot Auto/Selezione automatica stampante: ""
+*it.InputSlot Manual/Alimentazione manuale: ""
+*it.Translation PageSize/Page Size: ""
+*it.PageSize Letter/Lettera: ""
+*it.PageSize Legal/Legale: ""
+*it.PageSize Executive/Executive: ""
+*it.PageSize A4/A4: ""
+*it.PageSize A5/A5: ""
+*it.PageSize B5-JIS/JIS B5: ""
+*it.PageSize US-Folio/Folio USA: ""
+*it.PageSize Env10/Busta N.10: ""
+*it.PageSize EnvDL/Busta DL: ""
+*it.PageSize EnvC5/Busta C5: ""
+*it.PageSize EnvC6/Busta C6: ""
+*it.PageSize B5-ISO/ISO B5: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*it.PageSize A6/A6: ""
+*it.PageSize Oficio_S/Oficio: ""
+*it.PageSize Statement/Statement: ""
+*it.PageSize Env9/Busta N.9: ""
+*it.PageSize Postcard_S/Cartolina 4x6: ""
+*it.PageSize IndexCard/Scheda indicizzata: ""
+*it.PageSize Custom/Custom: ""
+*it.Translation PageRegion/PageRegion: ""
+*it.PageRegion Letter/Letter: ""
+*it.PageRegion Legal/Legal: ""
+*it.PageRegion Executive/Executive: ""
+*it.PageRegion A4/A4: ""
+*it.PageRegion A5/A5: ""
+*it.PageRegion B5-JIS/JIS B5: ""
+*it.PageRegion US-Folio/US Folio: ""
+*it.PageRegion Env10/No. 10 Env.: ""
+*it.PageRegion EnvDL/DL Env.: ""
+*it.PageRegion EnvC5/C5 Env.: ""
+*it.PageRegion EnvC6/C6 Env.: ""
+*it.PageRegion B5-ISO/ISO B5: ""
+*it.PageRegion EnvMonarch/Monarch Env.: ""
+*it.PageRegion A6/A6: ""
+*it.PageRegion Oficio_S/Oficio: ""
+*it.PageRegion Statement/Statement: ""
+*it.PageRegion Env9/#9 Envelope: ""
+*it.PageRegion Postcard_S/Postcard 4x6: ""
+*it.PageRegion IndexCard/Index Card: ""
+*it.PageRegion Custom/Custom: ""
+*it.Translation SECResolution/Qualità: ""
+*it.SECResolution Best/Migliore: ""
+*it.Translation ColorModel/Modalità colori: ""
+*it.ColorModel RGBA/Colore: ""
+*it.ColorModel Gray/Scala di grigi: ""
+*it.Translation BlackOptimization/Ottimizzazione del nero: ""
+*it.BlackOptimization Off/Disattivato: ""
+*it.BlackOptimization On/Attivato: ""
+*it.Translation AdvancedOptions/Opzioni avanzate: ""
+*it.Translation MediaType/Tipo carta: ""
+*it.MediaType None/Predefinito stampante: ""
+*it.MediaType Plain/Carta normale: ""
+*it.MediaType Thick/Spessa: ""
+*it.MediaType 51/Più spessa: ""
+*it.MediaType Thin/Sottile: ""
+*it.MediaType Bond/Carta laser: ""
+*it.MediaType Colored/Carta colorata: ""
+*it.MediaType Card/Cartoncini: ""
+*it.MediaType Label/Etichette: ""
+*it.MediaType Transparency/Lucidi: ""
+*it.MediaType Envelope/Buste: ""
+*it.MediaType Preprinted/Prestampata: ""
+*it.MediaType Cotton/Cotonata: ""
+*it.MediaType Recycled/Riciclata: ""
+*it.MediaType Archive/Carta archivio: ""
+*it.MediaType 12/Carta intestata: ""
+*it.MediaType 18/Perforata: ""
+*it.MediaType 67/Fotografica lucida 111-130 g/m2 (Laser): ""
+*it.MediaType 68/Fotografica lucida 131-175 g/m2 (Laser): ""
+*it.MediaType 69/Fotografica lucida 176-220 g/m2 (Laser): ""
+*it.Translation id_DocType/Tipo documento: ""
+*it.id_DocType Standard/Standard: ""
+*it.id_DocType Photo/Foto: ""
+*it.id_DocType Business/Grafica commerciale: ""
+*it.id_DocType CAD/CAD: ""
+*it.id_DocType Webpage/Pagina Web: ""
+*it.Translation id_EdgeEnhance/Ottimizzazione bordo: ""
+*it.id_EdgeEnhance Off/Disattivato: ""
+*it.id_EdgeEnhance Normal/Normale: ""
+*it.id_EdgeEnhance Maximum/Massimo: ""
+*it.Translation id_Trapping/Trapping: ""
+*it.id_Trapping Off/Disattivato: ""
+*it.id_Trapping Medium/Normale: ""
+*it.id_Trapping Maximum/Massimo: ""
+*it.Translation id_RGBColor/Gestione colori Samsung: ""
+*it.id_RGBColor Standard/Standard: ""
+*it.id_RGBColor Vivid/Vivace: ""
+*it.id_RGBColor Device/Dispositivo: ""
+*it.id_RGBColor 3/Immagini aziendali: ""
+*it.Translation id_HalftoneLPI/Schermo: ""
+*it.id_HalftoneLPI Default/Predefinito stampante: ""
+*it.id_HalftoneLPI Normal/Normale: ""
+*it.id_HalftoneLPI Enhanced/Migliorato: ""
+*it.id_HalftoneLPI Detailed/Dettagliato: ""
+*it.Translation SkipBlankPages/Ignora pagine vuote: ""
+*it.SkipBlankPages False/Disattivato: ""
+*it.SkipBlankPages True/Attivato: ""
+*it.Translation ColorAdjust/Livelli di regolazione: ""
+*it.Translation n_Brightness/Luminosità: ""
+*it.n_Brightness 0/0: ""
+*it.n_Brightness 10/10: ""
+*it.n_Brightness 20/20: ""
+*it.n_Brightness 30/30: ""
+*it.n_Brightness 40/40: ""
+*it.n_Brightness 50/50: ""
+*it.n_Brightness 60/60: ""
+*it.n_Brightness 70/70: ""
+*it.n_Brightness 80/80: ""
+*it.n_Brightness 90/90: ""
+*it.n_Brightness 100/100: ""
+*it.Translation n_Contrast/Contrasto: ""
+*it.n_Contrast 0/0: ""
+*it.n_Contrast 10/10: ""
+*it.n_Contrast 20/20: ""
+*it.n_Contrast 30/30: ""
+*it.n_Contrast 40/40: ""
+*it.n_Contrast 50/50: ""
+*it.n_Contrast 60/60: ""
+*it.n_Contrast 70/70: ""
+*it.n_Contrast 80/80: ""
+*it.n_Contrast 90/90: ""
+*it.n_Contrast 100/100: ""
+*it.Translation n_Saturation/Saturazione: ""
+*it.n_Saturation 0/0: ""
+*it.n_Saturation 10/10: ""
+*it.n_Saturation 20/20: ""
+*it.n_Saturation 30/30: ""
+*it.n_Saturation 40/40: ""
+*it.n_Saturation 50/50: ""
+*it.n_Saturation 60/60: ""
+*it.n_Saturation 70/70: ""
+*it.n_Saturation 80/80: ""
+*it.n_Saturation 90/90: ""
+*it.n_Saturation 100/100: ""
+*it.Translation n_RCBalance/Ciano-Rosso: ""
+*it.n_RCBalance 0/0: ""
+*it.n_RCBalance 10/10: ""
+*it.n_RCBalance 20/20: ""
+*it.n_RCBalance 30/30: ""
+*it.n_RCBalance 40/40: ""
+*it.n_RCBalance 50/50: ""
+*it.n_RCBalance 60/60: ""
+*it.n_RCBalance 70/70: ""
+*it.n_RCBalance 80/80: ""
+*it.n_RCBalance 90/90: ""
+*it.n_RCBalance 100/100: ""
+*it.Translation n_GMBalance/Magenta-Verde: ""
+*it.n_GMBalance 0/0: ""
+*it.n_GMBalance 10/10: ""
+*it.n_GMBalance 20/20: ""
+*it.n_GMBalance 30/30: ""
+*it.n_GMBalance 40/40: ""
+*it.n_GMBalance 50/50: ""
+*it.n_GMBalance 60/60: ""
+*it.n_GMBalance 70/70: ""
+*it.n_GMBalance 80/80: ""
+*it.n_GMBalance 90/90: ""
+*it.n_GMBalance 100/100: ""
+*it.Translation n_BYBalance/Giallo-Blu: ""
+*it.n_BYBalance 0/0: ""
+*it.n_BYBalance 10/10: ""
+*it.n_BYBalance 20/20: ""
+*it.n_BYBalance 30/30: ""
+*it.n_BYBalance 40/40: ""
+*it.n_BYBalance 50/50: ""
+*it.n_BYBalance 60/60: ""
+*it.n_BYBalance 70/70: ""
+*it.n_BYBalance 80/80: ""
+*it.n_BYBalance 90/90: ""
+*it.n_BYBalance 100/100: ""
+*% Dutch localization
+*nl.Translation ModelName/Samsung CLX-4190 Series: ""
+*nl.Translation InstallableOptions/Geïnstalleerde opties: ""
+*nl.Translation id_SaveMode/Tonerspaarstand: ""
+*nl.id_SaveMode On/Aan: ""
+*nl.id_SaveMode Off/Uit: ""
+*nl.Translation General/General: ""
+*nl.Translation AccountType/Accountingtype: ""
+*nl.AccountType Accounting/Accounting: ""
+*nl.AccountType Pincode/Alleen id: ""
+*nl.Translation AccountID/Gebruikersnaam: ""
+*nl.Translation Permission/ : ""
+*nl.Permission Personal/Gebruikersmachtiging: ""
+*nl.Permission Group/Groepsmachtiging: ""
+*nl.Translation AccountPassword/Voer het wachtwoord in: ""
+*nl.Translation ConfirmAcctPassword/Wachtwoord bevestigen: ""
+*nl.Translation PINCode/Alleen id: ""
+*nl.Translation InputSlot/Papierinvoer: ""
+*nl.InputSlot Auto/Automatische printerkeuze: ""
+*nl.InputSlot Manual/Handmatige invoer: ""
+*nl.Translation PageSize/Page Size: ""
+*nl.PageSize Letter/Letter: ""
+*nl.PageSize Legal/Legal: ""
+*nl.PageSize Executive/Executive: ""
+*nl.PageSize A4/A4: ""
+*nl.PageSize A5/A5: ""
+*nl.PageSize B5-JIS/JIS B5: ""
+*nl.PageSize US-Folio/US Folio: ""
+*nl.PageSize Env10/Env. nr.10: ""
+*nl.PageSize EnvDL/Envelop DL: ""
+*nl.PageSize EnvC5/Envelop C5: ""
+*nl.PageSize EnvC6/Envelop C6: ""
+*nl.PageSize B5-ISO/ISO B5: ""
+*nl.PageSize EnvMonarch/Monarch-env.: ""
+*nl.PageSize A6/A6: ""
+*nl.PageSize Oficio_S/Oficio: ""
+*nl.PageSize Statement/Statement: ""
+*nl.PageSize Env9/Envelop nr. 9: ""
+*nl.PageSize Postcard_S/Briefkaart 4x6: ""
+*nl.PageSize IndexCard/Indexkaart: ""
+*nl.PageSize Custom/Custom: ""
+*nl.Translation PageRegion/PageRegion: ""
+*nl.PageRegion Letter/Letter: ""
+*nl.PageRegion Legal/Legal: ""
+*nl.PageRegion Executive/Executive: ""
+*nl.PageRegion A4/A4: ""
+*nl.PageRegion A5/A5: ""
+*nl.PageRegion B5-JIS/JIS B5: ""
+*nl.PageRegion US-Folio/US Folio: ""
+*nl.PageRegion Env10/No. 10 Env.: ""
+*nl.PageRegion EnvDL/DL Env.: ""
+*nl.PageRegion EnvC5/C5 Env.: ""
+*nl.PageRegion EnvC6/C6 Env.: ""
+*nl.PageRegion B5-ISO/ISO B5: ""
+*nl.PageRegion EnvMonarch/Monarch Env.: ""
+*nl.PageRegion A6/A6: ""
+*nl.PageRegion Oficio_S/Oficio: ""
+*nl.PageRegion Statement/Statement: ""
+*nl.PageRegion Env9/#9 Envelope: ""
+*nl.PageRegion Postcard_S/Postcard 4x6: ""
+*nl.PageRegion IndexCard/Index Card: ""
+*nl.PageRegion Custom/Custom: ""
+*nl.Translation SECResolution/Kwaliteit: ""
+*nl.SECResolution Best/Best: ""
+*nl.Translation ColorModel/Kleurenmodus: ""
+*nl.ColorModel RGBA/Kleur: ""
+*nl.ColorModel Gray/Grijstinten: ""
+*nl.Translation BlackOptimization/Zwart-wit optimaliseren: ""
+*nl.BlackOptimization Off/Uit: ""
+*nl.BlackOptimization On/Aan: ""
+*nl.Translation AdvancedOptions/Geavanceerde opties: ""
+*nl.Translation MediaType/Type papier: ""
+*nl.MediaType None/Standaardinstelling printer: ""
+*nl.MediaType Plain/Normaal papier: ""
+*nl.MediaType Thick/Dik papier: ""
+*nl.MediaType 51/Dikker: ""
+*nl.MediaType Thin/Dun papier: ""
+*nl.MediaType Bond/Bankpost: ""
+*nl.MediaType Colored/Color: ""
+*nl.MediaType Card/Kaarten: ""
+*nl.MediaType Label/Etiketten: ""
+*nl.MediaType Transparency/Transparanten: ""
+*nl.MediaType Envelope/Envelop: ""
+*nl.MediaType Preprinted/Voorbedrukt: ""
+*nl.MediaType Cotton/Katoen: ""
+*nl.MediaType Recycled/Kringlooppapier: ""
+*nl.MediaType Archive/Archiefpapier: ""
+*nl.MediaType 12/Birefhoofd: ""
+*nl.MediaType 18/Geperforeerd: ""
+*nl.MediaType 67/Glanzende foto 111-130 g/m2 (laser): ""
+*nl.MediaType 68/Glanzende foto 131-175 g/m2 (laser): ""
+*nl.MediaType 69/Glanzende foto 176-220 g/m2 (laser): ""
+*nl.Translation id_DocType/Documenttype: ""
+*nl.id_DocType Standard/Standaard: ""
+*nl.id_DocType Photo/Foto: ""
+*nl.id_DocType Business/Zakelijke grafische afbeelding: ""
+*nl.id_DocType CAD/CAD: ""
+*nl.id_DocType Webpage/Webpagina: ""
+*nl.Translation id_EdgeEnhance/Randverbetering: ""
+*nl.id_EdgeEnhance Off/Uit: ""
+*nl.id_EdgeEnhance Normal/Normaal: ""
+*nl.id_EdgeEnhance Maximum/Maximum: ""
+*nl.Translation id_Trapping/Invanging: ""
+*nl.id_Trapping Off/Uit: ""
+*nl.id_Trapping Medium/Normaal: ""
+*nl.id_Trapping Maximum/Maximum: ""
+*nl.Translation id_RGBColor/Samsung Kleurbeheer: ""
+*nl.id_RGBColor Standard/Standaard: ""
+*nl.id_RGBColor Vivid/Levendig: ""
+*nl.id_RGBColor Device/Apparaat: ""
+*nl.id_RGBColor 3/Huisstijl: ""
+*nl.Translation id_HalftoneLPI/Venster: ""
+*nl.id_HalftoneLPI Default/Standaardinstelling printer: ""
+*nl.id_HalftoneLPI Normal/Normaal: ""
+*nl.id_HalftoneLPI Enhanced/Verbeterd: ""
+*nl.id_HalftoneLPI Detailed/Gedetailleerd: ""
+*nl.Translation SkipBlankPages/Blanco pagina's overslaan: ""
+*nl.SkipBlankPages False/Uit: ""
+*nl.SkipBlankPages True/Aan: ""
+*nl.Translation ColorAdjust/Aanpassingsniveaus: ""
+*nl.Translation n_Brightness/Helderheid: ""
+*nl.n_Brightness 0/0: ""
+*nl.n_Brightness 10/10: ""
+*nl.n_Brightness 20/20: ""
+*nl.n_Brightness 30/30: ""
+*nl.n_Brightness 40/40: ""
+*nl.n_Brightness 50/50: ""
+*nl.n_Brightness 60/60: ""
+*nl.n_Brightness 70/70: ""
+*nl.n_Brightness 80/80: ""
+*nl.n_Brightness 90/90: ""
+*nl.n_Brightness 100/100: ""
+*nl.Translation n_Contrast/Contrast: ""
+*nl.n_Contrast 0/0: ""
+*nl.n_Contrast 10/10: ""
+*nl.n_Contrast 20/20: ""
+*nl.n_Contrast 30/30: ""
+*nl.n_Contrast 40/40: ""
+*nl.n_Contrast 50/50: ""
+*nl.n_Contrast 60/60: ""
+*nl.n_Contrast 70/70: ""
+*nl.n_Contrast 80/80: ""
+*nl.n_Contrast 90/90: ""
+*nl.n_Contrast 100/100: ""
+*nl.Translation n_Saturation/Intensiteit: ""
+*nl.n_Saturation 0/0: ""
+*nl.n_Saturation 10/10: ""
+*nl.n_Saturation 20/20: ""
+*nl.n_Saturation 30/30: ""
+*nl.n_Saturation 40/40: ""
+*nl.n_Saturation 50/50: ""
+*nl.n_Saturation 60/60: ""
+*nl.n_Saturation 70/70: ""
+*nl.n_Saturation 80/80: ""
+*nl.n_Saturation 90/90: ""
+*nl.n_Saturation 100/100: ""
+*nl.Translation n_RCBalance/Cyaan-Rood: ""
+*nl.n_RCBalance 0/0: ""
+*nl.n_RCBalance 10/10: ""
+*nl.n_RCBalance 20/20: ""
+*nl.n_RCBalance 30/30: ""
+*nl.n_RCBalance 40/40: ""
+*nl.n_RCBalance 50/50: ""
+*nl.n_RCBalance 60/60: ""
+*nl.n_RCBalance 70/70: ""
+*nl.n_RCBalance 80/80: ""
+*nl.n_RCBalance 90/90: ""
+*nl.n_RCBalance 100/100: ""
+*nl.Translation n_GMBalance/Magenta-Groen: ""
+*nl.n_GMBalance 0/0: ""
+*nl.n_GMBalance 10/10: ""
+*nl.n_GMBalance 20/20: ""
+*nl.n_GMBalance 30/30: ""
+*nl.n_GMBalance 40/40: ""
+*nl.n_GMBalance 50/50: ""
+*nl.n_GMBalance 60/60: ""
+*nl.n_GMBalance 70/70: ""
+*nl.n_GMBalance 80/80: ""
+*nl.n_GMBalance 90/90: ""
+*nl.n_GMBalance 100/100: ""
+*nl.Translation n_BYBalance/Geel-Blauw: ""
+*nl.n_BYBalance 0/0: ""
+*nl.n_BYBalance 10/10: ""
+*nl.n_BYBalance 20/20: ""
+*nl.n_BYBalance 30/30: ""
+*nl.n_BYBalance 40/40: ""
+*nl.n_BYBalance 50/50: ""
+*nl.n_BYBalance 60/60: ""
+*nl.n_BYBalance 70/70: ""
+*nl.n_BYBalance 80/80: ""
+*nl.n_BYBalance 90/90: ""
+*nl.n_BYBalance 100/100: ""
+*% French localization
+*fr.Translation ModelName/Samsung CLX-4190 Series: ""
+*fr.Translation InstallableOptions/Options installées: ""
+*fr.Translation id_SaveMode/Économie de toner: ""
+*fr.id_SaveMode On/Activé: ""
+*fr.id_SaveMode Off/Désactivé: ""
+*fr.Translation General/General: ""
+*fr.Translation AccountType/Type de comptabilité: ""
+*fr.AccountType Accounting/Comptabilité: ""
+*fr.AccountType Pincode/ID uniquement: ""
+*fr.Translation AccountID/ID d'utilisateur: ""
+*fr.Translation Permission/ : ""
+*fr.Permission Personal/Autorisation utilisateur: ""
+*fr.Permission Group/Autorisation du groupe: ""
+*fr.Translation AccountPassword/Entrez le mot de passe: ""
+*fr.Translation ConfirmAcctPassword/Confirmez le mot de passe: ""
+*fr.Translation PINCode/ID uniquement: ""
+*fr.Translation InputSlot/Alimentation papier: ""
+*fr.InputSlot Auto/Sélection automatique de l'imprimante: ""
+*fr.InputSlot Manual/Chargeur manuel: ""
+*fr.Translation PageSize/Page Size: ""
+*fr.PageSize Letter/Lettre: ""
+*fr.PageSize Legal/Légal: ""
+*fr.PageSize Executive/Exécutif: ""
+*fr.PageSize A4/A4: ""
+*fr.PageSize A5/A5: ""
+*fr.PageSize B5-JIS/B5 JIS: ""
+*fr.PageSize US-Folio/Folio: ""
+*fr.PageSize Env10/Env. No.10: ""
+*fr.PageSize EnvDL/Env. DL: ""
+*fr.PageSize EnvC5/Env. C5: ""
+*fr.PageSize EnvC6/Env. C6: ""
+*fr.PageSize B5-ISO/B5 ISO: ""
+*fr.PageSize EnvMonarch/Env. Monarch: ""
+*fr.PageSize A6/A6: ""
+*fr.PageSize Oficio_S/Oficio: ""
+*fr.PageSize Statement/Statement: ""
+*fr.PageSize Env9/Env. No.9: ""
+*fr.PageSize Postcard_S/Carte postale 4x6: ""
+*fr.PageSize IndexCard/Fiche: ""
+*fr.PageSize Custom/Custom: ""
+*fr.Translation PageRegion/PageRegion: ""
+*fr.PageRegion Letter/Letter: ""
+*fr.PageRegion Legal/Legal: ""
+*fr.PageRegion Executive/Executive: ""
+*fr.PageRegion A4/A4: ""
+*fr.PageRegion A5/A5: ""
+*fr.PageRegion B5-JIS/JIS B5: ""
+*fr.PageRegion US-Folio/US Folio: ""
+*fr.PageRegion Env10/No. 10 Env.: ""
+*fr.PageRegion EnvDL/DL Env.: ""
+*fr.PageRegion EnvC5/C5 Env.: ""
+*fr.PageRegion EnvC6/C6 Env.: ""
+*fr.PageRegion B5-ISO/ISO B5: ""
+*fr.PageRegion EnvMonarch/Monarch Env.: ""
+*fr.PageRegion A6/A6: ""
+*fr.PageRegion Oficio_S/Oficio: ""
+*fr.PageRegion Statement/Statement: ""
+*fr.PageRegion Env9/#9 Envelope: ""
+*fr.PageRegion Postcard_S/Postcard 4x6: ""
+*fr.PageRegion IndexCard/Index Card: ""
+*fr.PageRegion Custom/Custom: ""
+*fr.Translation SECResolution/Qualité: ""
+*fr.SECResolution Best/Optimale: ""
+*fr.Translation ColorModel/Mode Couleur: ""
+*fr.ColorModel RGBA/Couleur: ""
+*fr.ColorModel Gray/Échelle de gris: ""
+*fr.Translation BlackOptimization/Optimisation du noir: ""
+*fr.BlackOptimization Off/Désactivé: ""
+*fr.BlackOptimization On/Activé: ""
+*fr.Translation AdvancedOptions/Options avancées: ""
+*fr.Translation MediaType/Type de papier: ""
+*fr.MediaType None/Imprimante par défaut: ""
+*fr.MediaType Plain/Papier ordinaire: ""
+*fr.MediaType Thick/Papier épais: ""
+*fr.MediaType 51/Plus épais: ""
+*fr.MediaType Thin/Papier fin: ""
+*fr.MediaType Bond/Papier de luxe: ""
+*fr.MediaType Colored/Papier couleur: ""
+*fr.MediaType Card/Papier cartonné: ""
+*fr.MediaType Label/Étiquettes: ""
+*fr.MediaType Transparency/Transparent: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*fr.MediaType Preprinted/Pré-imprimé: ""
+*fr.MediaType Cotton/Papier en coton: ""
+*fr.MediaType Recycled/Papier recyclé: ""
+*fr.MediaType Archive/Papier archive: ""
+*fr.MediaType 12/Papier à en-tête: ""
+*fr.MediaType 18/Perforé: ""
+*fr.MediaType 67/Photo papier brillant 111-130 g/m2 (Laser): ""
+*fr.MediaType 68/Photo papier brillant 131-175 g/m2 (Laser): ""
+*fr.MediaType 69/Photo papier brillant176-220 g/m2 (Laser): ""
+*fr.Translation id_DocType/Type de document: ""
+*fr.id_DocType Standard/Standard: ""
+*fr.id_DocType Photo/Photo: ""
+*fr.id_DocType Business/Graphique d'entreprise: ""
+*fr.id_DocType CAD/CAO: ""
+*fr.id_DocType Webpage/Page Web: ""
+*fr.Translation id_EdgeEnhance/Amélioration des bords: ""
+*fr.id_EdgeEnhance Off/Désactivé: ""
+*fr.id_EdgeEnhance Normal/Normale: ""
+*fr.id_EdgeEnhance Maximum/Maximum: ""
+*fr.Translation id_Trapping/Recouvrement: ""
+*fr.id_Trapping Off/Désactivé: ""
+*fr.id_Trapping Medium/Normale: ""
+*fr.id_Trapping Maximum/Maximum: ""
+*fr.Translation id_RGBColor/Gestion des couleurs Samsung: ""
+*fr.id_RGBColor Standard/Standard: ""
+*fr.id_RGBColor Vivid/Couleurs vives: ""
+*fr.id_RGBColor Device/Périphérique: ""
+*fr.id_RGBColor 3/Imagerie professionnelle: ""
+*fr.Translation id_HalftoneLPI/Trame: ""
+*fr.id_HalftoneLPI Default/Imprimante par défaut: ""
+*fr.id_HalftoneLPI Normal/Normale: ""
+*fr.id_HalftoneLPI Enhanced/Améliorée: ""
+*fr.id_HalftoneLPI Detailed/Détaillée: ""
+*fr.Translation SkipBlankPages/Ignorer les pages blanches: ""
+*fr.SkipBlankPages False/Désactivé: ""
+*fr.SkipBlankPages True/Activé: ""
+*fr.Translation ColorAdjust/Niveaux de réglage: ""
+*fr.Translation n_Brightness/Luminosité: ""
+*fr.n_Brightness 0/0: ""
+*fr.n_Brightness 10/10: ""
+*fr.n_Brightness 20/20: ""
+*fr.n_Brightness 30/30: ""
+*fr.n_Brightness 40/40: ""
+*fr.n_Brightness 50/50: ""
+*fr.n_Brightness 60/60: ""
+*fr.n_Brightness 70/70: ""
+*fr.n_Brightness 80/80: ""
+*fr.n_Brightness 90/90: ""
+*fr.n_Brightness 100/100: ""
+*fr.Translation n_Contrast/Contraste: ""
+*fr.n_Contrast 0/0: ""
+*fr.n_Contrast 10/10: ""
+*fr.n_Contrast 20/20: ""
+*fr.n_Contrast 30/30: ""
+*fr.n_Contrast 40/40: ""
+*fr.n_Contrast 50/50: ""
+*fr.n_Contrast 60/60: ""
+*fr.n_Contrast 70/70: ""
+*fr.n_Contrast 80/80: ""
+*fr.n_Contrast 90/90: ""
+*fr.n_Contrast 100/100: ""
+*fr.Translation n_Saturation/Saturation: ""
+*fr.n_Saturation 0/0: ""
+*fr.n_Saturation 10/10: ""
+*fr.n_Saturation 20/20: ""
+*fr.n_Saturation 30/30: ""
+*fr.n_Saturation 40/40: ""
+*fr.n_Saturation 50/50: ""
+*fr.n_Saturation 60/60: ""
+*fr.n_Saturation 70/70: ""
+*fr.n_Saturation 80/80: ""
+*fr.n_Saturation 90/90: ""
+*fr.n_Saturation 100/100: ""
+*fr.Translation n_RCBalance/Cyan-Rouge: ""
+*fr.n_RCBalance 0/0: ""
+*fr.n_RCBalance 10/10: ""
+*fr.n_RCBalance 20/20: ""
+*fr.n_RCBalance 30/30: ""
+*fr.n_RCBalance 40/40: ""
+*fr.n_RCBalance 50/50: ""
+*fr.n_RCBalance 60/60: ""
+*fr.n_RCBalance 70/70: ""
+*fr.n_RCBalance 80/80: ""
+*fr.n_RCBalance 90/90: ""
+*fr.n_RCBalance 100/100: ""
+*fr.Translation n_GMBalance/Magenta-Vert: ""
+*fr.n_GMBalance 0/0: ""
+*fr.n_GMBalance 10/10: ""
+*fr.n_GMBalance 20/20: ""
+*fr.n_GMBalance 30/30: ""
+*fr.n_GMBalance 40/40: ""
+*fr.n_GMBalance 50/50: ""
+*fr.n_GMBalance 60/60: ""
+*fr.n_GMBalance 70/70: ""
+*fr.n_GMBalance 80/80: ""
+*fr.n_GMBalance 90/90: ""
+*fr.n_GMBalance 100/100: ""
+*fr.Translation n_BYBalance/Jaune-Bleu: ""
+*fr.n_BYBalance 0/0: ""
+*fr.n_BYBalance 10/10: ""
+*fr.n_BYBalance 20/20: ""
+*fr.n_BYBalance 30/30: ""
+*fr.n_BYBalance 40/40: ""
+*fr.n_BYBalance 50/50: ""
+*fr.n_BYBalance 60/60: ""
+*fr.n_BYBalance 70/70: ""
+*fr.n_BYBalance 80/80: ""
+*fr.n_BYBalance 90/90: ""
+*fr.n_BYBalance 100/100: ""
+*% German localization
+*de.Translation ModelName/Samsung CLX-4190 Series: ""
+*de.Translation InstallableOptions/Installierte Optionen: ""
+*de.Translation id_SaveMode/Toner-Sparbetrieb: ""
+*de.id_SaveMode On/Ein: ""
+*de.id_SaveMode Off/Aus: ""
+*de.Translation General/General: ""
+*de.Translation AccountType/Auftragsprotokollierungstyp: ""
+*de.AccountType Accounting/Auftragsprotokollierung: ""
+*de.AccountType Pincode/Nur Benutzername: ""
+*de.Translation AccountID/Benutzer-ID: ""
+*de.Translation Permission/ : ""
+*de.Permission Personal/Benutzerberechtigung: ""
+*de.Permission Group/Gruppenberechtigung: ""
+*de.Translation AccountPassword/Passwort eingeben: ""
+*de.Translation ConfirmAcctPassword/Passwort bestätigen: ""
+*de.Translation PINCode/Nur Benutzername: ""
+*de.Translation InputSlot/Papierzufuhr: ""
+*de.InputSlot Auto/Automatische Druckerauswahl: ""
+*de.InputSlot Manual/Manueller Einzug: ""
+*de.Translation PageSize/Page Size: ""
+*de.PageSize Letter/US-Letter: ""
+*de.PageSize Legal/US-Legal: ""
+*de.PageSize Executive/US-Executive: ""
+*de.PageSize A4/A4: ""
+*de.PageSize A5/A5: ""
+*de.PageSize B5-JIS/JIS B5: ""
+*de.PageSize US-Folio/US-Folio: ""
+*de.PageSize Env10/No.10 Umschlag: ""
+*de.PageSize EnvDL/DL Umschlag: ""
+*de.PageSize EnvC5/C5 Umschlag: ""
+*de.PageSize EnvC6/C6 Umschlag: ""
+*de.PageSize B5-ISO/ISO B5: ""
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*de.PageSize A6/A6: ""
+*de.PageSize Oficio_S/Oficio: ""
+*de.PageSize Statement/Statement: ""
+*de.PageSize Env9/No.9 Umschlag: ""
+*de.PageSize Postcard_S/Postkarte 4x6: ""
+*de.PageSize IndexCard/Indexkarte: ""
+*de.PageSize Custom/Custom: ""
+*de.Translation PageRegion/PageRegion: ""
+*de.PageRegion Letter/Letter: ""
+*de.PageRegion Legal/Legal: ""
+*de.PageRegion Executive/Executive: ""
+*de.PageRegion A4/A4: ""
+*de.PageRegion A5/A5: ""
+*de.PageRegion B5-JIS/JIS B5: ""
+*de.PageRegion US-Folio/US Folio: ""
+*de.PageRegion Env10/No. 10 Env.: ""
+*de.PageRegion EnvDL/DL Env.: ""
+*de.PageRegion EnvC5/C5 Env.: ""
+*de.PageRegion EnvC6/C6 Env.: ""
+*de.PageRegion B5-ISO/ISO B5: ""
+*de.PageRegion EnvMonarch/Monarch Env.: ""
+*de.PageRegion A6/A6: ""
+*de.PageRegion Oficio_S/Oficio: ""
+*de.PageRegion Statement/Statement: ""
+*de.PageRegion Env9/#9 Envelope: ""
+*de.PageRegion Postcard_S/Postcard 4x6: ""
+*de.PageRegion IndexCard/Index Card: ""
+*de.PageRegion Custom/Custom: ""
+*de.Translation SECResolution/Qualität: ""
+*de.SECResolution Best/Beste: ""
+*de.Translation ColorModel/Farbmodus: ""
+*de.ColorModel RGBA/Farbe: ""
+*de.ColorModel Gray/Graustufen: ""
+*de.Translation BlackOptimization/Schwarz-Optimierung: ""
+*de.BlackOptimization Off/Aus: ""
+*de.BlackOptimization On/Ein: ""
+*de.Translation AdvancedOptions/Erweiterte Optionen: ""
+*de.Translation MediaType/Papiertyp: ""
+*de.MediaType None/Druckervorgabe: ""
+*de.MediaType Plain/Normalpapier: ""
+*de.MediaType Thick/Dickes Papier: ""
+*de.MediaType 51/Dicker: ""
+*de.MediaType Thin/Dünnes Papier: ""
+*de.MediaType Bond/Bankpost-Papier: ""
+*de.MediaType Colored/Farbpapier: ""
+*de.MediaType Card/Karten: ""
+*de.MediaType Label/Etiketten: ""
+*de.MediaType Transparency/Folien: ""
+*de.MediaType Envelope/Umschläge: ""
+*de.MediaType Preprinted/Formulare: ""
+*de.MediaType Cotton/Baumwollpapier: ""
+*de.MediaType Recycled/Recycling-Papier: ""
+*de.MediaType Archive/Archivpapier: ""
+*de.MediaType 12/Briefpapier mit Briefkopf: ""
+*de.MediaType 18/Gestanzt: ""
+*de.MediaType 67/Glanzfoto 111-130 g/m2 (Laser): ""
+*de.MediaType 68/Glanzfoto 131-175 g/m2 (Laser): ""
+*de.MediaType 69/Glanzfoto 176-220 g/m2 (Laser): ""
+*de.Translation id_DocType/Dokumenttyp: ""
+*de.id_DocType Standard/Standard: ""
+*de.id_DocType Photo/Foto: ""
+*de.id_DocType Business/Geschäftsgrafik: ""
+*de.id_DocType CAD/CAD: ""
+*de.id_DocType Webpage/Webseite: ""
+*de.Translation id_EdgeEnhance/Kantenhervorhebung: ""
+*de.id_EdgeEnhance Off/Aus: ""
+*de.id_EdgeEnhance Normal/Normal: ""
+*de.id_EdgeEnhance Maximum/Maximal: ""
+*de.Translation id_Trapping/Trapping: ""
+*de.id_Trapping Off/Aus: ""
+*de.id_Trapping Medium/Normal: ""
+*de.id_Trapping Maximum/Maximal: ""
+*de.Translation id_RGBColor/Samsung-Farbmanagement: ""
+*de.id_RGBColor Standard/Standard: ""
+*de.id_RGBColor Vivid/Kräftig: ""
+*de.id_RGBColor Device/Gerät: ""
+*de.id_RGBColor 3/Unternehmensbild: ""
+*de.Translation id_HalftoneLPI/Bildschirm: ""
+*de.id_HalftoneLPI Default/Druckervorgabe: ""
+*de.id_HalftoneLPI Normal/Normal: ""
+*de.id_HalftoneLPI Enhanced/Erweitert: ""
+*de.id_HalftoneLPI Detailed/Detailliert: ""
+*de.Translation SkipBlankPages/Leere Seiten überspringen: ""
+*de.SkipBlankPages False/Aus: ""
+*de.SkipBlankPages True/Ein: ""
+*de.Translation ColorAdjust/Anpassungsstufen: ""
+*de.Translation n_Brightness/Helligkeit: ""
+*de.n_Brightness 0/0: ""
+*de.n_Brightness 10/10: ""
+*de.n_Brightness 20/20: ""
+*de.n_Brightness 30/30: ""
+*de.n_Brightness 40/40: ""
+*de.n_Brightness 50/50: ""
+*de.n_Brightness 60/60: ""
+*de.n_Brightness 70/70: ""
+*de.n_Brightness 80/80: ""
+*de.n_Brightness 90/90: ""
+*de.n_Brightness 100/100: ""
+*de.Translation n_Contrast/Kontrast: ""
+*de.n_Contrast 0/0: ""
+*de.n_Contrast 10/10: ""
+*de.n_Contrast 20/20: ""
+*de.n_Contrast 30/30: ""
+*de.n_Contrast 40/40: ""
+*de.n_Contrast 50/50: ""
+*de.n_Contrast 60/60: ""
+*de.n_Contrast 70/70: ""
+*de.n_Contrast 80/80: ""
+*de.n_Contrast 90/90: ""
+*de.n_Contrast 100/100: ""
+*de.Translation n_Saturation/Sättigung: ""
+*de.n_Saturation 0/0: ""
+*de.n_Saturation 10/10: ""
+*de.n_Saturation 20/20: ""
+*de.n_Saturation 30/30: ""
+*de.n_Saturation 40/40: ""
+*de.n_Saturation 50/50: ""
+*de.n_Saturation 60/60: ""
+*de.n_Saturation 70/70: ""
+*de.n_Saturation 80/80: ""
+*de.n_Saturation 90/90: ""
+*de.n_Saturation 100/100: ""
+*de.Translation n_RCBalance/Zyan-Rot: ""
+*de.n_RCBalance 0/0: ""
+*de.n_RCBalance 10/10: ""
+*de.n_RCBalance 20/20: ""
+*de.n_RCBalance 30/30: ""
+*de.n_RCBalance 40/40: ""
+*de.n_RCBalance 50/50: ""
+*de.n_RCBalance 60/60: ""
+*de.n_RCBalance 70/70: ""
+*de.n_RCBalance 80/80: ""
+*de.n_RCBalance 90/90: ""
+*de.n_RCBalance 100/100: ""
+*de.Translation n_GMBalance/Magenta-Grün: ""
+*de.n_GMBalance 0/0: ""
+*de.n_GMBalance 10/10: ""
+*de.n_GMBalance 20/20: ""
+*de.n_GMBalance 30/30: ""
+*de.n_GMBalance 40/40: ""
+*de.n_GMBalance 50/50: ""
+*de.n_GMBalance 60/60: ""
+*de.n_GMBalance 70/70: ""
+*de.n_GMBalance 80/80: ""
+*de.n_GMBalance 90/90: ""
+*de.n_GMBalance 100/100: ""
+*de.Translation n_BYBalance/Geld-Blau: ""
+*de.n_BYBalance 0/0: ""
+*de.n_BYBalance 10/10: ""
+*de.n_BYBalance 20/20: ""
+*de.n_BYBalance 30/30: ""
+*de.n_BYBalance 40/40: ""
+*de.n_BYBalance 50/50: ""
+*de.n_BYBalance 60/60: ""
+*de.n_BYBalance 70/70: ""
+*de.n_BYBalance 80/80: ""
+*de.n_BYBalance 90/90: ""
+*de.n_BYBalance 100/100: ""
+*% Portuguese localization
+*pt.Translation ModelName/Samsung CLX-4190 Series: ""
+*pt.Translation InstallableOptions/Opções instaladas: ""
+*pt.Translation id_SaveMode/Economia de Tóner: ""
+*pt.id_SaveMode On/Ligado: ""
+*pt.id_SaveMode Off/Desligado: ""
+*pt.Translation General/General: ""
+*pt.Translation AccountType/Tipo de Contabilização: ""
+*pt.AccountType Accounting/Contabilização: ""
+*pt.AccountType Pincode/Apenas ID: ""
+*pt.Translation AccountID/ID de Utilizador: ""
+*pt.Translation Permission/ : ""
+*pt.Permission Personal/Permissão do utilizador: ""
+*pt.Permission Group/Permissão do grupo: ""
+*pt.Translation AccountPassword/Introduza a Palavra-passe: ""
+*pt.Translation ConfirmAcctPassword/Confirme a Palavra-passe: ""
+*pt.Translation PINCode/Apenas ID: ""
+*pt.Translation InputSlot/Origem do Papel: ""
+*pt.InputSlot Auto/Selecção automática da impressora: ""
+*pt.InputSlot Manual/Alimentação manual: ""
+*pt.Translation PageSize/Page Size: ""
+*pt.PageSize Letter/Carta: ""
+*pt.PageSize Legal/Legal: ""
+*pt.PageSize Executive/Executivo: ""
+*pt.PageSize A4/A4: ""
+*pt.PageSize A5/A5: ""
+*pt.PageSize B5-JIS/JIS B5: ""
+*pt.PageSize US-Folio/US Folio: ""
+*pt.PageSize Env10/Env. No.10: ""
+*pt.PageSize EnvDL/Env. DL: ""
+*pt.PageSize EnvC5/Env. C5: ""
+*pt.PageSize EnvC6/Env. C6: ""
+*pt.PageSize B5-ISO/ISO B5: ""
+*pt.PageSize EnvMonarch/Env. Monarch: ""
+*pt.PageSize A6/A6: ""
+*pt.PageSize Oficio_S/Ofício: ""
+*pt.PageSize Statement/Declaração: ""
+*pt.PageSize Env9/Env. No.9: ""
+*pt.PageSize Postcard_S/Postal 4x6: ""
+*pt.PageSize IndexCard/Carta índice: ""
+*pt.PageSize Custom/Custom: ""
+*pt.Translation PageRegion/PageRegion: ""
+*pt.PageRegion Letter/Letter: ""
+*pt.PageRegion Legal/Legal: ""
+*pt.PageRegion Executive/Executive: ""
+*pt.PageRegion A4/A4: ""
+*pt.PageRegion A5/A5: ""
+*pt.PageRegion B5-JIS/JIS B5: ""
+*pt.PageRegion US-Folio/US Folio: ""
+*pt.PageRegion Env10/No. 10 Env.: ""
+*pt.PageRegion EnvDL/DL Env.: ""
+*pt.PageRegion EnvC5/C5 Env.: ""
+*pt.PageRegion EnvC6/C6 Env.: ""
+*pt.PageRegion B5-ISO/ISO B5: ""
+*pt.PageRegion EnvMonarch/Monarch Env.: ""
+*pt.PageRegion A6/A6: ""
+*pt.PageRegion Oficio_S/Oficio: ""
+*pt.PageRegion Statement/Statement: ""
+*pt.PageRegion Env9/#9 Envelope: ""
+*pt.PageRegion Postcard_S/Postcard 4x6: ""
+*pt.PageRegion IndexCard/Index Card: ""
+*pt.PageRegion Custom/Custom: ""
+*pt.Translation SECResolution/Qualidade: ""
+*pt.SECResolution Best/Melhor: ""
+*pt.Translation ColorModel/Modo de Cor: ""
+*pt.ColorModel RGBA/Cor: ""
+*pt.ColorModel Gray/Escala de Cinzentos: ""
+*pt.Translation BlackOptimization/Optimização do Preto: ""
+*pt.BlackOptimization Off/Desligado: ""
+*pt.BlackOptimization On/Ligado: ""
+*pt.Translation AdvancedOptions/Opções avançadas: ""
+*pt.Translation MediaType/Tipo de Papel: ""
+*pt.MediaType None/Predefinição da Impressora: ""
+*pt.MediaType Plain/Papel comum: ""
+*pt.MediaType Thick/Grosso: ""
+*pt.MediaType 51/Mais grosso: ""
+*pt.MediaType Thin/Fino: ""
+*pt.MediaType Bond/Papel vegetal: ""
+*pt.MediaType Colored/Papel colorido: ""
+*pt.MediaType Card/Cartolina: ""
+*pt.MediaType Label/Etiquetas: ""
+*pt.MediaType Transparency/Transparência: ""
+*pt.MediaType Envelope/Envelope: ""
+*pt.MediaType Preprinted/Pré-impresso: ""
+*pt.MediaType Cotton/Algodão: ""
+*pt.MediaType Recycled/Papel reciclado: ""
+*pt.MediaType Archive/Papel de arquivo: ""
+*pt.MediaType 12/Papel timbrado: ""
+*pt.MediaType 18/Furado: ""
+*pt.MediaType 67/Foto brilhante 111-130 g/m2 (Laser): ""
+*pt.MediaType 68/Foto brilhante 131-175 g/m2 (Laser): ""
+*pt.MediaType 69/Foto brilhante 176-220 g/m2 (Laser): ""
+*pt.Translation id_DocType/Tipo de documento: ""
+*pt.id_DocType Standard/Padrão: ""
+*pt.id_DocType Photo/Fotografia: ""
+*pt.id_DocType Business/Gráfico Profissional: ""
+*pt.id_DocType CAD/CAD: ""
+*pt.id_DocType Webpage/Página Web: ""
+*pt.Translation id_EdgeEnhance/Realçar Contornos: ""
+*pt.id_EdgeEnhance Off/Desligado: ""
+*pt.id_EdgeEnhance Normal/Normal: ""
+*pt.id_EdgeEnhance Maximum/Máximo: ""
+*pt.Translation id_Trapping/Véu: ""
+*pt.id_Trapping Off/Desligado: ""
+*pt.id_Trapping Medium/Normal: ""
+*pt.id_Trapping Maximum/Máximo: ""
+*pt.Translation id_RGBColor/Gestão de Cores Samsung: ""
+*pt.id_RGBColor Standard/Padrão: ""
+*pt.id_RGBColor Vivid/Forte: ""
+*pt.id_RGBColor Device/Dispositivo: ""
+*pt.id_RGBColor 3/Imagem empresarial: ""
+*pt.Translation id_HalftoneLPI/Ecrã: ""
+*pt.id_HalftoneLPI Default/Predefinição da Impressora: ""
+*pt.id_HalftoneLPI Normal/Normal: ""
+*pt.id_HalftoneLPI Enhanced/Melhorado: ""
+*pt.id_HalftoneLPI Detailed/Detalhado: ""
+*pt.Translation SkipBlankPages/Ignorar páginas em branco: ""
+*pt.SkipBlankPages False/Desligado: ""
+*pt.SkipBlankPages True/Ligado: ""
+*pt.Translation ColorAdjust/Níveis de Ajuste: ""
+*pt.Translation n_Brightness/Luminosidade: ""
+*pt.n_Brightness 0/0: ""
+*pt.n_Brightness 10/10: ""
+*pt.n_Brightness 20/20: ""
+*pt.n_Brightness 30/30: ""
+*pt.n_Brightness 40/40: ""
+*pt.n_Brightness 50/50: ""
+*pt.n_Brightness 60/60: ""
+*pt.n_Brightness 70/70: ""
+*pt.n_Brightness 80/80: ""
+*pt.n_Brightness 90/90: ""
+*pt.n_Brightness 100/100: ""
+*pt.Translation n_Contrast/Contraste: ""
+*pt.n_Contrast 0/0: ""
+*pt.n_Contrast 10/10: ""
+*pt.n_Contrast 20/20: ""
+*pt.n_Contrast 30/30: ""
+*pt.n_Contrast 40/40: ""
+*pt.n_Contrast 50/50: ""
+*pt.n_Contrast 60/60: ""
+*pt.n_Contrast 70/70: ""
+*pt.n_Contrast 80/80: ""
+*pt.n_Contrast 90/90: ""
+*pt.n_Contrast 100/100: ""
+*pt.Translation n_Saturation/Saturação: ""
+*pt.n_Saturation 0/0: ""
+*pt.n_Saturation 10/10: ""
+*pt.n_Saturation 20/20: ""
+*pt.n_Saturation 30/30: ""
+*pt.n_Saturation 40/40: ""
+*pt.n_Saturation 50/50: ""
+*pt.n_Saturation 60/60: ""
+*pt.n_Saturation 70/70: ""
+*pt.n_Saturation 80/80: ""
+*pt.n_Saturation 90/90: ""
+*pt.n_Saturation 100/100: ""
+*pt.Translation n_RCBalance/Turq.-Vermelho: ""
+*pt.n_RCBalance 0/0: ""
+*pt.n_RCBalance 10/10: ""
+*pt.n_RCBalance 20/20: ""
+*pt.n_RCBalance 30/30: ""
+*pt.n_RCBalance 40/40: ""
+*pt.n_RCBalance 50/50: ""
+*pt.n_RCBalance 60/60: ""
+*pt.n_RCBalance 70/70: ""
+*pt.n_RCBalance 80/80: ""
+*pt.n_RCBalance 90/90: ""
+*pt.n_RCBalance 100/100: ""
+*pt.Translation n_GMBalance/Magenta-Verde: ""
+*pt.n_GMBalance 0/0: ""
+*pt.n_GMBalance 10/10: ""
+*pt.n_GMBalance 20/20: ""
+*pt.n_GMBalance 30/30: ""
+*pt.n_GMBalance 40/40: ""
+*pt.n_GMBalance 50/50: ""
+*pt.n_GMBalance 60/60: ""
+*pt.n_GMBalance 70/70: ""
+*pt.n_GMBalance 80/80: ""
+*pt.n_GMBalance 90/90: ""
+*pt.n_GMBalance 100/100: ""
+*pt.Translation n_BYBalance/Amarelo-Azul: ""
+*pt.n_BYBalance 0/0: ""
+*pt.n_BYBalance 10/10: ""
+*pt.n_BYBalance 20/20: ""
+*pt.n_BYBalance 30/30: ""
+*pt.n_BYBalance 40/40: ""
+*pt.n_BYBalance 50/50: ""
+*pt.n_BYBalance 60/60: ""
+*pt.n_BYBalance 70/70: ""
+*pt.n_BYBalance 80/80: ""
+*pt.n_BYBalance 90/90: ""
+*pt.n_BYBalance 100/100: ""
+*% Korean localization
+*ko.Translation ModelName/Samsung CLX-4190 Series: ""
+*ko.Translation InstallableOptions/설치할 수 있는 옵션: ""
+*ko.Translation id_SaveMode/토너 절약: ""
+*ko.id_SaveMode On/사용: ""
+*ko.id_SaveMode Off/사용안함: ""
+*ko.Translation General/General: ""
+*ko.Translation AccountType/작업 계정 유형: ""
+*ko.AccountType Accounting/계정: ""
+*ko.AccountType Pincode/아이디: ""
+*ko.Translation AccountID/사용자명: ""
+*ko.Translation Permission/ : ""
+*ko.Permission Personal/사용자 권한: ""
+*ko.Permission Group/그룹 권한: ""
+*ko.Translation AccountPassword/비밀번호 입력: ""
+*ko.Translation ConfirmAcctPassword/비밀번호 확인: ""
+*ko.Translation PINCode/아이디: ""
+*ko.Translation InputSlot/용지 공급원: ""
+*ko.InputSlot Auto/프린터 자동 선택: ""
+*ko.InputSlot Manual/수동 급지: ""
+*ko.Translation PageSize/Page Size: ""
+*ko.PageSize Letter/Letter: ""
+*ko.PageSize Legal/Legal: ""
+*ko.PageSize Executive/Executive: ""
+*ko.PageSize A4/A4: ""
+*ko.PageSize A5/A5: ""
+*ko.PageSize B5-JIS/JIS B5: ""
+*ko.PageSize US-Folio/US Folio: ""
+*ko.PageSize Env10/No.10 봉투: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*ko.PageSize EnvC6/C6 봉투: ""
+*ko.PageSize B5-ISO/ISO B5: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*ko.PageSize A6/A6: ""
+*ko.PageSize Oficio_S/Oficio: ""
+*ko.PageSize Statement/Statement: ""
+*ko.PageSize Env9/No.9 봉투: ""
+*ko.PageSize Postcard_S/포스트 카드 4x6: ""
+*ko.PageSize IndexCard/인덱스 카드: ""
+*ko.PageSize Custom/Custom: ""
+*ko.Translation PageRegion/PageRegion: ""
+*ko.PageRegion Letter/Letter: ""
+*ko.PageRegion Legal/Legal: ""
+*ko.PageRegion Executive/Executive: ""
+*ko.PageRegion A4/A4: ""
+*ko.PageRegion A5/A5: ""
+*ko.PageRegion B5-JIS/JIS B5: ""
+*ko.PageRegion US-Folio/US Folio: ""
+*ko.PageRegion Env10/No. 10 Env.: ""
+*ko.PageRegion EnvDL/DL Env.: ""
+*ko.PageRegion EnvC5/C5 Env.: ""
+*ko.PageRegion EnvC6/C6 Env.: ""
+*ko.PageRegion B5-ISO/ISO B5: ""
+*ko.PageRegion EnvMonarch/Monarch Env.: ""
+*ko.PageRegion A6/A6: ""
+*ko.PageRegion Oficio_S/Oficio: ""
+*ko.PageRegion Statement/Statement: ""
+*ko.PageRegion Env9/#9 Envelope: ""
+*ko.PageRegion Postcard_S/Postcard 4x6: ""
+*ko.PageRegion IndexCard/Index Card: ""
+*ko.PageRegion Custom/Custom: ""
+*ko.Translation SECResolution/인쇄 품질: ""
+*ko.SECResolution Best/고품질: ""
+*ko.Translation ColorModel/색상 설정: ""
+*ko.ColorModel RGBA/컬러: ""
+*ko.ColorModel Gray/흑백: ""
+*ko.Translation BlackOptimization/흑백 최적화: ""
+*ko.BlackOptimization Off/사용안함: ""
+*ko.BlackOptimization On/사용: ""
+*ko.Translation AdvancedOptions/고급설정: ""
+*ko.Translation MediaType/용지 종류: ""
+*ko.MediaType None/프린터 기본값: ""
+*ko.MediaType Plain/일반 용지: ""
+*ko.MediaType Thick/두꺼운 용지: ""
+*ko.MediaType 51/더 두꺼운 용지: ""
+*ko.MediaType Thin/얇은 용지: ""
+*ko.MediaType Bond/본드 용지: ""
+*ko.MediaType Colored/색지: ""
+*ko.MediaType Card/카드 용지: ""
+*ko.MediaType Label/라벨 용지: ""
+*ko.MediaType Transparency/투명 필름(OHP): ""
+*ko.MediaType Envelope/봉투: ""
+*ko.MediaType Preprinted/인쇄된 용지: ""
+*ko.MediaType Cotton/코튼 용지: ""
+*ko.MediaType Recycled/재생 용지: ""
+*ko.MediaType Archive/Archive 용지: ""
+*ko.MediaType 12/레터헤드: ""
+*ko.MediaType 18/천공 용지: ""
+*ko.MediaType 67/광택 사진 111-130 g/m2 (레이저용): ""
+*ko.MediaType 68/광택 사진 131-175 g/m2 (레이저용): ""
+*ko.MediaType 69/광택 사진 176-220 g/m2 (레이저용): ""
+*ko.Translation id_DocType/문서 종류: ""
+*ko.id_DocType Standard/기본값: ""
+*ko.id_DocType Photo/사진: ""
+*ko.id_DocType Business/비즈니스 그래픽: ""
+*ko.id_DocType CAD/캐드: ""
+*ko.id_DocType Webpage/웹페이지: ""
+*ko.Translation id_EdgeEnhance/경계 향상: ""
+*ko.id_EdgeEnhance Off/사용안함: ""
+*ko.id_EdgeEnhance Normal/표준: ""
+*ko.id_EdgeEnhance Maximum/최대: ""
+*ko.Translation id_Trapping/트래핑: ""
+*ko.id_Trapping Off/사용안함: ""
+*ko.id_Trapping Medium/표준: ""
+*ko.id_Trapping Maximum/최대: ""
+*ko.Translation id_RGBColor/삼성 색상 관리: ""
+*ko.id_RGBColor Standard/기본값: ""
+*ko.id_RGBColor Vivid/선명하게: ""
+*ko.id_RGBColor Device/장치: ""
+*ko.id_RGBColor 3/기업용 색상: ""
+*ko.Translation id_HalftoneLPI/스크린: ""
+*ko.id_HalftoneLPI Default/프린터 기본값: ""
+*ko.id_HalftoneLPI Normal/표준: ""
+*ko.id_HalftoneLPI Enhanced/향상: ""
+*ko.id_HalftoneLPI Detailed/선명하게: ""
+*ko.Translation SkipBlankPages/빈 종이 찍지 않기: ""
+*ko.SkipBlankPages False/사용안함: ""
+*ko.SkipBlankPages True/사용: ""
+*ko.Translation ColorAdjust/단계 조절: ""
+*ko.Translation n_Brightness/밝기: ""
+*ko.n_Brightness 0/0: ""
+*ko.n_Brightness 10/10: ""
+*ko.n_Brightness 20/20: ""
+*ko.n_Brightness 30/30: ""
+*ko.n_Brightness 40/40: ""
+*ko.n_Brightness 50/50: ""
+*ko.n_Brightness 60/60: ""
+*ko.n_Brightness 70/70: ""
+*ko.n_Brightness 80/80: ""
+*ko.n_Brightness 90/90: ""
+*ko.n_Brightness 100/100: ""
+*ko.Translation n_Contrast/대비: ""
+*ko.n_Contrast 0/0: ""
+*ko.n_Contrast 10/10: ""
+*ko.n_Contrast 20/20: ""
+*ko.n_Contrast 30/30: ""
+*ko.n_Contrast 40/40: ""
+*ko.n_Contrast 50/50: ""
+*ko.n_Contrast 60/60: ""
+*ko.n_Contrast 70/70: ""
+*ko.n_Contrast 80/80: ""
+*ko.n_Contrast 90/90: ""
+*ko.n_Contrast 100/100: ""
+*ko.Translation n_Saturation/채도(Saturation): ""
+*ko.n_Saturation 0/0: ""
+*ko.n_Saturation 10/10: ""
+*ko.n_Saturation 20/20: ""
+*ko.n_Saturation 30/30: ""
+*ko.n_Saturation 40/40: ""
+*ko.n_Saturation 50/50: ""
+*ko.n_Saturation 60/60: ""
+*ko.n_Saturation 70/70: ""
+*ko.n_Saturation 80/80: ""
+*ko.n_Saturation 90/90: ""
+*ko.n_Saturation 100/100: ""
+*ko.Translation n_RCBalance/사이언-빨강: ""
+*ko.n_RCBalance 0/0: ""
+*ko.n_RCBalance 10/10: ""
+*ko.n_RCBalance 20/20: ""
+*ko.n_RCBalance 30/30: ""
+*ko.n_RCBalance 40/40: ""
+*ko.n_RCBalance 50/50: ""
+*ko.n_RCBalance 60/60: ""
+*ko.n_RCBalance 70/70: ""
+*ko.n_RCBalance 80/80: ""
+*ko.n_RCBalance 90/90: ""
+*ko.n_RCBalance 100/100: ""
+*ko.Translation n_GMBalance/마젠타-녹색: ""
+*ko.n_GMBalance 0/0: ""
+*ko.n_GMBalance 10/10: ""
+*ko.n_GMBalance 20/20: ""
+*ko.n_GMBalance 30/30: ""
+*ko.n_GMBalance 40/40: ""
+*ko.n_GMBalance 50/50: ""
+*ko.n_GMBalance 60/60: ""
+*ko.n_GMBalance 70/70: ""
+*ko.n_GMBalance 80/80: ""
+*ko.n_GMBalance 90/90: ""
+*ko.n_GMBalance 100/100: ""
+*ko.Translation n_BYBalance/노랑-파랑: ""
+*ko.n_BYBalance 0/0: ""
+*ko.n_BYBalance 10/10: ""
+*ko.n_BYBalance 20/20: ""
+*ko.n_BYBalance 30/30: ""
+*ko.n_BYBalance 40/40: ""
+*ko.n_BYBalance 50/50: ""
+*ko.n_BYBalance 60/60: ""
+*ko.n_BYBalance 70/70: ""
+*ko.n_BYBalance 80/80: ""
+*ko.n_BYBalance 90/90: ""
+*ko.n_BYBalance 100/100: ""
+*% Simplified Chinese localization
+*zh_CN.Translation ModelName/Samsung CLX-4190 Series: ""
+*zh_CN.Translation InstallableOptions/已安装选件: ""
+*zh_CN.Translation id_SaveMode/省墨: ""
+*zh_CN.id_SaveMode On/开: ""
+*zh_CN.id_SaveMode Off/关: ""
+*zh_CN.Translation General/General: ""
+*zh_CN.Translation AccountType/统计类型: ""
+*zh_CN.AccountType Accounting/统计: ""
+*zh_CN.AccountType Pincode/仅限 ID: ""
+*zh_CN.Translation AccountID/用户 ID: ""
+*zh_CN.Translation Permission/ : ""
+*zh_CN.Permission Personal/用户权限: ""
+*zh_CN.Permission Group/组权限: ""
+*zh_CN.Translation AccountPassword/输入密码: ""
+*zh_CN.Translation ConfirmAcctPassword/确认密码: ""
+*zh_CN.Translation PINCode/仅限 ID: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_CN.InputSlot Auto/打印机自动选择: ""
+*zh_CN.InputSlot Manual/手动进纸器: ""
+*zh_CN.Translation PageSize/Page Size: ""
+*zh_CN.PageSize Letter/Letter: ""
+*zh_CN.PageSize Legal/Legal: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_CN.PageSize B5-JIS/JIS B5: ""
+*zh_CN.PageSize US-Folio/US Folio: ""
+*zh_CN.PageSize Env10/No.10 Env.: ""
+*zh_CN.PageSize EnvDL/DL Env.: ""
+*zh_CN.PageSize EnvC5/C5 Env.: ""
+*zh_CN.PageSize EnvC6/C6 Env.: ""
+*zh_CN.PageSize B5-ISO/ISO B5: ""
+*zh_CN.PageSize EnvMonarch/Monarch Env.: ""
+*zh_CN.PageSize A6/A6: ""
+*zh_CN.PageSize Oficio_S/Oficio: ""
+*zh_CN.PageSize Statement/Statement: ""
+*zh_CN.PageSize Env9/No.9 Env.: ""
+*zh_CN.PageSize Postcard_S/明信片 4x6: ""
+*zh_CN.PageSize IndexCard/索引卡: ""
+*zh_CN.PageSize Custom/Custom: ""
+*zh_CN.Translation PageRegion/PageRegion: ""
+*zh_CN.PageRegion Letter/Letter: ""
+*zh_CN.PageRegion Legal/Legal: ""
+*zh_CN.PageRegion Executive/Executive: ""
+*zh_CN.PageRegion A4/A4: ""
+*zh_CN.PageRegion A5/A5: ""
+*zh_CN.PageRegion B5-JIS/JIS B5: ""
+*zh_CN.PageRegion US-Folio/US Folio: ""
+*zh_CN.PageRegion Env10/No. 10 Env.: ""
+*zh_CN.PageRegion EnvDL/DL Env.: ""
+*zh_CN.PageRegion EnvC5/C5 Env.: ""
+*zh_CN.PageRegion EnvC6/C6 Env.: ""
+*zh_CN.PageRegion B5-ISO/ISO B5: ""
+*zh_CN.PageRegion EnvMonarch/Monarch Env.: ""
+*zh_CN.PageRegion A6/A6: ""
+*zh_CN.PageRegion Oficio_S/Oficio: ""
+*zh_CN.PageRegion Statement/Statement: ""
+*zh_CN.PageRegion Env9/#9 Envelope: ""
+*zh_CN.PageRegion Postcard_S/Postcard 4x6: ""
+*zh_CN.PageRegion IndexCard/Index Card: ""
+*zh_CN.PageRegion Custom/Custom: ""
+*zh_CN.Translation SECResolution/质量: ""
+*zh_CN.SECResolution Best/最佳: ""
+*zh_CN.Translation ColorModel/彩色模式: ""
+*zh_CN.ColorModel RGBA/彩色: ""
+*zh_CN.ColorModel Gray/灰阶: ""
+*zh_CN.Translation BlackOptimization/黑色优化: ""
+*zh_CN.BlackOptimization Off/关: ""
+*zh_CN.BlackOptimization On/开: ""
+*zh_CN.Translation AdvancedOptions/高级选项: ""
+*zh_CN.Translation MediaType/纸张类型: ""
+*zh_CN.MediaType None/打印机默认值: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_CN.MediaType Thick/厚纸: ""
+*zh_CN.MediaType 51/特厚纸: ""
+*zh_CN.MediaType Thin/薄纸: ""
+*zh_CN.MediaType Bond/Bond 纸: ""
+*zh_CN.MediaType Colored/彩色纸: ""
+*zh_CN.MediaType Card/卡片纸: ""
+*zh_CN.MediaType Label/标签: ""
+*zh_CN.MediaType Transparency/透明胶片: ""
+*zh_CN.MediaType Envelope/信封: ""
+*zh_CN.MediaType Preprinted/预印纸: ""
+*zh_CN.MediaType Cotton/棉质纸: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_CN.MediaType Archive/存档纸: ""
+*zh_CN.MediaType 12/信头纸: ""
+*zh_CN.MediaType 18/打孔纸: ""
+*zh_CN.MediaType 67/高光相纸 111-130 克/平方米（激光）: ""
+*zh_CN.MediaType 68/高光相纸 131-175 克/平方米（激光）: ""
+*zh_CN.MediaType 69/高光相纸 176-220 克/平方米（激光）: ""
+*zh_CN.Translation id_DocType/文档类型: ""
+*zh_CN.id_DocType Standard/标准: ""
+*zh_CN.id_DocType Photo/照片: ""
+*zh_CN.id_DocType Business/商业图形: ""
+*zh_CN.id_DocType CAD/CAD: ""
+*zh_CN.id_DocType Webpage/Web 页面: ""
+*zh_CN.Translation id_EdgeEnhance/边缘补强: ""
+*zh_CN.id_EdgeEnhance Off/关: ""
+*zh_CN.id_EdgeEnhance Normal/正常: ""
+*zh_CN.id_EdgeEnhance Maximum/最大: ""
+*zh_CN.Translation id_Trapping/陷印: ""
+*zh_CN.id_Trapping Off/关: ""
+*zh_CN.id_Trapping Medium/正常: ""
+*zh_CN.id_Trapping Maximum/最大: ""
+*zh_CN.Translation id_RGBColor/Samsung 颜色管理: ""
+*zh_CN.id_RGBColor Standard/标准: ""
+*zh_CN.id_RGBColor Vivid/鲜艳: ""
+*zh_CN.id_RGBColor Device/设备: ""
+*zh_CN.id_RGBColor 3/企业图像: ""
+*zh_CN.Translation id_HalftoneLPI/屏幕: ""
+*zh_CN.id_HalftoneLPI Default/打印机默认值: ""
+*zh_CN.id_HalftoneLPI Normal/正常: ""
+*zh_CN.id_HalftoneLPI Enhanced/增强: ""
+*zh_CN.id_HalftoneLPI Detailed/详细: ""
+*zh_CN.Translation SkipBlankPages/跳过空白页: ""
+*zh_CN.SkipBlankPages False/关: ""
+*zh_CN.SkipBlankPages True/开: ""
+*zh_CN.Translation ColorAdjust/调整级别: ""
+*zh_CN.Translation n_Brightness/亮度: ""
+*zh_CN.n_Brightness 0/0: ""
+*zh_CN.n_Brightness 10/10: ""
+*zh_CN.n_Brightness 20/20: ""
+*zh_CN.n_Brightness 30/30: ""
+*zh_CN.n_Brightness 40/40: ""
+*zh_CN.n_Brightness 50/50: ""
+*zh_CN.n_Brightness 60/60: ""
+*zh_CN.n_Brightness 70/70: ""
+*zh_CN.n_Brightness 80/80: ""
+*zh_CN.n_Brightness 90/90: ""
+*zh_CN.n_Brightness 100/100: ""
+*zh_CN.Translation n_Contrast/对比度: ""
+*zh_CN.n_Contrast 0/0: ""
+*zh_CN.n_Contrast 10/10: ""
+*zh_CN.n_Contrast 20/20: ""
+*zh_CN.n_Contrast 30/30: ""
+*zh_CN.n_Contrast 40/40: ""
+*zh_CN.n_Contrast 50/50: ""
+*zh_CN.n_Contrast 60/60: ""
+*zh_CN.n_Contrast 70/70: ""
+*zh_CN.n_Contrast 80/80: ""
+*zh_CN.n_Contrast 90/90: ""
+*zh_CN.n_Contrast 100/100: ""
+*zh_CN.Translation n_Saturation/饱和度: ""
+*zh_CN.n_Saturation 0/0: ""
+*zh_CN.n_Saturation 10/10: ""
+*zh_CN.n_Saturation 20/20: ""
+*zh_CN.n_Saturation 30/30: ""
+*zh_CN.n_Saturation 40/40: ""
+*zh_CN.n_Saturation 50/50: ""
+*zh_CN.n_Saturation 60/60: ""
+*zh_CN.n_Saturation 70/70: ""
+*zh_CN.n_Saturation 80/80: ""
+*zh_CN.n_Saturation 90/90: ""
+*zh_CN.n_Saturation 100/100: ""
+*zh_CN.Translation n_RCBalance/青色-红色: ""
+*zh_CN.n_RCBalance 0/0: ""
+*zh_CN.n_RCBalance 10/10: ""
+*zh_CN.n_RCBalance 20/20: ""
+*zh_CN.n_RCBalance 30/30: ""
+*zh_CN.n_RCBalance 40/40: ""
+*zh_CN.n_RCBalance 50/50: ""
+*zh_CN.n_RCBalance 60/60: ""
+*zh_CN.n_RCBalance 70/70: ""
+*zh_CN.n_RCBalance 80/80: ""
+*zh_CN.n_RCBalance 90/90: ""
+*zh_CN.n_RCBalance 100/100: ""
+*zh_CN.Translation n_GMBalance/洋红-绿色: ""
+*zh_CN.n_GMBalance 0/0: ""
+*zh_CN.n_GMBalance 10/10: ""
+*zh_CN.n_GMBalance 20/20: ""
+*zh_CN.n_GMBalance 30/30: ""
+*zh_CN.n_GMBalance 40/40: ""
+*zh_CN.n_GMBalance 50/50: ""
+*zh_CN.n_GMBalance 60/60: ""
+*zh_CN.n_GMBalance 70/70: ""
+*zh_CN.n_GMBalance 80/80: ""
+*zh_CN.n_GMBalance 90/90: ""
+*zh_CN.n_GMBalance 100/100: ""
+*zh_CN.Translation n_BYBalance/黄色-蓝色: ""
+*zh_CN.n_BYBalance 0/0: ""
+*zh_CN.n_BYBalance 10/10: ""
+*zh_CN.n_BYBalance 20/20: ""
+*zh_CN.n_BYBalance 30/30: ""
+*zh_CN.n_BYBalance 40/40: ""
+*zh_CN.n_BYBalance 50/50: ""
+*zh_CN.n_BYBalance 60/60: ""
+*zh_CN.n_BYBalance 70/70: ""
+*zh_CN.n_BYBalance 80/80: ""
+*zh_CN.n_BYBalance 90/90: ""
+*zh_CN.n_BYBalance 100/100: ""
+*% Traditional Chinese localization
+*zh_TW.Translation ModelName/Samsung CLX-4190 Series: ""
+*zh_TW.Translation InstallableOptions/已安裝選項: ""
+*zh_TW.Translation id_SaveMode/碳粉節省: ""
+*zh_TW.id_SaveMode On/開啟: ""
+*zh_TW.id_SaveMode Off/關閉: ""
+*zh_TW.Translation General/General: ""
+*zh_TW.Translation AccountType/計量類型: ""
+*zh_TW.AccountType Accounting/計量: ""
+*zh_TW.AccountType Pincode/僅限 ID: ""
+*zh_TW.Translation AccountID/使用者 ID: ""
+*zh_TW.Translation Permission/ : ""
+*zh_TW.Permission Personal/使用者權限: ""
+*zh_TW.Permission Group/群組權限: ""
+*zh_TW.Translation AccountPassword/輸入密碼: ""
+*zh_TW.Translation ConfirmAcctPassword/確認密碼: ""
+*zh_TW.Translation PINCode/僅限 ID: ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+*zh_TW.InputSlot Auto/印表機自動選擇: ""
+*zh_TW.InputSlot Manual/手動送紙: ""
+*zh_TW.Translation PageSize/Page Size: ""
+*zh_TW.PageSize Letter/Letter: ""
+*zh_TW.PageSize Legal/Legal: ""
+*zh_TW.PageSize Executive/Executive: ""
+*zh_TW.PageSize A4/A4: ""
+*zh_TW.PageSize A5/A5: ""
+*zh_TW.PageSize B5-JIS/JIS B5: ""
+*zh_TW.PageSize US-Folio/US Folio: ""
+*zh_TW.PageSize Env10/10 號信封: ""
+*zh_TW.PageSize EnvDL/DL信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+*zh_TW.PageSize EnvC6/C6 信封: ""
+*zh_TW.PageSize B5-ISO/ISO B5: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+*zh_TW.PageSize A6/A6: ""
+*zh_TW.PageSize Oficio_S/Oficio: ""
+*zh_TW.PageSize Statement/Statement: ""
+*zh_TW.PageSize Env9/9 號信封: ""
+*zh_TW.PageSize Postcard_S/明信片 4x6: ""
+*zh_TW.PageSize IndexCard/索引卡: ""
+*zh_TW.PageSize Custom/Custom: ""
+*zh_TW.Translation PageRegion/PageRegion: ""
+*zh_TW.PageRegion Letter/Letter: ""
+*zh_TW.PageRegion Legal/Legal: ""
+*zh_TW.PageRegion Executive/Executive: ""
+*zh_TW.PageRegion A4/A4: ""
+*zh_TW.PageRegion A5/A5: ""
+*zh_TW.PageRegion B5-JIS/JIS B5: ""
+*zh_TW.PageRegion US-Folio/US Folio: ""
+*zh_TW.PageRegion Env10/No. 10 Env.: ""
+*zh_TW.PageRegion EnvDL/DL Env.: ""
+*zh_TW.PageRegion EnvC5/C5 Env.: ""
+*zh_TW.PageRegion EnvC6/C6 Env.: ""
+*zh_TW.PageRegion B5-ISO/ISO B5: ""
+*zh_TW.PageRegion EnvMonarch/Monarch Env.: ""
+*zh_TW.PageRegion A6/A6: ""
+*zh_TW.PageRegion Oficio_S/Oficio: ""
+*zh_TW.PageRegion Statement/Statement: ""
+*zh_TW.PageRegion Env9/#9 Envelope: ""
+*zh_TW.PageRegion Postcard_S/Postcard 4x6: ""
+*zh_TW.PageRegion IndexCard/Index Card: ""
+*zh_TW.PageRegion Custom/Custom: ""
+*zh_TW.Translation SECResolution/品質: ""
+*zh_TW.SECResolution Best/最佳: ""
+*zh_TW.Translation ColorModel/彩色模式: ""
+*zh_TW.ColorModel RGBA/彩色: ""
+*zh_TW.ColorModel Gray/灰階: ""
+*zh_TW.Translation BlackOptimization/黑色最佳化: ""
+*zh_TW.BlackOptimization Off/關閉: ""
+*zh_TW.BlackOptimization On/開啟: ""
+*zh_TW.Translation AdvancedOptions/進階選項: ""
+*zh_TW.Translation MediaType/紙張類型: ""
+*zh_TW.MediaType None/印表機預設值: ""
+*zh_TW.MediaType Plain/一般紙張: ""
+*zh_TW.MediaType Thick/厚紙: ""
+*zh_TW.MediaType 51/特厚紙: ""
+*zh_TW.MediaType Thin/薄紙: ""
+*zh_TW.MediaType Bond/銅版紙: ""
+*zh_TW.MediaType Colored/色紙: ""
+*zh_TW.MediaType Card/卡片紙: ""
+*zh_TW.MediaType Label/標籤: ""
+*zh_TW.MediaType Transparency/投影片: ""
+*zh_TW.MediaType Envelope/信封: ""
+*zh_TW.MediaType Preprinted/預列印本: ""
+*zh_TW.MediaType Cotton/棉質: ""
+*zh_TW.MediaType Recycled/再生紙: ""
+*zh_TW.MediaType Archive/資料庫: ""
+*zh_TW.MediaType 12/專用信箋: ""
+*zh_TW.MediaType 18/穿孔紙: ""
+*zh_TW.MediaType 67/光面相紙 111-130 克/平方米 (雷射): ""
+*zh_TW.MediaType 68/光面相紙 131-175 克/平方米 (雷射): ""
+*zh_TW.MediaType 69/光面相紙 176-220 克/平方米 (雷射): ""
+*zh_TW.Translation id_DocType/文件類型: ""
+*zh_TW.id_DocType Standard/標準: ""
+*zh_TW.id_DocType Photo/相片: ""
+*zh_TW.id_DocType Business/商業圖形: ""
+*zh_TW.id_DocType CAD/CAD: ""
+*zh_TW.id_DocType Webpage/Web 頁面: ""
+*zh_TW.Translation id_EdgeEnhance/邊緣強化: ""
+*zh_TW.id_EdgeEnhance Off/關閉: ""
+*zh_TW.id_EdgeEnhance Normal/正常: ""
+*zh_TW.id_EdgeEnhance Maximum/最大: ""
+*zh_TW.Translation id_Trapping/陷印: ""
+*zh_TW.id_Trapping Off/關閉: ""
+*zh_TW.id_Trapping Medium/正常: ""
+*zh_TW.id_Trapping Maximum/最大: ""
+*zh_TW.Translation id_RGBColor/Samsung 色彩管理: ""
+*zh_TW.id_RGBColor Standard/標準: ""
+*zh_TW.id_RGBColor Vivid/鮮明: ""
+*zh_TW.id_RGBColor Device/裝置: ""
+*zh_TW.id_RGBColor 3/企業影像: ""
+*zh_TW.Translation id_HalftoneLPI/畫面: ""
+*zh_TW.id_HalftoneLPI Default/印表機預設值: ""
+*zh_TW.id_HalftoneLPI Normal/正常: ""
+*zh_TW.id_HalftoneLPI Enhanced/加強: ""
+*zh_TW.id_HalftoneLPI Detailed/詳細: ""
+*zh_TW.Translation SkipBlankPages/略過空白頁面: ""
+*zh_TW.SkipBlankPages False/關閉: ""
+*zh_TW.SkipBlankPages True/開啟: ""
+*zh_TW.Translation ColorAdjust/調整層級: ""
+*zh_TW.Translation n_Brightness/亮度: ""
+*zh_TW.n_Brightness 0/0: ""
+*zh_TW.n_Brightness 10/10: ""
+*zh_TW.n_Brightness 20/20: ""
+*zh_TW.n_Brightness 30/30: ""
+*zh_TW.n_Brightness 40/40: ""
+*zh_TW.n_Brightness 50/50: ""
+*zh_TW.n_Brightness 60/60: ""
+*zh_TW.n_Brightness 70/70: ""
+*zh_TW.n_Brightness 80/80: ""
+*zh_TW.n_Brightness 90/90: ""
+*zh_TW.n_Brightness 100/100: ""
+*zh_TW.Translation n_Contrast/對比度: ""
+*zh_TW.n_Contrast 0/0: ""
+*zh_TW.n_Contrast 10/10: ""
+*zh_TW.n_Contrast 20/20: ""
+*zh_TW.n_Contrast 30/30: ""
+*zh_TW.n_Contrast 40/40: ""
+*zh_TW.n_Contrast 50/50: ""
+*zh_TW.n_Contrast 60/60: ""
+*zh_TW.n_Contrast 70/70: ""
+*zh_TW.n_Contrast 80/80: ""
+*zh_TW.n_Contrast 90/90: ""
+*zh_TW.n_Contrast 100/100: ""
+*zh_TW.Translation n_Saturation/飽和度: ""
+*zh_TW.n_Saturation 0/0: ""
+*zh_TW.n_Saturation 10/10: ""
+*zh_TW.n_Saturation 20/20: ""
+*zh_TW.n_Saturation 30/30: ""
+*zh_TW.n_Saturation 40/40: ""
+*zh_TW.n_Saturation 50/50: ""
+*zh_TW.n_Saturation 60/60: ""
+*zh_TW.n_Saturation 70/70: ""
+*zh_TW.n_Saturation 80/80: ""
+*zh_TW.n_Saturation 90/90: ""
+*zh_TW.n_Saturation 100/100: ""
+*zh_TW.Translation n_RCBalance/青-紅: ""
+*zh_TW.n_RCBalance 0/0: ""
+*zh_TW.n_RCBalance 10/10: ""
+*zh_TW.n_RCBalance 20/20: ""
+*zh_TW.n_RCBalance 30/30: ""
+*zh_TW.n_RCBalance 40/40: ""
+*zh_TW.n_RCBalance 50/50: ""
+*zh_TW.n_RCBalance 60/60: ""
+*zh_TW.n_RCBalance 70/70: ""
+*zh_TW.n_RCBalance 80/80: ""
+*zh_TW.n_RCBalance 90/90: ""
+*zh_TW.n_RCBalance 100/100: ""
+*zh_TW.Translation n_GMBalance/洋紅-綠: ""
+*zh_TW.n_GMBalance 0/0: ""
+*zh_TW.n_GMBalance 10/10: ""
+*zh_TW.n_GMBalance 20/20: ""
+*zh_TW.n_GMBalance 30/30: ""
+*zh_TW.n_GMBalance 40/40: ""
+*zh_TW.n_GMBalance 50/50: ""
+*zh_TW.n_GMBalance 60/60: ""
+*zh_TW.n_GMBalance 70/70: ""
+*zh_TW.n_GMBalance 80/80: ""
+*zh_TW.n_GMBalance 90/90: ""
+*zh_TW.n_GMBalance 100/100: ""
+*zh_TW.Translation n_BYBalance/黃-藍: ""
+*zh_TW.n_BYBalance 0/0: ""
+*zh_TW.n_BYBalance 10/10: ""
+*zh_TW.n_BYBalance 20/20: ""
+*zh_TW.n_BYBalance 30/30: ""
+*zh_TW.n_BYBalance 40/40: ""
+*zh_TW.n_BYBalance 50/50: ""
+*zh_TW.n_BYBalance 60/60: ""
+*zh_TW.n_BYBalance 70/70: ""
+*zh_TW.n_BYBalance 80/80: ""
+*zh_TW.n_BYBalance 90/90: ""
+*zh_TW.n_BYBalance 100/100: ""
+*cupsLanguages: "es it nl fr de pt ko zh_CN zh_TW"
+
+*APScannerUUID: "7E9A5F8E-7E9A-5F8E-7E9A-5F8E7E9A5F8E"
+*APScannerModulePath: "/Library/Image Capture/Devices/Samsung Scanner.app"
+*APICADriver: True
