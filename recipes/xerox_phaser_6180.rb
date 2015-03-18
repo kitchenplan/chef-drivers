@@ -2,7 +2,7 @@ dmg_package '6180 Print Installer' do
     source "http://download.support.xerox.com/pub/drivers/6180/drivers/macosx109/pt_BR/Phaser_6180_OS_10.9_Print_Installer.dmg"
     action :install
     type 'pkg'
-    volume 'Phaser 6180 Print Installer'
+    volumes_dir 'Phaser 6180 Print Installer'
     dmg_name 'Phaser_6180_OS_10.9_Print_Installer'
 end
 
