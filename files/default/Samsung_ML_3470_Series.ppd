@@ -1,0 +1,2103 @@
+*PPD-Adobe: "4.3"
+*% =========================================
+*% Disclaimer:  The above statement indicates
+*% that this PPD was written using the Adobe PPD
+*% File Format Specification 4.3, but does not 
+*% intend to imply approval and acceptance by
+*% Adobe Systems, Inc. 
+*% =========================================
+*%                      CopyRight (c) 2008 by
+*%                      Samsung Electronics Inc,.
+*%                       All Rights Reserved
+*%
+*% This software is furnished under a license and may be used and copied
+*% only in accordance with the terms of such license and with the inclusion
+*% of the above copyright notice.  This software or any other copies
+*% thereof may not be provided or otherwise made available to any other
+*% person except as allowed under license.  No title to and owership of the
+*% software is hereby transferred.
+*%
+*% =========================================
+*% PPD for Samsung ML-3470 Series PS
+*% For Macintosh Only
+*% =========================================
+*FileVersion: "2.01.01"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*PCFileName: "M3470.PPD"
+*APDialogExtension: "/Library/Printers/Samsung/PDEs/Graphic.bundle"
+*APDialogExtension: "/Library/Printers/Samsung/PDEs/Output.bundle"
+*APDialogExtension: "/Library/Printers/Samsung/PDEs/Printer.bundle"
+*APPrinterIconPath: "/Library/Printers/Samsung/Icons/ML-3470.icns"
+*Product: "(Samsung ML-3470 Series)"
+*Manufacturer: "Samsung"
+*PSVersion: "(3011    ) 0"
+*cupsFilter:	"application/vnd.cups-postscript 0 /Library/Printers/Samsung/Filters/pstosecps"
+*ModelName: "Samsung ML-3470 Series"
+*ShortNickName: "Samsung ML-3470 Series PS"
+*NickName: "Samsung ML-3470 Series PS"
+*LanguageLevel: "3"
+*Protocols: PJL TBCP
+*FreeVM: "3400000"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*TTRasterizer: Type42
+*?TTRasterizer: "
+  save
+       42 /FontType resourcestatus
+       { pop pop (Type42)} {pop pop (None)} ifelse = flush
+  restore
+"
+*End
+*Throughput: "33"
+
+*% =========================================================
+*% Installable Options
+*% =========================================================
+*OpenGroup: InstallableOptions/Installed Options
+
+*OpenUI *Option1/Tray 2: Boolean
+*DefaultOption1: False
+*Option1 False/Not Installed: ""
+*Option1 True/Installed: ""
+*CloseUI: *Option1
+
+*OpenUI *InstalledMemory/Printer Memory: PickOne
+*DefaultInstalledMemory: 64MB
+*InstalledMemory 32MB/32MB: ""
+*InstalledMemory 64MB/64MB: ""
+*InstalledMemory 96MB/96MB: ""
+*InstalledMemory 128MB/128MB: ""
+*InstalledMemory 192MB/192MB: ""
+*InstalledMemory 256MB/256MB: ""
+*InstalledMemory 320MB/320MB: ""
+*CloseUI: *InstalledMemory
+*CloseGroup: InstallableOptions
+
+*VMOption 32MB/32MB: "3400000"
+*VMOption 64MB/64MB: "6700000"
+*VMOption 96MB/96MB: "9800000"
+*VMOption 128MB/128MB:"13400000"
+*VMOption 192MB/192MB:"19700000"
+*VMOption 256MB/256MB: "26800000"
+*VMOption 320MB/320MB:"32800000"
+
+*JCLBegin: "<1B>%-12345X"
+*JCLToPSInterpreter: "@PJL ENTER LANGUAGE = POSTSCRIPT<0A>"
+*JCLEnd: "<1B>%-12345X"
+
+*ePJL: "TonerSave, RET"
+
+*APPrinterPreset Photo_on_Plain_Paper_-_Fine/Photo on Plain Paper - Fine: "
+	*Resolution 1200x1200dpi
+	*MediaType Plain
+	com.apple.print.preset.graphicsType Photo
+	com.apple.print.preset.quality high
+	com.apple.print.preset.media-front-coating none"
+*End
+
+*% =========================================================
+*% Help file
+*% =========================================================
+*AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/English/About.html"
+*OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/English/Output.html"
+*PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/English/Printer.html"
+*GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/English/Graphic.html"
+
+*de.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/German/About.html"
+*de.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/German/Output.html"
+*de.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/German/Printer.html"
+*de.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/German/Graphic.html"
+
+*es.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Spanish/About.html"
+*es.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Spanish/Output.html"
+*es.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Spanish/Printer.html"
+*es.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Spanish/Graphic.html"
+
+*fr.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/French/About.html"
+*fr.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/French/Output.html"
+*fr.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/French/Printer.html"
+*fr.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/French/Graphic.html"
+
+*it.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Italian/About.html"
+*it.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Italian/Output.html"
+*it.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Italian/Printer.html"
+*it.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Italian/Graphic.html"
+
+*ko.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/ko/About.html"
+*ko.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/ko/Output.html"
+*ko.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/ko/Printer.html"
+*ko.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/ko/Graphic.html"
+
+*nl.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Dutch/About.html"
+*nl.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Dutch/Output.html"
+*nl.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Dutch/Printer.html"
+*nl.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/Dutch/Graphic.html"
+
+*pt.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/pt/About.html"
+*pt.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/pt/Output.html"
+*pt.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/pt/Printer.html"
+*pt.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/pt/Graphic.html"
+
+*zh_CN.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_CN/About.html"
+*zh_CN.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_CN/Output.html"
+*zh_CN.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_CN/Printer.html"
+*zh_CN.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_CN/Graphic.html"
+
+*zh_TW.AboutHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_TW/About.html"
+*zh_TW.OutputHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_TW/Output.html"
+*zh_TW.PrinterHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_TW/Printer.html"
+*zh_TW.GraphicHelpPath: "/Library/Printers/Samsung/ML-3470/Help/zh_TW/Graphic.html"
+
+*% =========================================================
+*%  Toner Save Mode
+*% =========================================================
+*OpenUI *TonerSave/Toner Save Mode: PickOne
+*OrderDependency: 5 AnySetup *TonerSave
+*DefaultTonerSave: PrinterSetting
+*TonerSave PrinterSetting/Printer Setting: ""
+*TonerSave On/On: "%% @PJL SET ECONOMODE = ON"
+*TonerSave Off/Off: "%% @PJL SET ECONOMODE = OFF"
+*CloseUI: *TonerSave
+
+*OpenUI *Duplex/Double-sided Printing: PickOne
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/None: " <</Duplex false>> setpagedevice"
+*Duplex DuplexNoTumble/Long Edge: "
+    <</Duplex true /Tumble false>> setpagedevice"
+*End
+*Duplex DuplexTumble/Short Edge: "
+    <</Duplex true /Tumble true>> setpagedevice"
+*End
+*?Duplex: "
+   save
+      currentpagedevice /Duplex get
+        {currentpagedevice /Tumble get
+            {(DuplexTumble)}{(DuplexNoTumble)}ifelse
+         }{(None)} ifelse = flush
+   restore
+"
+*End  
+*CloseUI: *Duplex
+
+*% =========================================================
+*%  Printer Features
+*% =========================================================
+*OpenGroup: AdvancedOptions/Advanced Options
+*% =========================================================
+*%  Reverse Duplex
+*% =========================================================
+*OpenUI *SECReverseDuplex/Reverse Duplex Printing:  Boolean
+*OrderDependency: 50 AnySetup *SECReverseDuplex
+*DefaultSECReverseDuplex: False
+*SECReverseDuplex False/Off: "userdict /SECReverseDuplex false put"
+*SECReverseDuplex True/On: "userdict /SECReverseDuplex true put"
+*CloseUI: *SECReverseDuplex
+
+*% =========================================================
+*%  Fit to page
+*% =========================================================
+*OpenUI *PaperPolicy/Fit to Page: PickOne
+*OrderDependency: 10 AnySetup *PaperPolicy
+*DefaultPaperPolicy: Promptuser
+*PaperPolicy Promptuser/Prompt User: "
+   <</DeferredMediaSelection true>> setpagedevice"
+*End
+*PaperPolicy NearestSizeAdjust/Nearest Size and Scale: "
+   <</DeferredMediaSelection false /Policies << /PageSize 3 >> >> setpagedevice"
+*End
+*PaperPolicy NearestSizeNoAdjust/Nearest Size and Crop: "
+   <</DeferredMediaSelection false /Policies << /PageSize 5 >> >> setpagedevice"
+*End
+*CloseUI: *PaperPolicy
+*CloseGroup: AdvancedOptions
+
+*% =========================================================
+*%  Image Mode
+*% =========================================================
+*OpenUI *RET/Image Mode: PickOne
+*OrderDependency: 5 AnySetup *RET
+*DefaultRET: PrinterSetting
+*RET PrinterSetting/Printer Setting:""
+*RET Off/Normal:                    "%% @PJL SET RET = NORMAL"
+*RET Enhance/Text Enhancement:       	"%% @PJL SET RET = ENHANCE"
+*CloseUI: *RET
+
+*% =========================================================
+*%  Media Type
+*% =========================================================
+*OpenUI *MediaType/Paper Type: PickOne
+*OrderDependency: 10 AnySetup *MediaType
+*DefaultMediaType: None
+*MediaType None/Printer Default:""
+*MediaType Plain/Plain Paper: 	"<</MediaType (Plain)>> setpagedevice"
+*MediaType Thick/Thick Paper: 	"<</MediaType (THICK)>> setpagedevice"
+*MediaType Thin/Thin Paper: 		"<</MediaType (THIN)>> setpagedevice"
+*MediaType Bond/Bond Paper: 		"<</MediaType (Bond)>> setpagedevice"
+*MediaType Color/Color Paper: 	"<</MediaType (Color)>> setpagedevice"
+*MediaType Card/CardStock: 			"<</MediaType (Card Stock)>> setpagedevice"
+*MediaType Labels/Labels: 			"<</MediaType (Labels)>> setpagedevice"
+*MediaType Transparency/Transparency: "<</MediaType (Transparency)>> setpagedevice"
+*MediaType Envelope/Envelope: 				"<</MediaType (Envelope)>> setpagedevice"
+*MediaType Preprinted/Preprinted: 		"<</MediaType (Preprinted)>> setpagedevice"
+*MediaType Cotton/Cotton: 						"<</MediaType (COTTEN)  >> setpagedevice"
+*MediaType Recycled/Recycled Paper: 	"<</MediaType (Recycled)>> setpagedevice"
+*MediaType Archive/Archive Paper: 		"<</MediaType (ARCHIVE)  >> setpagedevice"
+*CloseUI: *MediaType
+
+*% =========================================================
+*%  Resolution & Halftone Information
+*% =========================================================
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 1200x1200dpi/1200 dpi (Best): "<</HWResolution [1200 1200]>> setpagedevice"
+*Resolution 600dpi/600 dpi (Normal): "<</HWResolution [600 600]>> setpagedevice"
+*?Resolution: "
+	save
+        currentpagedevice /HWResolution get
+        0 get
+ 	(          ) cvs print (dpi) = flush
+	restore"
+*End
+*CloseUI: *Resolution
+
+*DefaultHalftoneType: 9
+*ScreenFreq: "106.0"
+*ScreenAngle: "45.0"
+*%ResScreenFreq 600dpi/600 dpi :  "106.0"
+*%ResScreenAngle 600dpi/600 dpi : "45.0"
+*%ResScreenFreq 1200dpi/1200 dpi :  "180.0"
+*%ResScreenAngle 1200dpi/1200 dpi : "45.0"
+
+
+*% =========================================================
+*%  Paper Source
+*% =========================================================
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Middle
+*InputSlot Upper/Multi-Purpose Tray:"
+ << /ManualFeed false /MediaPosition 2 >> setpagedevice"
+*End
+*InputSlot Middle/Tray 1:"
+ << /ManualFeed false /MediaPosition 1 >> setpagedevice"
+*End
+*InputSlot Lower/Tray 2:"
+ << /ManualFeed false /MediaPosition 3 >> setpagedevice"
+*End
+*InputSlot ManualFeed/Manual Feeder:"
+ << /ManualFeed true>> setpagedevice" 
+*End
+*CloseUI: *InputSlot
+
+
+*% =========================================================
+*%  Paper Handling
+*% =========================================================
+*% Use these entries to set paper size unless there is a specific
+*% reason to use PageRegion, such as when using manual Feeder.
+*OpenUI *PageSize/PageSize: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/Letter: "<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*PageSize Legal/Legal: "<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*PageSize Executive/Executive: "<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*PageSize A4/A4: "<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*PageSize A5/A5: "<</PageSize [420 595] /ImagingBBox null>> setpagedevice"
+*PageSize B5-JIS/JIS B5: "<</PageSize [516 729] /ImagingBBox null>> setpagedevice"
+*PageSize US-Folio/US Folio: "<</PageSize [612 936] /ImagingBBox null>> setpagedevice"
+*PageSize Env10/No. 10 Env.: "<</PageSize [297 684] /ImagingBBox null>> setpagedevice"
+*PageSize EnvDL/DL Env.: "<</PageSize [312 624] /ImagingBBox null>> setpagedevice"
+*PageSize EnvC5/C5 Env.: "<</PageSize [459 649] /ImagingBBox null>> setpagedevice"
+*PageSize EnvC6/C6 Env.: "<</PageSize [323 459] /ImagingBBox null>> setpagedevice"
+*PageSize B5-ISO/ISO B5: "<</PageSize [499 709] /ImagingBBox null>> setpagedevice"
+*PageSize EnvMonarch/Monarch Env.: "<</PageSize [279 540] /ImagingBBox null>> setpagedevice"
+*PageSize A6/A6: "<</PageSize [297 420] /ImagingBBox null>> setpagedevice"
+*PageSize Oficio_A/Oficio : "<</PageSize [612 972] /ImagingBBox null>> setpagedevice"
+*?PageSize: "
+save currentpagedevice /PageSize get aload pop
+   2 copy gt {exch} if (Unknown) 15 dict
+   dup [612 972] (Oficio_A) put
+   dup [297 420] (A6) put
+   dup [279 540] (EnvMonarch) put
+   dup [499 709] (B5-ISO) put
+   dup [323 459] (EnvC6) put
+   dup [459 649] (EnvC5) put
+   dup [312 624] (EnvDL) put
+   dup [297 684] (Env10) put
+   dup [612 936] (US-Folio) put
+   dup [516 729] (B5-JIS) put
+   dup [420 595] (A5) put
+   dup [595 842] (A4) put
+   dup [522 756] (Executive) put
+   dup [612 1008] (Legal) put   
+   dup [612 792] (Letter) put
+ {exch aload pop 4 index sub abs 5 le exch 5 index
+ sub abs 5 le and  {exch pop exit} {pop} ifelse}
+ bind forall  = flush pop pop restore
+"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/Letter: "<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*PageRegion Legal/Legal: "<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*PageRegion Executive/Executive: "<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*PageRegion A4/A4: "<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*PageRegion A5/A5: "<</PageSize [420 595] /ImagingBBox null>> setpagedevice"
+*PageRegion B5-JIS/JIS B5: "<</PageSize [516 729] /ImagingBBox null>> setpagedevice"
+*PageRegion US-Folio/US Folio: "<</PageSize [612 936] /ImagingBBox null>> setpagedevice"
+*PageRegion Env10/No. 10 Env.: "<</PageSize [297 684] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvDL/DL Env.: "<</PageSize [312 624] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC5/C5 Env.: "<</PageSize [459 649] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC6/C6 Env.: "<</PageSize [323 459] /ImagingBBox null>> setpagedevice"
+*PageRegion B5-ISO/ISO B5: "<</PageSize [499 709] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvMonarch/Monarch Env.: "<</PageSize [279 540] /ImagingBBox null>> setpagedevice"
+*PageRegion A6/A6: "<</PageSize [297 420] /ImagingBBox null>> setpagedevice"
+*PageRegion Oficio_A/Oficio : "<</PageSize [612 972] /ImagingBBox null>> setpagedevice"
+*CloseUI: *PageRegion
+
+
+*% These entries provide the imageable areas of the media option keywords
+*DefaultImageableArea: Letter
+*ImageableArea Letter/Letter: "12.50 12.50 599.50 779.50"
+*ImageableArea Legal/Legal: "12.50 12.50 599.50 995.50"
+*ImageableArea Executive/Executive: "12.50 11.00 509.50 744.00"
+*ImageableArea A4/A4: "12.50 12.50 582.50 829.50"
+*ImageableArea A5/A5: "12.50 12.50 407.50 582.50"
+*ImageableArea B5-JIS/JIS B5: "12.50 12.50 503.50 715.50"
+*ImageableArea US-Folio/US Folio: "12.50 12.50 599.50 923.50"
+*ImageableArea Env10/No.10 Env.: "12.50 12.50 284.50 670.50"
+*ImageableArea EnvDL/DL Env.: "12.50 12.50 299.50 610.50"
+*ImageableArea EnvC5/C5 Env.: "12.50 12.50 446.50 635.50"
+*ImageableArea EnvC6/C6 Env.: "12.50 12.50 310.50 446.50"
+*ImageableArea B5-ISO/ISO B5: "12.50 12.50 485.50 695.50"
+*ImageableArea EnvMonarch/Monarch Env.: "12.50 12.50 266.50 527.50"
+*ImageableArea A6/A6: "12.50 12.50 284.50 407.50"
+*ImageableArea Oficio_A/Oficio : "12.50 12.50 599.50 959.50"
+*?ImageableArea: "
+ 	save /cvp { cvi (            ) cvs print ( ) print } bind def
+  	newpath clippath pathbbox
+  	4 -2 roll exch 2 {ceiling cvp} repeat
+ 	 exch 2 {floor cvp} repeat flush
+	 restore"
+*End
+
+
+*% These provide the physical dimensions of the media, by option keyword.
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/Letter: "612 792"
+*PaperDimension Legal/Legal: "612 1008"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension B5-JIS/JIS B5: "516 729"
+*PaperDimension US-Folio/US Folio: "612 936"
+*PaperDimension Env10/No. 10 Env.: "297 684"
+*PaperDimension EnvDL/DL Env.: "312 624"
+*PaperDimension EnvC5/C5 Env.: "459 649"
+*PaperDimension EnvC6/C6 Env.: "323 459"
+*PaperDimension B5-ISO/ISO B5: "499 709"
+*PaperDimension EnvMonarch/Monarch Env.: "279 540"
+*PaperDimension A6/A6: "297 420"
+*PaperDimension Oficio_A/Oficio : "612 972"
+
+*RequiresPageRegion All: True
+
+*%=== Custom Paper Support =================
+*VariablePaperSize: True
+
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*HWMargins: 16 16 16 16
+*CustomPageSize True: "
+     pop pop pop 
+   <</PageSize [ 5 -2 roll ] /Policies << /PageSize 7 >> /ImagingBBox null >> setpagedevice
+"
+*End
+
+*ParamCustomPageSize Width: 1 points 216 612
+*ParamCustomPageSize Height: 2 points 360 1008
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 1 1
+
+*RequiresPageRegion All: True
+*LandscapeOrientation: Plus270
+
+*% =========================================================
+*%  User Interface Constraints
+*% =========================================================
+
+*UIConstraints: *Option1 False *InputSlot Lower
+*UIConstraints: *InputSlot Lower *Option1 False 
+
+*%========Duplex does'nt allow PageSize
+*UIConstraints: *PageSize Executive  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A5  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A6  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Env10 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvC5  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvC6  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize B5-JIS  *Duplex DuplexNoTumble
+*UIConstraints: *PageSize B5-ISO  *Duplex DuplexNoTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Executive
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A6
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvC6
+*UIConstraints: *Duplex DuplexNoTumble *PageSize B5-JIS
+*UIConstraints: *Duplex DuplexNoTumble *PageSize B5-ISO
+
+*UIConstraints: *PageRegion Executive  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion A5  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion A6  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion Env10 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvC5  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvC6  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion B5-JIS  *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion B5-ISO  *Duplex DuplexNoTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion Executive
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion A5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion A6
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvC6
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion B5-JIS
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion B5-ISO
+
+*UIConstraints: *PageSize Executive  *Duplex DuplexTumble
+*UIConstraints: *PageSize A5  *Duplex DuplexTumble
+*UIConstraints: *PageSize A6  *Duplex DuplexTumble
+*UIConstraints: *PageSize Env10 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC5  *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC6  *Duplex DuplexTumble
+*UIConstraints: *PageSize B5-JIS  *Duplex DuplexTumble
+*UIConstraints: *PageSize B5-ISO  *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexTumble *PageSize Executive
+*UIConstraints: *Duplex DuplexTumble *PageSize A5
+*UIConstraints: *Duplex DuplexTumble *PageSize A6
+*UIConstraints: *Duplex DuplexTumble *PageSize Env10
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvMonarch
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvDL
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvC5
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvC6
+*UIConstraints: *Duplex DuplexTumble *PageSize B5-JIS
+*UIConstraints: *Duplex DuplexTumble *PageSize B5-ISO
+
+*UIConstraints: *PageRegion Executive  *Duplex DuplexTumble
+*UIConstraints: *PageRegion A5  *Duplex DuplexTumble
+*UIConstraints: *PageRegion A6  *Duplex DuplexTumble
+*UIConstraints: *PageRegion Env10 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC5  *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC6  *Duplex DuplexTumble
+*UIConstraints: *PageRegion B5-JIS  *Duplex DuplexTumble
+*UIConstraints: *PageRegion B5-ISO  *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexTumble *PageRegion Executive
+*UIConstraints: *Duplex DuplexTumble *PageRegion A5
+*UIConstraints: *Duplex DuplexTumble *PageRegion A6
+*UIConstraints: *Duplex DuplexTumble *PageRegion Env10
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvMonarch
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvDL
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvC5
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvC6
+*UIConstraints: *Duplex DuplexTumble *PageRegion B5-JIS
+*UIConstraints: *Duplex DuplexTumble *PageRegion B5-ISO
+
+*% =========================================================
+*%  Duplex - MediaType
+*% =========================================================
+*UIConstraints: *MediaType Thick            *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Thick            *Duplex DuplexTumble
+*UIConstraints: *MediaType Thin             *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Thin             *Duplex DuplexTumble
+*UIConstraints: *MediaType Cotton           *Duplex DuplexTumble
+*UIConstraints: *MediaType Cotton           *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Envelope         *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Envelope         *Duplex DuplexTumble
+*UIConstraints: *MediaType Transparency     *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Transparency     *Duplex DuplexTumble
+*UIConstraints: *MediaType Labels           *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Labels           *Duplex DuplexTumble
+*UIConstraints: *MediaType Card             *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Card             *Duplex DuplexTumble
+*UIConstraints: *MediaType Bond             *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Bond             *Duplex DuplexTumble
+*UIConstraints: *MediaType Archive          *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Archive          *Duplex DuplexTumble
+*UIConstraints: *MediaType Color	    *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Color	    *Duplex DuplexTumble
+*UIConstraints: *MediaType Preprinted       *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Preprinted       *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Thick
+*UIConstraints: *Duplex DuplexTumble        *MediaType Thick
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Thin
+*UIConstraints: *Duplex DuplexTumble        *MediaType Thin
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Cotton
+*UIConstraints: *Duplex DuplexTumble        *MediaType Cotton
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Envelope
+*UIConstraints: *Duplex DuplexTumble        *MediaType Envelope
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Transparency
+*UIConstraints: *Duplex DuplexTumble        *MediaType Transparency
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Labels
+*UIConstraints: *Duplex DuplexTumble        *MediaType Labels
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Card
+*UIConstraints: *Duplex DuplexTumble        *MediaType Card
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Bond
+*UIConstraints: *Duplex DuplexTumble        *MediaType Bond
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Archive
+*UIConstraints: *Duplex DuplexTumble        *MediaType Archive
+*UIConstraints: *Duplex DuplexNoTumble      *MediaType Color	          
+*UIConstraints: *Duplex DuplexTumble  	    *MediaType Color	          
+*UIConstraints: *Duplex DuplexNoTumble	    *MediaType Preprinted       
+*UIConstraints: *Duplex DuplexTumble  	    *MediaType Preprinted       
+
+*% =========================================================
+*%  InputSlot(Middle) - PaperSize
+*% =========================================================
+
+*UIConstraints: *PageSize A6                *InputSlot Middle
+*UIConstraints: *PageSize Env10             *InputSlot Middle
+*UIConstraints: *PageSize EnvMonarch        *InputSlot Middle
+*UIConstraints: *PageSize EnvDL             *InputSlot Middle
+*UIConstraints: *PageSize EnvC5             *InputSlot Middle
+*UIConstraints: *PageSize EnvC6             *InputSlot Middle
+
+*UIConstraints: *InputSlot Middle           *PageSize A6         
+*UIConstraints: *InputSlot Middle           *PageSize Env10      
+*UIConstraints: *InputSlot Middle           *PageSize EnvMonarch 
+*UIConstraints: *InputSlot Middle           *PageSize EnvDL      
+*UIConstraints: *InputSlot Middle           *PageSize EnvC5      
+*UIConstraints: *InputSlot Middle           *PageSize EnvC6      
+
+*% =========================================================
+*%  InputSlot(Middle) - PageRegion
+*% =========================================================
+
+*UIConstraints: *PageRegion A6              *InputSlot Middle
+*UIConstraints: *PageRegion Env10           *InputSlot Middle
+*UIConstraints: *PageRegion EnvMonarch      *InputSlot Middle
+*UIConstraints: *PageRegion EnvDL           *InputSlot Middle
+*UIConstraints: *PageRegion EnvC5           *InputSlot Middle
+*UIConstraints: *PageRegion EnvC6           *InputSlot Middle
+
+*UIConstraints: *InputSlot Middle           *PageRegion A6         
+*UIConstraints: *InputSlot Middle           *PageRegion Env10      
+*UIConstraints: *InputSlot Middle           *PageRegion EnvMonarch 
+*UIConstraints: *InputSlot Middle           *PageRegion EnvDL      
+*UIConstraints: *InputSlot Middle           *PageRegion EnvC5      
+*UIConstraints: *InputSlot Middle           *PageRegion EnvC6      
+
+*% =========================================================
+*%  InputSlot(Lower) - PaperSize
+*% =========================================================
+
+*UIConstraints: *PageSize A6                *InputSlot Lower
+*UIConstraints: *PageSize Env10             *InputSlot Lower
+*UIConstraints: *PageSize EnvMonarch        *InputSlot Lower
+*UIConstraints: *PageSize EnvDL             *InputSlot Lower
+*UIConstraints: *PageSize EnvC5             *InputSlot Lower
+*UIConstraints: *PageSize EnvC6             *InputSlot Lower
+
+*UIConstraints: *InputSlot Lower            *PageSize A6         
+*UIConstraints: *InputSlot Lower            *PageSize Env10      
+*UIConstraints: *InputSlot Lower            *PageSize EnvMonarch 
+*UIConstraints: *InputSlot Lower            *PageSize EnvDL      
+*UIConstraints: *InputSlot Lower            *PageSize EnvC5      
+*UIConstraints: *InputSlot Lower            *PageSize EnvC6      
+
+*% =========================================================
+*%  InputSlot(Lower) - PageRegion
+*% =========================================================
+
+*UIConstraints: *PageRegion A6              *InputSlot Lower
+*UIConstraints: *PageRegion Env10           *InputSlot Lower
+*UIConstraints: *PageRegion EnvMonarch      *InputSlot Lower
+*UIConstraints: *PageRegion EnvDL           *InputSlot Lower
+*UIConstraints: *PageRegion EnvC5           *InputSlot Lower
+*UIConstraints: *PageRegion EnvC6           *InputSlot Lower
+
+*UIConstraints: *InputSlot Lower            *PageRegion A6         
+*UIConstraints: *InputSlot Lower            *PageRegion Env10      
+*UIConstraints: *InputSlot Lower            *PageRegion EnvMonarch 
+*UIConstraints: *InputSlot Lower            *PageRegion EnvDL      
+*UIConstraints: *InputSlot Lower            *PageRegion EnvC5      
+*UIConstraints: *InputSlot Lower            *PageRegion EnvC6  
+
+*% =========================================================
+*%  InputSlot(Middle) - MediaType
+*% =========================================================
+
+*UIConstraints: *InputSlot Middle           *MediaType Cotton
+*UIConstraints: *InputSlot Middle           *MediaType Envelope
+*UIConstraints: *InputSlot Middle           *MediaType Transparency
+*UIConstraints: *InputSlot Middle           *MediaType Labels
+*UIConstraints: *InputSlot Middle           *MediaType Card
+*UIConstraints: *InputSlot Middle           *MediaType Bond
+*UIConstraints: *InputSlot Middle           *MediaType Color	                    
+*UIConstraints: *InputSlot Middle	    *MediaType Preprinted       
+
+*UIConstraints: *MediaType Cotton           *InputSlot Middle
+*UIConstraints: *MediaType Envelope         *InputSlot Middle
+*UIConstraints: *MediaType Transparency     *InputSlot Middle
+*UIConstraints: *MediaType Labels           *InputSlot Middle
+*UIConstraints: *MediaType Card             *InputSlot Middle
+*UIConstraints: *MediaType Bond             *InputSlot Middle
+*UIConstraints: *MediaType Color	    *InputSlot Middle
+*UIConstraints: *MediaType Preprinted       *InputSlot Middle
+
+*% =========================================================
+*%  InputSlot(Lower) - MediaType
+*% =========================================================
+
+*UIConstraints: *InputSlot Lower            *MediaType Cotton
+*UIConstraints: *InputSlot Lower            *MediaType Envelope
+*UIConstraints: *InputSlot Lower            *MediaType Transparency
+*UIConstraints: *InputSlot Lower            *MediaType Labels
+*UIConstraints: *InputSlot Lower            *MediaType Card
+*UIConstraints: *InputSlot Lower            *MediaType Bond
+*UIConstraints: *InputSlot Lower            *MediaType Color	                    
+*UIConstraints: *InputSlot Lower            *MediaType Preprinted       
+
+*UIConstraints: *MediaType Cotton           *InputSlot Lower
+*UIConstraints: *MediaType Envelope         *InputSlot Lower
+*UIConstraints: *MediaType Transparency     *InputSlot Lower
+*UIConstraints: *MediaType Labels           *InputSlot Lower
+*UIConstraints: *MediaType Card             *InputSlot Lower
+*UIConstraints: *MediaType Bond             *InputSlot Lower
+*UIConstraints: *MediaType Color	    *InputSlot Lower
+*UIConstraints: *MediaType Preprinted       *InputSlot Lower
+
+*% =========================================================
+*%  Envelope(PageSize) - MediaType
+*% =========================================================		
+
+*% Env10
+*UIConstraints: *PageSize Env10			*MediaType None
+*UIConstraints: *PageSize Env10			*MediaType Plain
+*UIConstraints: *PageSize Env10			*MediaType Thick
+*UIConstraints: *PageSize Env10			*MediaType Thin
+*UIConstraints: *PageSize Env10			*MediaType Bond
+*UIConstraints: *PageSize Env10			*MediaType Color
+*UIConstraints: *PageSize Env10			*MediaType Card
+*UIConstraints: *PageSize Env10			*MediaType Labels
+*UIConstraints: *PageSize Env10			*MediaType Transparency
+*UIConstraints: *PageSize Env10			*MediaType Preprinted
+*UIConstraints: *PageSize Env10			*MediaType Recycled
+*UIConstraints: *PageSize Env10			*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageSize Env10			
+*UIConstraints: *MediaType Plain       		*PageSize Env10			
+*UIConstraints: *MediaType Thick       		*PageSize Env10			
+*UIConstraints: *MediaType Thin        		*PageSize Env10			
+*UIConstraints: *MediaType Bond        		*PageSize Env10			
+*UIConstraints: *MediaType Color       		*PageSize Env10			
+*UIConstraints: *MediaType Card        		*PageSize Env10			
+*UIConstraints: *MediaType Labels      		*PageSize Env10			
+*UIConstraints: *MediaType Transparency		*PageSize Env10			
+*UIConstraints: *MediaType Preprinted  		*PageSize Env10			
+*UIConstraints: *MediaType Recycled    		*PageSize Env10			
+*UIConstraints: *MediaType Cotton      		*PageSize Env10		
+
+*% EnvDL
+*UIConstraints: *PageSize EnvDL			*MediaType None
+*UIConstraints: *PageSize EnvDL			*MediaType Plain
+*UIConstraints: *PageSize EnvDL			*MediaType Thick
+*UIConstraints: *PageSize EnvDL			*MediaType Thin
+*UIConstraints: *PageSize EnvDL			*MediaType Bond
+*UIConstraints: *PageSize EnvDL			*MediaType Color
+*UIConstraints: *PageSize EnvDL			*MediaType Card
+*UIConstraints: *PageSize EnvDL			*MediaType Labels
+*UIConstraints: *PageSize EnvDL			*MediaType Transparency
+*UIConstraints: *PageSize EnvDL			*MediaType Preprinted
+*UIConstraints: *PageSize EnvDL			*MediaType Recycled
+*UIConstraints: *PageSize EnvDL			*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageSize EnvDL			
+*UIConstraints: *MediaType Plain       		*PageSize EnvDL			
+*UIConstraints: *MediaType Thick       		*PageSize EnvDL			
+*UIConstraints: *MediaType Thin        		*PageSize EnvDL			
+*UIConstraints: *MediaType Bond        		*PageSize EnvDL			
+*UIConstraints: *MediaType Color       		*PageSize EnvDL			
+*UIConstraints: *MediaType Card        		*PageSize EnvDL			
+*UIConstraints: *MediaType Labels      		*PageSize EnvDL			
+*UIConstraints: *MediaType Transparency		*PageSize EnvDL			
+*UIConstraints: *MediaType Preprinted  		*PageSize EnvDL			
+*UIConstraints: *MediaType Recycled    		*PageSize EnvDL			
+*UIConstraints: *MediaType Cotton      		*PageSize EnvDL			
+
+*% EnvC5
+*UIConstraints: *PageSize EnvC5			*MediaType None
+*UIConstraints: *PageSize EnvC5			*MediaType Plain
+*UIConstraints: *PageSize EnvC5			*MediaType Thick
+*UIConstraints: *PageSize EnvC5			*MediaType Thin
+*UIConstraints: *PageSize EnvC5			*MediaType Bond
+*UIConstraints: *PageSize EnvC5			*MediaType Color
+*UIConstraints: *PageSize EnvC5			*MediaType Card
+*UIConstraints: *PageSize EnvC5			*MediaType Labels
+*UIConstraints: *PageSize EnvC5			*MediaType Transparency
+*UIConstraints: *PageSize EnvC5			*MediaType Preprinted
+*UIConstraints: *PageSize EnvC5			*MediaType Recycled
+*UIConstraints: *PageSize EnvC5			*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageSize EnvC5			
+*UIConstraints: *MediaType Plain       		*PageSize EnvC5			
+*UIConstraints: *MediaType Thick       		*PageSize EnvC5			
+*UIConstraints: *MediaType Thin        		*PageSize EnvC5			
+*UIConstraints: *MediaType Bond        		*PageSize EnvC5			
+*UIConstraints: *MediaType Color       		*PageSize EnvC5			
+*UIConstraints: *MediaType Card        		*PageSize EnvC5			
+*UIConstraints: *MediaType Labels      		*PageSize EnvC5			
+*UIConstraints: *MediaType Transparency		*PageSize EnvC5			
+*UIConstraints: *MediaType Preprinted  		*PageSize EnvC5			
+*UIConstraints: *MediaType Recycled    		*PageSize EnvC5			
+*UIConstraints: *MediaType Cotton      		*PageSize EnvC5
+
+*% EnvC6
+*UIConstraints: *PageSize EnvC6			*MediaType None
+*UIConstraints: *PageSize EnvC6			*MediaType Plain
+*UIConstraints: *PageSize EnvC6			*MediaType Thick
+*UIConstraints: *PageSize EnvC6			*MediaType Thin
+*UIConstraints: *PageSize EnvC6			*MediaType Bond
+*UIConstraints: *PageSize EnvC6			*MediaType Color
+*UIConstraints: *PageSize EnvC6			*MediaType Card
+*UIConstraints: *PageSize EnvC6			*MediaType Labels
+*UIConstraints: *PageSize EnvC6			*MediaType Transparency
+*UIConstraints: *PageSize EnvC6			*MediaType Preprinted
+*UIConstraints: *PageSize EnvC6			*MediaType Recycled
+*UIConstraints: *PageSize EnvC6			*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageSize EnvC6			
+*UIConstraints: *MediaType Plain       		*PageSize EnvC6			
+*UIConstraints: *MediaType Thick       		*PageSize EnvC6			
+*UIConstraints: *MediaType Thin        		*PageSize EnvC6			
+*UIConstraints: *MediaType Bond        		*PageSize EnvC6			
+*UIConstraints: *MediaType Color       		*PageSize EnvC6			
+*UIConstraints: *MediaType Card        		*PageSize EnvC6			
+*UIConstraints: *MediaType Labels      		*PageSize EnvC6			
+*UIConstraints: *MediaType Transparency		*PageSize EnvC6			
+*UIConstraints: *MediaType Preprinted  		*PageSize EnvC6			
+*UIConstraints: *MediaType Recycled    		*PageSize EnvC6			
+*UIConstraints: *MediaType Cotton      		*PageSize EnvC6		
+
+*% EnvMonarch
+*UIConstraints: *PageSize EnvMonarch		*MediaType None        	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Plain       	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Thick       	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Thin        	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Bond        	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Color       	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Card        	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Labels      	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Transparency	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Preprinted  	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Recycled    	
+*UIConstraints: *PageSize EnvMonarch		*MediaType Cotton      	
+
+*UIConstraints: *MediaType None        		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Plain       		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Thick       		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Thin        		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Bond        		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Color       		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Card        		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Labels      		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Transparency		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Preprinted  		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Recycled    		*PageSize EnvMonarch	
+*UIConstraints: *MediaType Cotton      		*PageSize EnvMonarch
+
+*% =========================================================
+*%  Envelope(PageRegion) - MediaType
+*% =========================================================		
+
+*% Env10
+*UIConstraints: *PageRegion Env10		*MediaType None
+*UIConstraints: *PageRegion Env10		*MediaType Plain
+*UIConstraints: *PageRegion Env10		*MediaType Thick
+*UIConstraints: *PageRegion Env10		*MediaType Thin
+*UIConstraints: *PageRegion Env10		*MediaType Bond
+*UIConstraints: *PageRegion Env10		*MediaType Color
+*UIConstraints: *PageRegion Env10		*MediaType Card
+*UIConstraints: *PageRegion Env10		*MediaType Labels
+*UIConstraints: *PageRegion Env10		*MediaType Transparency
+*UIConstraints: *PageRegion Env10		*MediaType Preprinted
+*UIConstraints: *PageRegion Env10		*MediaType Recycled
+*UIConstraints: *PageRegion Env10		*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageRegion Env10			
+*UIConstraints: *MediaType Plain       		*PageRegion Env10			
+*UIConstraints: *MediaType Thick       		*PageRegion Env10			
+*UIConstraints: *MediaType Thin        		*PageRegion Env10			
+*UIConstraints: *MediaType Bond        		*PageRegion Env10			
+*UIConstraints: *MediaType Color       		*PageRegion Env10			
+*UIConstraints: *MediaType Card        		*PageRegion Env10			
+*UIConstraints: *MediaType Labels      		*PageRegion Env10			
+*UIConstraints: *MediaType Transparency		*PageRegion Env10			
+*UIConstraints: *MediaType Preprinted  		*PageRegion Env10			
+*UIConstraints: *MediaType Recycled    		*PageRegion Env10			
+*UIConstraints: *MediaType Cotton      		*PageRegion Env10			
+
+*% EnvDL
+*UIConstraints: *PageRegion EnvDL		*MediaType None
+*UIConstraints: *PageRegion EnvDL		*MediaType Plain
+*UIConstraints: *PageRegion EnvDL		*MediaType Thick
+*UIConstraints: *PageRegion EnvDL		*MediaType Thin
+*UIConstraints: *PageRegion EnvDL		*MediaType Bond
+*UIConstraints: *PageRegion EnvDL		*MediaType Color
+*UIConstraints: *PageRegion EnvDL		*MediaType Card
+*UIConstraints: *PageRegion EnvDL		*MediaType Labels
+*UIConstraints: *PageRegion EnvDL		*MediaType Transparency
+*UIConstraints: *PageRegion EnvDL		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvDL		*MediaType Recycled
+*UIConstraints: *PageRegion EnvDL		*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageRegion EnvDL			
+*UIConstraints: *MediaType Plain       		*PageRegion EnvDL			
+*UIConstraints: *MediaType Thick       		*PageRegion EnvDL			
+*UIConstraints: *MediaType Thin        		*PageRegion EnvDL			
+*UIConstraints: *MediaType Bond        		*PageRegion EnvDL			
+*UIConstraints: *MediaType Color       		*PageRegion EnvDL			
+*UIConstraints: *MediaType Card        		*PageRegion EnvDL			
+*UIConstraints: *MediaType Labels      		*PageRegion EnvDL			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvDL			
+*UIConstraints: *MediaType Preprinted  		*PageRegion EnvDL			
+*UIConstraints: *MediaType Recycled    		*PageRegion EnvDL			
+*UIConstraints: *MediaType Cotton      		*PageRegion EnvDL			
+
+*% EnvC5
+*UIConstraints: *PageRegion EnvC5		*MediaType None
+*UIConstraints: *PageRegion EnvC5		*MediaType Plain
+*UIConstraints: *PageRegion EnvC5		*MediaType Thick
+*UIConstraints: *PageRegion EnvC5		*MediaType Thin
+*UIConstraints: *PageRegion EnvC5		*MediaType Bond
+*UIConstraints: *PageRegion EnvC5		*MediaType Color
+*UIConstraints: *PageRegion EnvC5		*MediaType Card
+*UIConstraints: *PageRegion EnvC5		*MediaType Labels
+*UIConstraints: *PageRegion EnvC5		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC5		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvC5		*MediaType Recycled
+*UIConstraints: *PageRegion EnvC5		*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageRegion EnvC5			
+*UIConstraints: *MediaType Plain       		*PageRegion EnvC5			
+*UIConstraints: *MediaType Thick       		*PageRegion EnvC5			
+*UIConstraints: *MediaType Thin        		*PageRegion EnvC5			
+*UIConstraints: *MediaType Bond        		*PageRegion EnvC5			
+*UIConstraints: *MediaType Color       		*PageRegion EnvC5			
+*UIConstraints: *MediaType Card        		*PageRegion EnvC5			
+*UIConstraints: *MediaType Labels      		*PageRegion EnvC5			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvC5			
+*UIConstraints: *MediaType Preprinted  		*PageRegion EnvC5			
+*UIConstraints: *MediaType Recycled    		*PageRegion EnvC5			
+*UIConstraints: *MediaType Cotton      		*PageRegion EnvC5			
+
+*% EnvC6
+*UIConstraints: *PageRegion EnvC6		*MediaType None
+*UIConstraints: *PageRegion EnvC6		*MediaType Plain
+*UIConstraints: *PageRegion EnvC6		*MediaType Thick
+*UIConstraints: *PageRegion EnvC6		*MediaType Thin
+*UIConstraints: *PageRegion EnvC6		*MediaType Bond
+*UIConstraints: *PageRegion EnvC6		*MediaType Color
+*UIConstraints: *PageRegion EnvC6		*MediaType Card
+*UIConstraints: *PageRegion EnvC6		*MediaType Labels
+*UIConstraints: *PageRegion EnvC6		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC6		*MediaType Preprinted
+*UIConstraints: *PageRegion EnvC6		*MediaType Recycled
+*UIConstraints: *PageRegion EnvC6		*MediaType Cotton
+
+*UIConstraints: *MediaType None        		*PageRegion EnvC6			
+*UIConstraints: *MediaType Plain       		*PageRegion EnvC6			
+*UIConstraints: *MediaType Thick       		*PageRegion EnvC6			
+*UIConstraints: *MediaType Thin        		*PageRegion EnvC6			
+*UIConstraints: *MediaType Bond        		*PageRegion EnvC6			
+*UIConstraints: *MediaType Color       		*PageRegion EnvC6			
+*UIConstraints: *MediaType Card        		*PageRegion EnvC6			
+*UIConstraints: *MediaType Labels      		*PageRegion EnvC6			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvC6			
+*UIConstraints: *MediaType Preprinted  		*PageRegion EnvC6			
+*UIConstraints: *MediaType Recycled    		*PageRegion EnvC6			
+*UIConstraints: *MediaType Cotton      		*PageRegion EnvC6			
+
+*% EnvMonarch
+*UIConstraints: *PageRegion EnvMonarch		*MediaType None        	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Plain       	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Thick       	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Thin        	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Bond        	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Color       	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Card        	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Labels      	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Transparency	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Preprinted  	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Recycled    	
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Cotton     	
+
+*UIConstraints: *MediaType None        		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Plain       		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Thick       		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Thin        		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Bond        		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Color       		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Card        		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Labels      		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Transparency		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Preprinted  		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Recycled    		*PageRegion EnvMonarch	
+*UIConstraints: *MediaType Cotton      		*PageRegion EnvMonarch
+
+*% =========================================================
+*%  PageSize - Envelope(MediaType)
+*% =========================================================
+*UIConstraints: *PageSize Letter		*MediaType Envelope
+*UIConstraints: *PageSize Legal			*MediaType Envelope
+*UIConstraints: *PageSize Oficio_A		*MediaType Envelope
+*UIConstraints: *PageSize US-Folio		*MediaType Envelope
+*UIConstraints: *PageSize A4			*MediaType Envelope
+*UIConstraints: *PageSize B5-ISO		*MediaType Envelope
+*UIConstraints: *PageSize B5-JIS		*MediaType Envelope
+*UIConstraints: *PageSize Executive		*MediaType Envelope
+*UIConstraints: *PageSize A5                    *MediaType Envelope
+*UIConstraints: *PageSize A6                    *MediaType Envelope
+
+*UIConstraints: *MediaType Envelope		*PageSize Letter		
+*UIConstraints: *MediaType Envelope		*PageSize Legal			
+*UIConstraints: *MediaType Envelope		*PageSize Oficio_A		
+*UIConstraints: *MediaType Envelope		*PageSize US-Folio		
+*UIConstraints: *MediaType Envelope		*PageSize A4			
+*UIConstraints: *MediaType Envelope		*PageSize B5-ISO		
+*UIConstraints: *MediaType Envelope		*PageSize B5-JIS		
+*UIConstraints: *MediaType Envelope		*PageSize Executive		
+*UIConstraints: *MediaType Envelope             *PageSize A5
+*UIConstraints: *MediaType Envelope             *PageSize A6
+
+*% =========================================================
+*%  PageRegion - Envelope(MediaType)
+*% =========================================================
+*UIConstraints: *PageRegion Letter		*MediaType Envelope
+*UIConstraints: *PageRegion Legal		*MediaType Envelope
+*UIConstraints: *PageRegion Oficio_A		*MediaType Envelope
+*UIConstraints: *PageRegion US-Folio		*MediaType Envelope
+*UIConstraints: *PageRegion A4			*MediaType Envelope
+*UIConstraints: *PageRegion B5-ISO		*MediaType Envelope
+*UIConstraints: *PageRegion B5-JIS		*MediaType Envelope
+*UIConstraints: *PageRegion Executive		*MediaType Envelope
+*UIConstraints: *PageRegion A5                  *MediaType Envelope
+*UIConstraints: *PageRegion A6                  *MediaType Envelope
+
+*UIConstraints: *MediaType Envelope		*PageRegion Letter		
+*UIConstraints: *MediaType Envelope		*PageRegion Legal			
+*UIConstraints: *MediaType Envelope		*PageRegion Oficio_A		
+*UIConstraints: *MediaType Envelope		*PageRegion US-Folio		
+*UIConstraints: *MediaType Envelope		*PageRegion A4			
+*UIConstraints: *MediaType Envelope		*PageRegion B5-ISO		
+*UIConstraints: *MediaType Envelope		*PageRegion B5-JIS		
+*UIConstraints: *MediaType Envelope		*PageRegion Executive
+*UIConstraints: *MediaType Envelope             *PageRegion A5
+*UIConstraints: *MediaType Envelope             *PageRegion A6
+
+*% =========================================================
+*%  PageSize - Transparency(MediaType)
+*% =========================================================
+*UIConstraints: *PageSize Legal			*MediaType Transparency
+*UIConstraints: *PageSize Oficio_A		*MediaType Transparency
+*UIConstraints: *PageSize US-Folio		*MediaType Transparency
+*UIConstraints: *PageSize A5			*MediaType Transparency
+*UIConstraints: *PageSize A6			*MediaType Transparency
+*UIConstraints: *PageSize B5-ISO		*MediaType Transparency
+*UIConstraints: *PageSize B5-JIS		*MediaType Transparency
+*UIConstraints: *PageSize Executive		*MediaType Transparency
+*UIConstraints: *PageSize Env10			*MediaType Transparency
+*UIConstraints: *PageSize EnvDL			*MediaType Transparency
+*UIConstraints: *PageSize EnvC5			*MediaType Transparency
+*UIConstraints: *PageSize EnvC6			*MediaType Transparency
+*UIConstraints: *PageSize EnvMonarch		*MediaType Transparency
+
+*UIConstraints: *MediaType Transparency		*PageSize Legal			
+*UIConstraints: *MediaType Transparency		*PageSize Oficio_A		
+*UIConstraints: *MediaType Transparency		*PageSize US-Folio		
+*UIConstraints: *MediaType Transparency		*PageSize A5			
+*UIConstraints: *MediaType Transparency		*PageSize A6			
+*UIConstraints: *MediaType Transparency		*PageSize B5-ISO		
+*UIConstraints: *MediaType Transparency		*PageSize B5-JIS		
+*UIConstraints: *MediaType Transparency		*PageSize Executive		
+*UIConstraints: *MediaType Transparency		*PageSize Env10			
+*UIConstraints: *MediaType Transparency		*PageSize EnvDL			
+*UIConstraints: *MediaType Transparency		*PageSize EnvC5			
+*UIConstraints: *MediaType Transparency		*PageSize EnvC6			
+*UIConstraints: *MediaType Transparency		*PageSize EnvMonarch	
+
+*% =========================================================
+*%  PageRegion - Transparency(MediaType)
+*% =========================================================
+*UIConstraints: *PageRegion Legal		*MediaType Transparency
+*UIConstraints: *PageRegion Oficio_A		*MediaType Transparency
+*UIConstraints: *PageRegion US-Folio		*MediaType Transparency
+*UIConstraints: *PageRegion A5			*MediaType Transparency
+*UIConstraints: *PageRegion A6			*MediaType Transparency
+*UIConstraints: *PageRegion B5-ISO		*MediaType Transparency
+*UIConstraints: *PageRegion B5-JIS		*MediaType Transparency
+*UIConstraints: *PageRegion Executive		*MediaType Transparency
+*UIConstraints: *PageRegion Env10		*MediaType Transparency
+*UIConstraints: *PageRegion EnvDL		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC5		*MediaType Transparency
+*UIConstraints: *PageRegion EnvC6		*MediaType Transparency
+*UIConstraints: *PageRegion EnvMonarch		*MediaType Transparency
+
+*UIConstraints: *MediaType Transparency		*PageRegion Legal			
+*UIConstraints: *MediaType Transparency		*PageRegion Oficio_A		
+*UIConstraints: *MediaType Transparency		*PageRegion US-Folio		
+*UIConstraints: *MediaType Transparency		*PageRegion A5			
+*UIConstraints: *MediaType Transparency		*PageRegion A6			
+*UIConstraints: *MediaType Transparency		*PageRegion B5-ISO		
+*UIConstraints: *MediaType Transparency		*PageRegion B5-JIS		
+*UIConstraints: *MediaType Transparency		*PageRegion Executive		
+*UIConstraints: *MediaType Transparency		*PageRegion Env10			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvDL			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvC5			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvC6			
+*UIConstraints: *MediaType Transparency		*PageRegion EnvMonarch	
+
+*% =========================================================  
+*%  CustomPageSize - InputSlot (Tray1) 
+*% ========================================================= 
+
+*NonUIConstraints: *CustomPageSize True	    	*MediaType Transparency
+*NonUIConstraints: *MediaType Transparency	*CustomPageSize True
+
+*% =========================================================  
+*%  CustomPageSize - InputSlot (Tray2) 
+*% ========================================================= 
+*NonUIConstraints: *CustomPageSize True	    *InputSlot Lower
+*NonUIConstraints: *InputSlot Lower	    *CustomPageSize True
+
+*% =========================================================  
+*%  CustomPageSize - InputSlot (Tray1) 
+*% ========================================================= 
+*NonUIConstraints: *CustomPageSize True	    *InputSlot Middle
+*NonUIConstraints: *InputSlot Middle	    *CustomPageSize True
+
+*% ++++++++++++++++++++++
+*%  Font Information
+*% ++++++++++++++++++++++
+*DefaultFont: Courier
+*Font AlbertusMT-Italic: Standard "(001.001)" Standard ROM
+*Font AlbertusMT-Light: Standard "(001.001)" Standard ROM
+*Font AlbertusMT: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Bold: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Compact: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Italic: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Roman: Standard "(001.001)" Standard ROM
+*Font Apple-Chancery: Standard "(001.001)" ExtendedRoman ROM
+*Font Arial-BoldItalicMT: Standard "(001.001)" Standard ROM
+*Font Arial-BoldMT: Standard "(001.001)" Standard ROM
+*Font Arial-ItalicMT: Standard "(001.001)" Standard ROM
+*Font ArialMT: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Book: Standard "(001.001)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.001)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.001)" Standard ROM
+*Font Bodoni-Bold: Standard "(001.001)" Standard ROM
+*Font Bodoni-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Bodoni-Italic: Standard "(001.001)" Standard ROM
+*Font Bodoni-Poster: Standard "(001.001)" Standard ROM
+*Font Bodoni-PosterCompressed: Standard "(001.001)" Standard ROM
+*Font Bodoni: Standard "(001.001)" Standard ROM
+*Font Bookman-Demi: Standard "(001.001)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.001)" Standard ROM
+*Font Bookman-Light: Standard "(001.001)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.001)" Standard ROM
+*Font Candid: Special "(001.001)" Special ROM
+*Font Chicago: Standard "(001.001)" ExtendedRoman ROM
+*Font Clarendon-Bold: Standard "(001.001)" Standard ROM
+*Font Clarendon-Light: Standard "(001.001)" Standard ROM
+*Font Clarendon: Standard "(001.001)" Standard ROM
+*Font CooperBlack-Italic: Standard "(001.001)" Standard ROM
+*Font CooperBlack: Standard "(001.001)" Standard ROM
+*Font Copperplate-ThirtyThreeBC: Standard "(001.001)" Standard ROM
+*Font Copperplate-ThirtyTwoBC: Standard "(001.001)" Standard ROM
+*Font Coronet-Regular: Standard "(001.001)" Standard ROM
+*Font Courier-Bold: Standard "(001.001)" Standard ROM
+*Font Courier-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Courier-Oblique: Standard "(001.001)" Standard ROM
+*Font Courier: Standard "(001.001)" Standard ROM
+*Font Eurostile-Bold: Standard "(001.001)" Standard ROM
+*Font Eurostile-BoldExtendedTwo: Standard "(001.001)" Standard ROM
+*Font Eurostile-ExtendedTwo: Standard "(001.001)" Standard ROM
+*Font Eurostile: Standard "(001.001)" Standard ROM
+*Font Geneva: Standard "(001.001)" ExtendedRoman ROM
+*Font GillSans-Bold: Standard "(001.001)" Standard ROM
+*Font GillSans-BoldCondensed: Standard "(001.001)" Standard ROM
+*Font GillSans-BoldItalic: Standard "(001.001)" Standard ROM
+*Font GillSans-Condensed: Standard "(001.001)" Standard ROM
+*Font GillSans-ExtraBold: Standard "(001.001)" Standard ROM
+*Font GillSans-Italic: Standard "(001.001)" Standard ROM
+*Font GillSans-Light: Standard "(001.001)" Standard ROM
+*Font GillSans-LightItalic: Standard "(001.001)" Standard ROM
+*Font GillSans: Standard "(001.001)" Standard ROM
+*Font Goudy-Bold: Standard "(001.001)" Standard ROM
+*Font Goudy-BoldItalic: Standard "(001.000)" Standard ROM
+*Font Goudy-ExtraBold: Standard "(001.001)" Standard ROM
+*Font Goudy-Italic: Standard "(001.001)" Standard ROM
+*Font Goudy: Standard "(001.001)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Condensed-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-Condensed-BoldObl: Standard "(001.001)" Standard ROM
+*Font Helvetica-Condensed-Oblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Condensed: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.001)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.001)" Standard ROM
+*Font Helvetica: Standard "(001.001)" Standard ROM
+*Font HoeflerText-Black: Standard "(001.001)" ExtendedRoman ROM
+*Font HoeflerText-BlackItalic: Standard "(001.001)" Standard ROM
+*Font HoeflerText-Italic: Standard "(001.001)" ExtendedRoman ROM
+*Font HoeflerText-Ornaments: Special "(001.001)" Special ROM
+*Font HoeflerText-Regular: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Bold: Standard "(001.001)" Standard ROM
+*Font JoannaMT-BoldItalic: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Italic: Standard "(001.001)" Standard ROM
+*Font JoannaMT: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Bold: Standard "(001.001)" Standard ROM
+*Font LetterGothic-BoldSlanted: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Slanted: Standard "(001.001)" Standard ROM
+*Font LetterGothic: Standard "(001.001)" Standard ROM
+*Font LubalinGraph-Book: Standard "(001.001)" Standard ROM
+*Font LubalinGraph-BookOblique: Standard "(001.001)" Standard ROM
+*Font LubalinGraph-Demi: Standard "(001.001)" Standard ROM
+*Font LubalinGraph-DemiOblique: Standard "(001.001)" Standard ROM
+*Font Marigold: Standard "(001.001)" Standard ROM
+*Font Monaco: Standard "(001.001)" ExtendedRoman ROM
+*Font MonaLisa-Recut: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.001)" Standard ROM
+*Font NewYork: Standard "(001.001)" ExtendedRoman ROM
+*Font Optima-Bold: Standard "(001.001)" Standard ROM
+*Font Optima-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Optima-Italic: Standard "(001.001)" Standard ROM
+*Font Optima: Standard "(001.001)" Standard ROM
+*Font Oxford: Standard "(001.001)" Standard ROM
+*Font Palatino-Bold: Standard "(001.001)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Palatino-Italic: Standard "(001.001)" Standard ROM
+*Font Palatino-Roman: Standard "(001.001)" Standard ROM
+*Font StempelGaramond-Bold: Standard "(001.001)" Standard ROM
+*Font StempelGaramond-BoldItalic: Standard "(001.001)" Standard ROM
+*Font StempelGaramond-Italic: Standard "(001.001)" Standard ROM
+*Font StempelGaramond-Roman: Standard "(001.001)" Standard ROM
+*Font Symbol: Special "(001.001)" Special ROM
+*Font Taffy: Standard "(001.001)" Standard ROM
+*Font Times-Bold: Standard "(001.001)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Times-Italic: Standard "(001.001)" Standard ROM
+*Font Times-Roman: Standard "(001.001)" Standard ROM
+*Font TimesNewRomanPS-BoldItalicMT: Standard "(001.001)" Standard ROM
+*Font TimesNewRomanPS-BoldMT: Standard "(001.001)" Standard ROM
+*Font TimesNewRomanPS-ItalicMT: Standard "(001.001)" Standard ROM
+*Font TimesNewRomanPSMT: Standard "(001.001)" Standard ROM
+*Font Univers-Bold: Standard "(001.001)" Standard ROM
+*Font Univers-BoldExt: Standard "(001.001)" Standard ROM
+*Font Univers-BoldExtObl: Standard "(001.001)" Standard ROM
+*Font Univers-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed: Standard "(001.001)" Standard ROM
+*Font Univers-CondensedBold: Standard "(001.001)" Standard ROM
+*Font Univers-CondensedBoldOblique: Standard "(001.001)" Standard ROM
+*Font Univers-CondensedOblique: Standard "(001.001)" Standard ROM
+*Font Univers-Extended: Standard "(001.001)" Standard ROM
+*Font Univers-ExtendedObl: Standard "(001.001)" Standard ROM
+*Font Univers-Light: Standard "(001.001)" Standard ROM
+*Font Univers-LightOblique: Standard "(001.001)" Standard ROM
+*Font Univers-Oblique: Standard "(001.001)" Standard ROM
+*Font Univers: Standard "(001.001)" Standard ROM
+*Font Wingdings-Regular: Special "(001.001)" Special ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.001)" Standard ROM
+*Font ZapfDingbats: Special "(001.001)" Special ROM
+
+*?FontQuery: "save
+{count 1 gt
+  {exch dup 127 string cvs (/)print print (:)print
+   /Font resourcestatus
+   {pop pop (Yes)} {(No)} ifelse =
+  }
+  {exit}
+  ifelse
+} bind loop
+(*) = flush
+restore"
+*End
+
+*?FontList: "save
+ (*) {cvn ==} 128 string /Font resourceforall
+ (*) = flush
+restore"
+*End
+*% German localization
+*de.Translation ModelName/Samsung ML-3470 Series: ""
+*de.Translation InstallableOptions/Installierte Optionen: ""
+*de.Translation Option1/Schacht 2: ""
+*de.Option1 False/Nicht installiert: ""
+*de.Option1 True/Installiert: ""
+*de.Translation InstalledMemory/Installierter Arbeitsspeicher: ""
+*de.InstalledMemory 32MB/32MB: ""
+*de.InstalledMemory 64MB/64MB: ""
+*de.InstalledMemory 96MB/96MB: ""
+*de.InstalledMemory 128MB/128MB: ""
+*de.InstalledMemory 192MB/192MB: ""
+*de.InstalledMemory 256MB/256MB: ""
+*de.InstalledMemory 320MB/320MB: ""
+*de.Translation General/General: ""
+*de.Translation About/Info: ""
+*de.Translation TonerSave/Toner-Sparbetrieb: ""
+*de.TonerSave PrinterSetting/Druckereinstellungen: ""
+*de.TonerSave On/Ein: ""
+*de.TonerSave Off/Aus: ""
+*de.Translation Duplex/Beidseitiger Druck: ""
+*de.Duplex None/Kein: ""
+*de.Duplex DuplexNoTumble/Lange Seite: ""
+*de.Duplex DuplexTumble/Kurze Seite: ""
+*de.Translation AdvancedOptions/Erweiterte Optionen: ""
+*de.Translation SECReverseDuplex/Duplex in umgekehrter Reihenfolge: ""
+*de.SECReverseDuplex False/Aus: ""
+*de.SECReverseDuplex True/Ein: ""
+*de.Translation PaperPolicy/An Papierformat anpassen: ""
+*de.PaperPolicy Promptuser/Benutzer-Prompt anzeigen: ""
+*de.PaperPolicy NearestSizeAdjust/Nächste Größe und Skalieren: ""
+*de.PaperPolicy NearestSizeNoAdjust/Nächste Größe und Beschneiden: ""
+*de.Translation RET/Bildmodus: ""
+*de.RET PrinterSetting/Druckereinstellungen: ""
+*de.RET Off/Normal: ""
+*de.RET Enhance/Textverbesserung: ""
+*de.Translation MediaType/Papiertyp: ""
+*de.MediaType None/Druckereinstellungen: ""
+*de.MediaType Plain/Normalpapier: ""
+*de.MediaType Thick/Dickes Papier: ""
+*de.MediaType Thin/Dünnes Papier: ""
+*de.MediaType Bond/Bankpost-Papier: ""
+*de.MediaType Color/Farbpapier: ""
+*de.MediaType Card/Karten: ""
+*de.MediaType Labels/Etiketten: ""
+*de.MediaType Transparency/Folien: ""
+*de.MediaType Envelope/Umschläge: ""
+*de.MediaType Preprinted/Formulare: ""
+*de.MediaType Cotton/Baumwollpapier: ""
+*de.MediaType Recycled/Recycling-Papier: ""
+*de.MediaType Archive/Archivpapier: ""
+*de.Translation Resolution/Auflösung: ""
+*de.Resolution 1200x1200dpi/1200 dpi (Optimal): ""
+*de.Resolution 600dpi/600 dpi (Normal): ""
+*de.Translation InputSlot/Papierzufuhr: ""
+*de.InputSlot Upper/Mehrzweckschacht: ""
+*de.InputSlot Middle/Schacht 1: ""
+*de.InputSlot Lower/Schacht 2: ""
+*de.InputSlot ManualFeed/Manueller Einzug: ""
+*de.Translation PageSize/PageSize: ""
+*de.PageSize Letter/US-Letter: ""
+*de.PageSize Legal/US-Legal: ""
+*de.PageSize Executive/US-Executive: ""
+*de.PageSize A4/A4: ""
+*de.PageSize A5/A5: ""
+*de.PageSize B5-JIS/JIS B5: ""
+*de.PageSize US-Folio/US-Folio: ""
+*de.PageSize Env10/No. 10 Env.: ""
+*de.PageSize EnvDL/DL Umschlag: ""
+*de.PageSize EnvC5/C5 Umschlag: ""
+*de.PageSize EnvC6/C6 Umschlag: ""
+*de.PageSize B5-ISO/ISO B5: ""
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*de.PageSize A6/A6: ""
+*de.PageSize Oficio_A/Oficio : ""
+*de.PageSize Custom/Custom: ""
+*de.Translation PageRegion/PageRegion: ""
+*de.PageRegion Letter/US-Letter: ""
+*de.PageRegion Legal/US-Legal: ""
+*de.PageRegion Executive/US-Executive: ""
+*de.PageRegion A4/A4: ""
+*de.PageRegion A5/A5: ""
+*de.PageRegion B5-JIS/JIS B5: ""
+*de.PageRegion US-Folio/US-Folio: ""
+*de.PageRegion Env10/No. 10 Env.: ""
+*de.PageRegion EnvDL/DL Umschlag: ""
+*de.PageRegion EnvC5/C5 Umschlag: ""
+*de.PageRegion EnvC6/C6 Umschlag: ""
+*de.PageRegion B5-ISO/ISO B5: ""
+*de.PageRegion EnvMonarch/Umschlag Monarch: ""
+*de.PageRegion A6/A6: ""
+*de.PageRegion Oficio_A/Oficio : ""
+*de.PageRegion Custom/Custom: ""
+*% Spanish localization
+*es.Translation ModelName/Samsung ML-3470 Series: ""
+*es.Translation InstallableOptions/Opciones instaladas: ""
+*es.Translation Option1/Bandeja 2: ""
+*es.Option1 False/No instalada: ""
+*es.Option1 True/Instalada: ""
+*es.Translation InstalledMemory/Memoria instalada: ""
+*es.InstalledMemory 32MB/32MB: ""
+*es.InstalledMemory 64MB/64MB: ""
+*es.InstalledMemory 96MB/96MB: ""
+*es.InstalledMemory 128MB/128MB: ""
+*es.InstalledMemory 192MB/192MB: ""
+*es.InstalledMemory 256MB/256MB: ""
+*es.InstalledMemory 320MB/320MB: ""
+*es.Translation General/General: ""
+*es.Translation About/Acerca de: ""
+*es.Translation TonerSave/Modo Ahorro de tóner: ""
+*es.TonerSave PrinterSetting/Configuración de la impresora: ""
+*es.TonerSave On/Activado: ""
+*es.TonerSave Off/Desactivado: ""
+*es.Translation Duplex/Impresión a doble cara: ""
+*es.Duplex None/Ninguna: ""
+*es.Duplex DuplexNoTumble/Margen largo: ""
+*es.Duplex DuplexTumble/Margen corto: ""
+*es.Translation AdvancedOptions/Opciones avanzadas: ""
+*es.Translation SECReverseDuplex/Impresión dúplex inversa: ""
+*es.SECReverseDuplex False/Desactivado: ""
+*es.SECReverseDuplex True/Activado: ""
+*es.Translation PaperPolicy/Ajustar a página: ""
+*es.PaperPolicy Promptuser/Avisar al usuario: ""
+*es.PaperPolicy NearestSizeAdjust/Tamaño más cercano y aumentar: ""
+*es.PaperPolicy NearestSizeNoAdjust/Tamaño más cercano y reducir: ""
+*es.Translation RET/Modo Imagen: ""
+*es.RET PrinterSetting/Configuración de la impresora: ""
+*es.RET Off/Normal: ""
+*es.RET Enhance/Mejora del texto: ""
+*es.Translation MediaType/Papel Tipo: ""
+*es.MediaType None/Impresora predeterm.: ""
+*es.MediaType Plain/Papel normal: ""
+*es.MediaType Thick/Grueso: ""
+*es.MediaType Thin/Fino: ""
+*es.MediaType Bond/Bond: ""
+*es.MediaType Color/Papel de color: ""
+*es.MediaType Card/Tarjetas: ""
+*es.MediaType Labels/Etiquetas: ""
+*es.MediaType Transparency/Transparencia: ""
+*es.MediaType Envelope/Sobres: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*es.MediaType Cotton/Algodón: ""
+*es.MediaType Recycled/Reciclado: ""
+*es.MediaType Archive/Papel archivo: ""
+*es.Translation Resolution/Resolución: ""
+*es.Resolution 1200x1200dpi/1.200 ppp (Perfecta): ""
+*es.Resolution 600dpi/600 ppp (Normal): ""
+*es.Translation InputSlot/Paper Source: ""
+*es.InputSlot Upper/Bandeja multiusos: ""
+*es.InputSlot Middle/Bandeja 1: ""
+*es.InputSlot Lower/Bandeja 2: ""
+*es.InputSlot ManualFeed/Alimentación manual: ""
+*es.Translation PageSize/PageSize: ""
+*es.PageSize Letter/Carta: ""
+*es.PageSize Legal/Legal: ""
+*es.PageSize Executive/Ejecutivo: ""
+*es.PageSize A4/A4: ""
+*es.PageSize A5/A5: ""
+*es.PageSize B5-JIS/JIS B5: ""
+*es.PageSize US-Folio/Folio: ""
+*es.PageSize Env10/No. 10 Env.: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*es.PageSize EnvC6/Sobre C6: ""
+*es.PageSize B5-ISO/ISO B5: ""
+*es.PageSize EnvMonarch/S. Monarca: ""
+*es.PageSize A6/A6: ""
+*es.PageSize Oficio_A/Oficio : ""
+*es.PageSize Custom/Custom: ""
+*es.Translation PageRegion/PageRegion: ""
+*es.PageRegion Letter/Carta: ""
+*es.PageRegion Legal/Legal: ""
+*es.PageRegion Executive/Ejecutivo: ""
+*es.PageRegion A4/A4: ""
+*es.PageRegion A5/A5: ""
+*es.PageRegion B5-JIS/JIS B5: ""
+*es.PageRegion US-Folio/Folio: ""
+*es.PageRegion Env10/No. 10 Env.: ""
+*es.PageRegion EnvDL/Sobre DL: ""
+*es.PageRegion EnvC5/Sobre C5: ""
+*es.PageRegion EnvC6/Sobre C6: ""
+*es.PageRegion B5-ISO/ISO B5: ""
+*es.PageRegion EnvMonarch/S. Monarca: ""
+*es.PageRegion A6/A6: ""
+*es.PageRegion Oficio_A/Oficio : ""
+*es.PageRegion Custom/Custom: ""
+*% French localization
+*fr.Translation ModelName/Samsung ML-3470 Series: ""
+*fr.Translation InstallableOptions/Options installées: ""
+*fr.Translation Option1/Bac 2: ""
+*fr.Option1 False/Non Installé: ""
+*fr.Option1 True/Installé: ""
+*fr.Translation InstalledMemory/Mémoire installée: ""
+*fr.InstalledMemory 32MB/32MB: ""
+*fr.InstalledMemory 64MB/64MB: ""
+*fr.InstalledMemory 96MB/96MB: ""
+*fr.InstalledMemory 128MB/128MB: ""
+*fr.InstalledMemory 192MB/192MB: ""
+*fr.InstalledMemory 256MB/256MB: ""
+*fr.InstalledMemory 320MB/320MB: ""
+*fr.Translation General/General: ""
+*fr.Translation About/À propos: ""
+*fr.Translation TonerSave/Mode économie d'encre: ""
+*fr.TonerSave PrinterSetting/Configuration de l'imprimante: ""
+*fr.TonerSave On/Activé: ""
+*fr.TonerSave Off/Désactivé: ""
+*fr.Translation Duplex/Impression recto-verso: ""
+*fr.Duplex None/Aucun: ""
+*fr.Duplex DuplexNoTumble/Bord long: ""
+*fr.Duplex DuplexTumble/Bord court: ""
+*fr.Translation AdvancedOptions/Options avancées: ""
+*fr.Translation SECReverseDuplex/Impression recto-verso inversée: ""
+*fr.SECReverseDuplex False/Désactivé: ""
+*fr.SECReverseDuplex True/Activé: ""
+*fr.Translation PaperPolicy/Ajuster à la page: ""
+*fr.PaperPolicy Promptuser/Guider l'utilisateur: ""
+*fr.PaperPolicy NearestSizeAdjust/Taille et échelle les plus proches: ""
+*fr.PaperPolicy NearestSizeNoAdjust/Taille et découpe les plus proches: ""
+*fr.Translation RET/Mode image: ""
+*fr.RET PrinterSetting/Configuration de l'imprimante: ""
+*fr.RET Off/Normal: ""
+*fr.RET Enhance/Amélioration du texte: ""
+*fr.Translation MediaType/Papier Type: ""
+*fr.MediaType None/Options par défaut: ""
+*fr.MediaType Plain/Papier ordinaire: ""
+*fr.MediaType Thick/Papier épais: ""
+*fr.MediaType Thin/Papier fin: ""
+*fr.MediaType Bond/Papier de luxe: ""
+*fr.MediaType Color/Papier couleur: ""
+*fr.MediaType Card/Papier cartonné: ""
+*fr.MediaType Labels/Étiquettes: ""
+*fr.MediaType Transparency/Transparent: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*fr.MediaType Preprinted/Pré-imprimé: ""
+*fr.MediaType Cotton/Papier en coton: ""
+*fr.MediaType Recycled/Papier recyclé: ""
+*fr.MediaType Archive/Papier archive: ""
+*fr.Translation Resolution/Résolution: ""
+*fr.Resolution 1200x1200dpi/1200 ppp (optimale): ""
+*fr.Resolution 600dpi/600 ppp (normale): ""
+*fr.Translation InputSlot/Papier Alimentation: ""
+*fr.InputSlot Upper/Bac polyvalent: ""
+*fr.InputSlot Middle/Bac 1: ""
+*fr.InputSlot Lower/Bac 2: ""
+*fr.InputSlot ManualFeed/Chargeur manuel: ""
+*fr.Translation PageSize/PageSize: ""
+*fr.PageSize Letter/Lettre: ""
+*fr.PageSize Legal/Légal: ""
+*fr.PageSize Executive/Exécutif: ""
+*fr.PageSize A4/A4: ""
+*fr.PageSize A5/A5: ""
+*fr.PageSize B5-JIS/B5 JIS: ""
+*fr.PageSize US-Folio/Folio: ""
+*fr.PageSize Env10/No. 10 Env.: ""
+*fr.PageSize EnvDL/Env. DL: ""
+*fr.PageSize EnvC5/Env. C5: ""
+*fr.PageSize EnvC6/Env. C6: ""
+*fr.PageSize B5-ISO/B5 ISO: ""
+*fr.PageSize EnvMonarch/Env. Monarch: ""
+*fr.PageSize A6/A6: ""
+*fr.PageSize Oficio_A/Oficio : ""
+*fr.PageSize Custom/Custom: ""
+*fr.Translation PageRegion/PageRegion: ""
+*fr.PageRegion Letter/Lettre: ""
+*fr.PageRegion Legal/Légal: ""
+*fr.PageRegion Executive/Exécutif: ""
+*fr.PageRegion A4/A4: ""
+*fr.PageRegion A5/A5: ""
+*fr.PageRegion B5-JIS/B5 JIS: ""
+*fr.PageRegion US-Folio/Folio: ""
+*fr.PageRegion Env10/No. 10 Env.: ""
+*fr.PageRegion EnvDL/Env. DL: ""
+*fr.PageRegion EnvC5/Env. C5: ""
+*fr.PageRegion EnvC6/Env. C6: ""
+*fr.PageRegion B5-ISO/B5 ISO: ""
+*fr.PageRegion EnvMonarch/Env. Monarch: ""
+*fr.PageRegion A6/A6: ""
+*fr.PageRegion Oficio_A/Oficio : ""
+*fr.PageRegion Custom/Custom: ""
+*% Italian localization
+*it.Translation ModelName/Samsung ML-3470 Series: ""
+*it.Translation InstallableOptions/Opzioni installate: ""
+*it.Translation Option1/Vassoio 2: ""
+*it.Option1 False/Non installato: ""
+*it.Option1 True/Installato: ""
+*it.Translation InstalledMemory/Memoria installata: ""
+*it.InstalledMemory 32MB/32MB: ""
+*it.InstalledMemory 64MB/64MB: ""
+*it.InstalledMemory 96MB/96MB: ""
+*it.InstalledMemory 128MB/128MB: ""
+*it.InstalledMemory 192MB/192MB: ""
+*it.InstalledMemory 256MB/256MB: ""
+*it.InstalledMemory 320MB/320MB: ""
+*it.Translation General/General: ""
+*it.Translation About/Informazioni su: ""
+*it.Translation TonerSave/Modalità risparmio toner: ""
+*it.TonerSave PrinterSetting/Impostazione stampante: ""
+*it.TonerSave On/Attivato: ""
+*it.TonerSave Off/Disattivato: ""
+*it.Translation Duplex/Stampa fronte-retro: ""
+*it.Duplex None/Nessuno: ""
+*it.Duplex DuplexNoTumble/Lato lungo: ""
+*it.Duplex DuplexTumble/Lato corto: ""
+*it.Translation AdvancedOptions/Opzioni avanzate: ""
+*it.Translation SECReverseDuplex/Stampa inverti fronte-retro: ""
+*it.SECReverseDuplex False/Disattivato: ""
+*it.SECReverseDuplex True/Attivato: ""
+*it.Translation PaperPolicy/Adatta alla pagina: ""
+*it.PaperPolicy Promptuser/Messaggio utente: ""
+*it.PaperPolicy NearestSizeAdjust/Usa dimensioni più vicine e riduci: ""
+*it.PaperPolicy NearestSizeNoAdjust/Usa dimensioni più vicine e taglia: ""
+*it.Translation RET/Modalità immagine: ""
+*it.RET PrinterSetting/Impostazione stampante: ""
+*it.RET Off/Normale: ""
+*it.RET Enhance/Miglioramento testo: ""
+*it.Translation MediaType/Carta Tipo: ""
+*it.MediaType None/Predefiniti stampante: ""
+*it.MediaType Plain/Carta normale: ""
+*it.MediaType Thick/Spessa: ""
+*it.MediaType Thin/Sottile: ""
+*it.MediaType Bond/Carta laser: ""
+*it.MediaType Color/Carta colorata: ""
+*it.MediaType Card/Cartoncini: ""
+*it.MediaType Labels/Etichette: ""
+*it.MediaType Transparency/Lucidi: ""
+*it.MediaType Envelope/Buste: ""
+*it.MediaType Preprinted/Prestampata: ""
+*it.MediaType Cotton/Cotonata: ""
+*it.MediaType Recycled/Riciclata: ""
+*it.MediaType Archive/Carta archivio: ""
+*it.Translation Resolution/Risoluzione: ""
+*it.Resolution 1200x1200dpi/1200 dpi (migliore): ""
+*it.Resolution 600dpi/600 dpi (normale): ""
+*it.Translation InputSlot/Carta Origine: ""
+*it.InputSlot Upper/Vassoio multifunzione: ""
+*it.InputSlot Middle/Vassoio 1: ""
+*it.InputSlot Lower/Vassoio 2: ""
+*it.InputSlot ManualFeed/Alimentazione manuale: ""
+*it.Translation PageSize/PageSize: ""
+*it.PageSize Letter/Lettera: ""
+*it.PageSize Legal/Legale: ""
+*it.PageSize Executive/Executive: ""
+*it.PageSize A4/A4: ""
+*it.PageSize A5/A5: ""
+*it.PageSize B5-JIS/JIS B5: ""
+*it.PageSize US-Folio/Folio USA: ""
+*it.PageSize Env10/No. 10 Env.: ""
+*it.PageSize EnvDL/Busta DL: ""
+*it.PageSize EnvC5/Busta C5: ""
+*it.PageSize EnvC6/Busta C6: ""
+*it.PageSize B5-ISO/ISO B5: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*it.PageSize A6/A6: ""
+*it.PageSize Oficio_A/Oficio : ""
+*it.PageSize Custom/Custom: ""
+*it.Translation PageRegion/PageRegion: ""
+*it.PageRegion Letter/Lettera: ""
+*it.PageRegion Legal/Legale: ""
+*it.PageRegion Executive/Executive: ""
+*it.PageRegion A4/A4: ""
+*it.PageRegion A5/A5: ""
+*it.PageRegion B5-JIS/JIS B5: ""
+*it.PageRegion US-Folio/Folio USA: ""
+*it.PageRegion Env10/No. 10 Env.: ""
+*it.PageRegion EnvDL/Busta DL: ""
+*it.PageRegion EnvC5/Busta C5: ""
+*it.PageRegion EnvC6/Busta C6: ""
+*it.PageRegion B5-ISO/ISO B5: ""
+*it.PageRegion EnvMonarch/Busta Monarch: ""
+*it.PageRegion A6/A6: ""
+*it.PageRegion Oficio_A/Oficio : ""
+*it.PageRegion Custom/Custom: ""
+*% Korean localization
+*ko.Translation ModelName/Samsung ML-3470 Series: ""
+*ko.Translation InstallableOptions/설치할 수 있는 옵션: ""
+*ko.Translation Option1/용지함 2: ""
+*ko.Option1 False/설치되지 않음: ""
+*ko.Option1 True/설치됨: ""
+*ko.Translation InstalledMemory/프린터 메모리: ""
+*ko.InstalledMemory 32MB/32MB: ""
+*ko.InstalledMemory 64MB/64MB: ""
+*ko.InstalledMemory 96MB/96MB: ""
+*ko.InstalledMemory 128MB/128MB: ""
+*ko.InstalledMemory 192MB/192MB: ""
+*ko.InstalledMemory 256MB/256MB: ""
+*ko.InstalledMemory 320MB/320MB: ""
+*ko.Translation General/General: ""
+*ko.Translation About/About: ""
+*ko.Translation TonerSave/토너 절약: ""
+*ko.TonerSave PrinterSetting/프린터 설정값: ""
+*ko.TonerSave On/사용: ""
+*ko.TonerSave Off/사용안함: ""
+*ko.Translation Duplex/양면 인쇄: ""
+*ko.Duplex None/없음: ""
+*ko.Duplex DuplexNoTumble/긴면 묶음: ""
+*ko.Duplex DuplexTumble/짧은면 묶음: ""
+*ko.Translation AdvancedOptions/고급설정: ""
+*ko.Translation SECReverseDuplex/역순 양면인쇄: ""
+*ko.SECReverseDuplex False/사용안함: ""
+*ko.SECReverseDuplex True/사용: ""
+*ko.Translation PaperPolicy/용지 크기에 맞춤: ""
+*ko.PaperPolicy Promptuser/없음: ""
+*ko.PaperPolicy NearestSizeAdjust/페이지에 맞게 맞춤: ""
+*ko.PaperPolicy NearestSizeNoAdjust/페이지에 맞게 자름: ""
+*ko.Translation RET/이미지 모드: ""
+*ko.RET PrinterSetting/프린터 설정값: ""
+*ko.RET Off/보통: ""
+*ko.RET Enhance/문자 인쇄 향상: ""
+*ko.Translation MediaType/용지 종류: ""
+*ko.MediaType None/프린터 기본값: ""
+*ko.MediaType Plain/일반 용지: ""
+*ko.MediaType Thick/두꺼운 용지: ""
+*ko.MediaType Thin/얇은 용지: ""
+*ko.MediaType Bond/본드 용지: ""
+*ko.MediaType Color/색지: ""
+*ko.MediaType Card/카드 용지: ""
+*ko.MediaType Labels/라벨 용지: ""
+*ko.MediaType Transparency/투명 필름(OHP): ""
+*ko.MediaType Envelope/봉투: ""
+*ko.MediaType Preprinted/인쇄된 용지: ""
+*ko.MediaType Cotton/코튼 용지: ""
+*ko.MediaType Recycled/재생 용지: ""
+*ko.MediaType Archive/Archive 용지: ""
+*ko.Translation Resolution/해상도: ""
+*ko.Resolution 1200x1200dpi/1200 dpi (고품질): ""
+*ko.Resolution 600dpi/600 dpi (표준): ""
+*ko.Translation InputSlot/용지 공급원: ""
+*ko.InputSlot Upper/다목적 용지함: ""
+*ko.InputSlot Middle/용지함 1: ""
+*ko.InputSlot Lower/용지함 2: ""
+*ko.InputSlot ManualFeed/수동 급지: ""
+*ko.Translation PageSize/PageSize: ""
+*ko.PageSize Letter/Letter: ""
+*ko.PageSize Legal/Legal: ""
+*ko.PageSize Executive/Executive: ""
+*ko.PageSize A4/A4: ""
+*ko.PageSize A5/A5: ""
+*ko.PageSize B5-JIS/JIS B5: ""
+*ko.PageSize US-Folio/US Folio: ""
+*ko.PageSize Env10/No. 10 Env.: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*ko.PageSize EnvC6/C6 봉투: ""
+*ko.PageSize B5-ISO/ISO B5: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*ko.PageSize A6/A6: ""
+*ko.PageSize Oficio_A/Oficio : ""
+*ko.PageSize Custom/Custom: ""
+*ko.Translation PageRegion/PageRegion: ""
+*ko.PageRegion Letter/Letter: ""
+*ko.PageRegion Legal/Legal: ""
+*ko.PageRegion Executive/Executive: ""
+*ko.PageRegion A4/A4: ""
+*ko.PageRegion A5/A5: ""
+*ko.PageRegion B5-JIS/JIS B5: ""
+*ko.PageRegion US-Folio/US Folio: ""
+*ko.PageRegion Env10/No. 10 Env.: ""
+*ko.PageRegion EnvDL/DL 봉투: ""
+*ko.PageRegion EnvC5/C5 봉투: ""
+*ko.PageRegion EnvC6/C6 봉투: ""
+*ko.PageRegion B5-ISO/ISO B5: ""
+*ko.PageRegion EnvMonarch/Monarch 봉투: ""
+*ko.PageRegion A6/A6: ""
+*ko.PageRegion Oficio_A/Oficio : ""
+*ko.PageRegion Custom/Custom: ""
+*% Dutch localization
+*nl.Translation ModelName/Samsung ML-3470 Series: ""
+*nl.Translation InstallableOptions/Geïnstalleerde opties: ""
+*nl.Translation Option1/Lade 2: ""
+*nl.Option1 False/Niet geplaatst: ""
+*nl.Option1 True/Geplaatst: ""
+*nl.Translation InstalledMemory/Printergeheugen: ""
+*nl.InstalledMemory 32MB/32MB: ""
+*nl.InstalledMemory 64MB/64MB: ""
+*nl.InstalledMemory 96MB/96MB: ""
+*nl.InstalledMemory 128MB/128MB: ""
+*nl.InstalledMemory 192MB/192MB: ""
+*nl.InstalledMemory 256MB/256MB: ""
+*nl.InstalledMemory 320MB/320MB: ""
+*nl.Translation General/General: ""
+*nl.Translation About/Info: ""
+*nl.Translation TonerSave/Tonerbesparingsmodus: ""
+*nl.TonerSave PrinterSetting/Printerinstelling: ""
+*nl.TonerSave On/Aan: ""
+*nl.TonerSave Off/Uit: ""
+*nl.Translation Duplex/Dubbelzijdig afdrukken: ""
+*nl.Duplex None/Geen: ""
+*nl.Duplex DuplexNoTumble/Lange zijde: ""
+*nl.Duplex DuplexTumble/Korte zijde: ""
+*nl.Translation AdvancedOptions/Geavanceerde keuzes: ""
+*nl.Translation SECReverseDuplex/Omgekeerd dubbelzijdig afdrukken: ""
+*nl.SECReverseDuplex False/Uit: ""
+*nl.SECReverseDuplex True/Aan: ""
+*nl.Translation PaperPolicy/Aan pagina aanpassen: ""
+*nl.PaperPolicy Promptuser/Aan gebruiker vragen: ""
+*nl.PaperPolicy NearestSizeAdjust/Beste formaat/zoom: ""
+*nl.PaperPolicy NearestSizeNoAdjust/Beste formaat/hak af: ""
+*nl.Translation RET/Afbeeldingmodus: ""
+*nl.RET PrinterSetting/Printerinstelling: ""
+*nl.RET Off/Normaal: ""
+*nl.RET Enhance/Tekstverbetering: ""
+*nl.Translation MediaType/Papier Type: ""
+*nl.MediaType None/Printerstandaard: ""
+*nl.MediaType Plain/Normaal papier: ""
+*nl.MediaType Thick/Dik papier: ""
+*nl.MediaType Thin/Dun papier: ""
+*nl.MediaType Bond/Bankpost: ""
+*nl.MediaType Color/Gekleurd papier: ""
+*nl.MediaType Card/Kaarten: ""
+*nl.MediaType Labels/Etiketten: ""
+*nl.MediaType Transparency/Transparanten: ""
+*nl.MediaType Envelope/Enveloppen: ""
+*nl.MediaType Preprinted/Voorbedrukt: ""
+*nl.MediaType Cotton/Katoen: ""
+*nl.MediaType Recycled/Kringlooppapier: ""
+*nl.MediaType Archive/Archiefpapier: ""
+*nl.Translation Resolution/Resolutie: ""
+*nl.Resolution 1200x1200dpi/1200 dpi (best): ""
+*nl.Resolution 600dpi/600 dpi (normaal): ""
+*nl.Translation InputSlot/Papier Invoer: ""
+*nl.InputSlot Upper/Multifunctionele lade: ""
+*nl.InputSlot Middle/Lade 1: ""
+*nl.InputSlot Lower/Lade 2: ""
+*nl.InputSlot ManualFeed/Handmatige invoer: ""
+*nl.Translation PageSize/PageSize: ""
+*nl.PageSize Letter/Letter: ""
+*nl.PageSize Legal/Legal: ""
+*nl.PageSize Executive/Executive: ""
+*nl.PageSize A4/A4: ""
+*nl.PageSize A5/A5: ""
+*nl.PageSize B5-JIS/JIS B5: ""
+*nl.PageSize US-Folio/US Folio: ""
+*nl.PageSize Env10/No. 10 Env.: ""
+*nl.PageSize EnvDL/Envelop DL: ""
+*nl.PageSize EnvC5/Envelop C5: ""
+*nl.PageSize EnvC6/Envelop C6: ""
+*nl.PageSize B5-ISO/ISO B5: ""
+*nl.PageSize EnvMonarch/Monarch-env.: ""
+*nl.PageSize A6/A6: ""
+*nl.PageSize Oficio_A/Oficio : ""
+*nl.PageSize Custom/Custom: ""
+*nl.Translation PageRegion/PageRegion: ""
+*nl.PageRegion Letter/Letter: ""
+*nl.PageRegion Legal/Legal: ""
+*nl.PageRegion Executive/Executive: ""
+*nl.PageRegion A4/A4: ""
+*nl.PageRegion A5/A5: ""
+*nl.PageRegion B5-JIS/JIS B5: ""
+*nl.PageRegion US-Folio/US Folio: ""
+*nl.PageRegion Env10/No. 10 Env.: ""
+*nl.PageRegion EnvDL/Envelop DL: ""
+*nl.PageRegion EnvC5/Envelop C5: ""
+*nl.PageRegion EnvC6/Envelop C6: ""
+*nl.PageRegion B5-ISO/ISO B5: ""
+*nl.PageRegion EnvMonarch/Monarch-env.: ""
+*nl.PageRegion A6/A6: ""
+*nl.PageRegion Oficio_A/Oficio : ""
+*nl.PageRegion Custom/Custom: ""
+*% Portuguese localization
+*pt.Translation ModelName/Samsung ML-3470 Series: ""
+*pt.Translation InstallableOptions/Opções instaladas: ""
+*pt.Translation Option1/Tabuleiro 2: ""
+*pt.Option1 False/Não instalada: ""
+*pt.Option1 True/Instalada: ""
+*pt.Translation InstalledMemory/Memória impressora: ""
+*pt.InstalledMemory 32MB/32MB: ""
+*pt.InstalledMemory 64MB/64MB: ""
+*pt.InstalledMemory 96MB/96MB: ""
+*pt.InstalledMemory 128MB/128MB: ""
+*pt.InstalledMemory 192MB/192MB: ""
+*pt.InstalledMemory 256MB/256MB: ""
+*pt.InstalledMemory 320MB/320MB: ""
+*pt.Translation General/General: ""
+*pt.Translation About/Acerca de: ""
+*pt.Translation TonerSave/Modo de economia de toner: ""
+*pt.TonerSave PrinterSetting/Predefinição da impressora: ""
+*pt.TonerSave On/Activado: ""
+*pt.TonerSave Off/Desactivado: ""
+*pt.Translation Duplex/Impressão em duas faces: ""
+*pt.Duplex None/Nenhum: ""
+*pt.Duplex DuplexNoTumble/Margem longa: ""
+*pt.Duplex DuplexTumble/Margem curta: ""
+*pt.Translation AdvancedOptions/Opções avançadas: ""
+*pt.Translation SECReverseDuplex/Impressão duplex invertido: ""
+*pt.SECReverseDuplex False/Desactivado: ""
+*pt.SECReverseDuplex True/Activado: ""
+*pt.Translation PaperPolicy/Ajustar à página: ""
+*pt.PaperPolicy Promptuser/Avisar utilizador: ""
+*pt.PaperPolicy NearestSizeAdjust/Tam. e esc mais próx: ""
+*pt.PaperPolicy NearestSizeNoAdjust/Tam/corte mais próx: ""
+*pt.Translation RET/Modo Imagem: ""
+*pt.RET PrinterSetting/Predefinição da impressora: ""
+*pt.RET Off/Normal: ""
+*pt.RET Enhance/Aperfeiçoamento de texto: ""
+*pt.Translation MediaType/Tipo de papel: ""
+*pt.MediaType None/Predefinição da impressora: ""
+*pt.MediaType Plain/Papel comum: ""
+*pt.MediaType Thick/Grosso: ""
+*pt.MediaType Thin/Fino: ""
+*pt.MediaType Bond/Papel vegetal: ""
+*pt.MediaType Color/Papel colorido: ""
+*pt.MediaType Card/Cartolina: ""
+*pt.MediaType Labels/Etiquetas: ""
+*pt.MediaType Transparency/Transparência: ""
+*pt.MediaType Envelope/Envelope: ""
+*pt.MediaType Preprinted/Pré-impresso: ""
+*pt.MediaType Cotton/Algodão: ""
+*pt.MediaType Recycled/Papel reciclado: ""
+*pt.MediaType Archive/Papel de arquivo: ""
+*pt.Translation Resolution/Resolução: ""
+*pt.Resolution 1200x1200dpi/1200 ppp (Melhor): ""
+*pt.Resolution 600dpi/600 ppp (normal): ""
+*pt.Translation InputSlot/Origem do papel: ""
+*pt.InputSlot Upper/Tabuleiro multifuncion.: ""
+*pt.InputSlot Middle/Tabuleiro 1: ""
+*pt.InputSlot Lower/Tabuleiro 2: ""
+*pt.InputSlot ManualFeed/Alimentação manual: ""
+*pt.Translation PageSize/PageSize: ""
+*pt.PageSize Letter/Carta: ""
+*pt.PageSize Legal/Legal: ""
+*pt.PageSize Executive/Executivo: ""
+*pt.PageSize A4/A4: ""
+*pt.PageSize A5/A5: ""
+*pt.PageSize B5-JIS/JIS B5: ""
+*pt.PageSize US-Folio/US Folio: ""
+*pt.PageSize Env10/No. 10 Env.: ""
+*pt.PageSize EnvDL/Env. DL: ""
+*pt.PageSize EnvC5/Env. C5: ""
+*pt.PageSize EnvC6/Env. C6: ""
+*pt.PageSize B5-ISO/ISO B5: ""
+*pt.PageSize EnvMonarch/Env. Monarch: ""
+*pt.PageSize A6/A6: ""
+*pt.PageSize Oficio_A/Ofício : ""
+*pt.PageSize Custom/Custom: ""
+*pt.Translation PageRegion/PageRegion: ""
+*pt.PageRegion Letter/Carta: ""
+*pt.PageRegion Legal/Legal: ""
+*pt.PageRegion Executive/Executivo: ""
+*pt.PageRegion A4/A4: ""
+*pt.PageRegion A5/A5: ""
+*pt.PageRegion B5-JIS/JIS B5: ""
+*pt.PageRegion US-Folio/US Folio: ""
+*pt.PageRegion Env10/No. 10 Env.: ""
+*pt.PageRegion EnvDL/Env. DL: ""
+*pt.PageRegion EnvC5/Env. C5: ""
+*pt.PageRegion EnvC6/Env. C6: ""
+*pt.PageRegion B5-ISO/ISO B5: ""
+*pt.PageRegion EnvMonarch/Env. Monarch: ""
+*pt.PageRegion A6/A6: ""
+*pt.PageRegion Oficio_A/Ofício : ""
+*pt.PageRegion Custom/Custom: ""
+*% Simplified Chinese localization
+*zh_CN.Translation ModelName/Samsung ML-3470 Series: ""
+*zh_CN.Translation InstallableOptions/安装选项: ""
+*zh_CN.Translation Option1/纸盘 2: ""
+*zh_CN.Option1 False/没有安装: ""
+*zh_CN.Option1 True/已安装: ""
+*zh_CN.Translation InstalledMemory/打印机内存: ""
+*zh_CN.InstalledMemory 32MB/32MB: ""
+*zh_CN.InstalledMemory 64MB/64MB: ""
+*zh_CN.InstalledMemory 96MB/96MB: ""
+*zh_CN.InstalledMemory 128MB/128MB: ""
+*zh_CN.InstalledMemory 192MB/192MB: ""
+*zh_CN.InstalledMemory 256MB/256MB: ""
+*zh_CN.InstalledMemory 320MB/320MB: ""
+*zh_CN.Translation General/General: ""
+*zh_CN.Translation About/关于: ""
+*zh_CN.Translation TonerSave/省墨模式: ""
+*zh_CN.TonerSave PrinterSetting/打印机设置: ""
+*zh_CN.TonerSave On/开: ""
+*zh_CN.TonerSave Off/关: ""
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_CN.Duplex None/无: ""
+*zh_CN.Duplex DuplexNoTumble/长边: ""
+*zh_CN.Duplex DuplexTumble/短边: ""
+*zh_CN.Translation AdvancedOptions/高级选项: ""
+*zh_CN.Translation SECReverseDuplex/翻转双面打印: ""
+*zh_CN.SECReverseDuplex False/关: ""
+*zh_CN.SECReverseDuplex True/开: ""
+*zh_CN.Translation PaperPolicy/适合页面: ""
+*zh_CN.PaperPolicy Promptuser/提示用户: ""
+*zh_CN.PaperPolicy NearestSizeAdjust/最接近的大小和比例: ""
+*zh_CN.PaperPolicy NearestSizeNoAdjust/最接近的大小和切边: ""
+*zh_CN.Translation RET/图像模式: ""
+*zh_CN.RET PrinterSetting/打印机设置: ""
+*zh_CN.RET Off/正常: ""
+*zh_CN.RET Enhance/文字增强: ""
+*zh_CN.Translation MediaType/纸张类型: ""
+*zh_CN.MediaType None/打印机默认值: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_CN.MediaType Thick/厚纸: ""
+*zh_CN.MediaType Thin/薄纸: ""
+*zh_CN.MediaType Bond/Bond 纸: ""
+*zh_CN.MediaType Color/彩色纸: ""
+*zh_CN.MediaType Card/卡片纸: ""
+*zh_CN.MediaType Labels/标签: ""
+*zh_CN.MediaType Transparency/透明胶片: ""
+*zh_CN.MediaType Envelope/信封: ""
+*zh_CN.MediaType Preprinted/预印纸: ""
+*zh_CN.MediaType Cotton/棉质纸: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_CN.MediaType Archive/存档纸: ""
+*zh_CN.Translation Resolution/分辨率: ""
+*zh_CN.Resolution 1200x1200dpi/1200 dpi (最佳): ""
+*zh_CN.Resolution 600dpi/600 dpi (正常): ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_CN.InputSlot Upper/多用途纸盘: ""
+*zh_CN.InputSlot Middle/纸盘 1: ""
+*zh_CN.InputSlot Lower/纸盘 2: ""
+*zh_CN.InputSlot ManualFeed/手动进纸器: ""
+*zh_CN.Translation PageSize/PageSize: ""
+*zh_CN.PageSize Letter/Letter: ""
+*zh_CN.PageSize Legal/Legal: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_CN.PageSize B5-JIS/JIS B5: ""
+*zh_CN.PageSize US-Folio/US Folio: ""
+*zh_CN.PageSize Env10/No. 10 Env.: ""
+*zh_CN.PageSize EnvDL/DL Env.: ""
+*zh_CN.PageSize EnvC5/C5 Env.: ""
+*zh_CN.PageSize EnvC6/C6 Env.: ""
+*zh_CN.PageSize B5-ISO/ISO B5: ""
+*zh_CN.PageSize EnvMonarch/Monarch Env.: ""
+*zh_CN.PageSize A6/A6: ""
+*zh_CN.PageSize Oficio_A/Oficio : ""
+*zh_CN.PageSize Custom/Custom: ""
+*zh_CN.Translation PageRegion/PageRegion: ""
+*zh_CN.PageRegion Letter/Letter: ""
+*zh_CN.PageRegion Legal/Legal: ""
+*zh_CN.PageRegion Executive/Executive: ""
+*zh_CN.PageRegion A4/A4: ""
+*zh_CN.PageRegion A5/A5: ""
+*zh_CN.PageRegion B5-JIS/JIS B5: ""
+*zh_CN.PageRegion US-Folio/US Folio: ""
+*zh_CN.PageRegion Env10/No. 10 Env.: ""
+*zh_CN.PageRegion EnvDL/DL Env.: ""
+*zh_CN.PageRegion EnvC5/C5 Env.: ""
+*zh_CN.PageRegion EnvC6/C6 Env.: ""
+*zh_CN.PageRegion B5-ISO/ISO B5: ""
+*zh_CN.PageRegion EnvMonarch/Monarch Env.: ""
+*zh_CN.PageRegion A6/A6: ""
+*zh_CN.PageRegion Oficio_A/Oficio : ""
+*zh_CN.PageRegion Custom/Custom: ""
+*% Traditional Chinese localization
+*zh_TW.Translation ModelName/Samsung ML-3470 Series: ""
+*zh_TW.Translation InstallableOptions/安裝選項: ""
+*zh_TW.Translation Option1/紙匣2: ""
+*zh_TW.Option1 False/未安裝: ""
+*zh_TW.Option1 True/已安裝: ""
+*zh_TW.Translation InstalledMemory/印表機記憶體: ""
+*zh_TW.InstalledMemory 32MB/32MB: ""
+*zh_TW.InstalledMemory 64MB/64MB: ""
+*zh_TW.InstalledMemory 96MB/96MB: ""
+*zh_TW.InstalledMemory 128MB/128MB: ""
+*zh_TW.InstalledMemory 192MB/192MB: ""
+*zh_TW.InstalledMemory 256MB/256MB: ""
+*zh_TW.InstalledMemory 320MB/320MB: ""
+*zh_TW.Translation General/General: ""
+*zh_TW.Translation About/關於: ""
+*zh_TW.Translation TonerSave/碳粉節省模式: ""
+*zh_TW.TonerSave PrinterSetting/印表機設定: ""
+*zh_TW.TonerSave On/開啟: ""
+*zh_TW.TonerSave Off/關閉: ""
+*zh_TW.Translation Duplex/雙面列印: ""
+*zh_TW.Duplex None/無: ""
+*zh_TW.Duplex DuplexNoTumble/長邊緣: ""
+*zh_TW.Duplex DuplexTumble/短邊緣: ""
+*zh_TW.Translation AdvancedOptions/進階選項: ""
+*zh_TW.Translation SECReverseDuplex/顛倒雙面列印: ""
+*zh_TW.SECReverseDuplex False/關閉: ""
+*zh_TW.SECReverseDuplex True/開啟: ""
+*zh_TW.Translation PaperPolicy/調整為頁面大小: ""
+*zh_TW.PaperPolicy Promptuser/提示用戶: ""
+*zh_TW.PaperPolicy NearestSizeAdjust/最接近的大小和比例: ""
+*zh_TW.PaperPolicy NearestSizeNoAdjust/最接近的大小和切邊: ""
+*zh_TW.Translation RET/影像模式: ""
+*zh_TW.RET PrinterSetting/印表機設定: ""
+*zh_TW.RET Off/正常: ""
+*zh_TW.RET Enhance/文字增強: ""
+*zh_TW.Translation MediaType/紙張類型: ""
+*zh_TW.MediaType None/預設印表機: ""
+*zh_TW.MediaType Plain/一般紙張: ""
+*zh_TW.MediaType Thick/厚紙: ""
+*zh_TW.MediaType Thin/薄紙: ""
+*zh_TW.MediaType Bond/銅版紙: ""
+*zh_TW.MediaType Color/色紙: ""
+*zh_TW.MediaType Card/卡片紙: ""
+*zh_TW.MediaType Labels/標籤: ""
+*zh_TW.MediaType Transparency/投影片: ""
+*zh_TW.MediaType Envelope/信封: ""
+*zh_TW.MediaType Preprinted/預列印本: ""
+*zh_TW.MediaType Cotton/棉質: ""
+*zh_TW.MediaType Recycled/再生紙: ""
+*zh_TW.MediaType Archive/資料庫: ""
+*zh_TW.Translation Resolution/解析度: ""
+*zh_TW.Resolution 1200x1200dpi/1,200 dpi (最佳): ""
+*zh_TW.Resolution 600dpi/600 dpi (正常): ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+*zh_TW.InputSlot Upper/多功能紙匣: ""
+*zh_TW.InputSlot Middle/紙匣1: ""
+*zh_TW.InputSlot Lower/紙匣2: ""
+*zh_TW.InputSlot ManualFeed/手動送紙: ""
+*zh_TW.Translation PageSize/PageSize: ""
+*zh_TW.PageSize Letter/Letter: ""
+*zh_TW.PageSize Legal/Legal: ""
+*zh_TW.PageSize Executive/Executive: ""
+*zh_TW.PageSize A4/A4: ""
+*zh_TW.PageSize A5/A5: ""
+*zh_TW.PageSize B5-JIS/JIS B5: ""
+*zh_TW.PageSize US-Folio/US Folio: ""
+*zh_TW.PageSize Env10/No. 10 Env.: ""
+*zh_TW.PageSize EnvDL/DL信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+*zh_TW.PageSize EnvC6/C6 信封: ""
+*zh_TW.PageSize B5-ISO/ISO B5: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+*zh_TW.PageSize A6/A6: ""
+*zh_TW.PageSize Oficio_A/Oficio : ""
+*zh_TW.PageSize Custom/Custom: ""
+*zh_TW.Translation PageRegion/PageRegion: ""
+*zh_TW.PageRegion Letter/Letter: ""
+*zh_TW.PageRegion Legal/Legal: ""
+*zh_TW.PageRegion Executive/Executive: ""
+*zh_TW.PageRegion A4/A4: ""
+*zh_TW.PageRegion A5/A5: ""
+*zh_TW.PageRegion B5-JIS/JIS B5: ""
+*zh_TW.PageRegion US-Folio/US Folio: ""
+*zh_TW.PageRegion Env10/No. 10 Env.: ""
+*zh_TW.PageRegion EnvDL/DL信封: ""
+*zh_TW.PageRegion EnvC5/C5 信封: ""
+*zh_TW.PageRegion EnvC6/C6 信封: ""
+*zh_TW.PageRegion B5-ISO/ISO B5: ""
+*zh_TW.PageRegion EnvMonarch/Monarch 信封: ""
+*zh_TW.PageRegion A6/A6: ""
+*zh_TW.PageRegion Oficio_A/Oficio : ""
+*zh_TW.PageRegion Custom/Custom: ""
+*cupsLanguages: "de es fr it ko nl pt zh_CN zh_TW"
