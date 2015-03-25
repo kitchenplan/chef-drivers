@@ -1,0 +1,6 @@
+node.default['drivers']['canon']['pixma9000ii']['dmg_remote'] = "http://gdlp01.c-wss.com/gds/9/0100001769/15/mcpd-mac-pro9000ii-10_89_2_0-ea13.dmg"
+node.default['drivers']['canon']['pixma9000ii']['dmg_filename'] = "mcpd-mac-pro9000ii-10_89_2_0-ea13.dmg"
+node.default['drivers']['canon']['pixma9000ii']['dmg_checksum'] = "94a4a9ffb3bcff547dc7f5dd1f6bd7086c07d647c3164419aebad2092caa4a95"
+node.default['drivers']['canon']['pixma9000ii']['installer_pkg'] = "PrinterDriver_Pro9000II\ series_108902.pkg"
+node.default['drivers']['canon']['pixma9000ii']['mount_name'] = "PrinterDriver_Pro9000II\ series"
+node.default['drivers']['canon']['pixma9000ii']['printer_name_grep'] = "Pro9000II"

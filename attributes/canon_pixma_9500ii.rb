@@ -1,0 +1,6 @@
+node.default['drivers']['canon']['pixma9500ii']['dmg_remote'] = "http://gdlp01.c-wss.com/gds/1/0100001771/14/mcpd-mac-pro9500ii-11_7_1_0-ea17_2.dmg"
+node.default['drivers']['canon']['pixma9500ii']['dmg_checksum'] = "e9d3e1fe4dedfff852d0b4415493380647d7343d07e7c9651a8383a49095a80b"
+node.default['drivers']['canon']['pixma9500ii']['dmg_filename'] = "mcpd-mac-pro9500ii-11_7_1_0-ea17_2.dmg"
+node.default['drivers']['canon']['pixma9500ii']['installer_pkg'] = "PrinterDriver_Pro9500II\ series_110701.pkg"
+node.default['drivers']['canon']['pixma9500ii']['mount_name'] = "PrinterDriver_Pro9500II\ series"
+node.default['drivers']['canon']['pixma9500ii']['printer_name_grep'] = "Pro9500II"

@@ -2,9 +2,13 @@
 
 This file is used to list changes made in each version of drivers.
 
+## 0.1.1
+
+* Djuri Baars - Added Canon Pixma Pro 9000II/9500II drivers
+
 ## 0.1.0:
 
-* Initial release of drivers
+* Roderik van der Veer - Initial release of drivers
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
